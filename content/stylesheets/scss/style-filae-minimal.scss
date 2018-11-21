@@ -1,0 +1,25 @@
+@import '../../../../css/SearchApi/scss/helpers/_variables';
+@import '../../../../css/SearchApi/scss/helpers/mixin/_mixin';
+@import '../../../../css/SearchApi/scss/helpers/_animations';
+@import '../../../../css/SearchApi/scss/helpers/_useful-classname';
+
+// Custom file for font path
+@import 'general/_fonts';
+@import '../../../../css/SearchApi/scss/general/_old-style';
+@import '../../../../css/SearchApi/scss/general/_general';
+@import '../../../../css/SearchApi/scss/general/_navigation';
+
+ 
+@import '../../../../css/SearchApi/scss/components/_alert';
+@import '../../../../css/SearchApi/scss/components/_banner';
+@import '../../../../css/SearchApi/scss/components/_button';
+@import '../../../../css/SearchApi/scss/components/_captcha';
+@import '../../../../css/SearchApi/scss/components/_guide';
+@import '../../../../css/SearchApi/scss/components/_input';
+@import '../../../../css/SearchApi/scss/components/_modal';
+@import '../../../../css/SearchApi/scss/components/_quote'; 
+@import '../../../../css/SearchApi/scss/components/_slider';
+@import '../../../../css/SearchApi/scss/components/_dropdown';
+
+// Only for styleguide CSS 
+@import 'pages/_styleguide';

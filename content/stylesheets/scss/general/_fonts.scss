@@ -1,0 +1,226 @@
+
+//////////////////////////////////
+/*  Typographie Icone icomoon  */
+/* More information on http://redmine.filae.com/projects/genealogie/wiki/Equipe_int%C3%A9gration for the process to update the font */
+/* Icons section -->  Fontello */
+//////////////////////////////////
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../../../../../fonts/icomoon.eot');
+    src:  url('../../../../../fonts/icomoon.eot') format('embedded-opentype'),
+      url('../../../../fonts/icomoon.ttf') format('truetype'),
+      url('../../../../../fonts/icomoon.woff?') format('woff'),
+      url('../../../../../fonts/icomoon.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-i-archives-militaires-2:before { content: '\1818'; } /* '᠘' */
+.icon-ic_local_offer_black_24px-1:before { content: '\3535'; } /* '㔵' */
+.icon-essai:before { content: '\7777'; } /* '睷' */
+.icon-i-1ere-guerre:before { content: '\e600'; } /* '' */
+.icon-i-2eme-guerre:before { content: '\e601'; } /* '' */
+.icon-i-alerte:before { content: '\e602'; } /* '' */
+.icon-i-ancien-regime:before { content: '\e603'; } /* '' */
+.icon-i-annonce:before { content: '\e604'; } /* '' */
+.icon-i-arbre:before { content: '\e605'; } /* '' */
+.icon-i-arbre-genea:before { content: '\e606'; } /* '' */
+.icon-i-archives-militaires:before { content: '\e607'; } /* '' */
+.icon-i-attention-plein:before { content: '\e608'; } /* '' */
+.icon-i-attention-vide:before { content: '\e609'; } /* '' */
+.icon-i-avatar-femme:before { content: '\e60a'; } /* '' */
+.icon-i-avatar-h-f-01:before { content: '\e60b'; } /* '' */
+.icon-i-avatar-h-f-02:before { content: '\e60c'; } /* '' */
+.icon-i-avatar-homme:before { content: '\e60d'; } /* '' */
+.icon-i-avatar-neutre:before { content: '\e60e'; } /* '' */
+.icon-i-avatar-neutre-plus:before { content: '\e60f'; } /* '' */
+.icon-i-berceau:before { content: '\e610'; } /* '' */
+.icon-i-bonnet-marianne:before { content: '\e611'; } /* '' */
+.icon-i-boutique:before { content: '\e612'; } /* '' */
+.icon-i-bulle-3points:before { content: '\e613'; } /* '' */
+.icon-i-cadenas:before { content: '\e614'; } /* '' */
+.icon-i-calendrier-15:before { content: '\e615'; } /* '' */
+.icon-i-calepin:before { content: '\e616'; } /* '' */
+.icon-i-carte-identite:before { content: '\e617'; } /* '' */
+.icon-i-casque:before { content: '\e618'; } /* '' */
+.icon-i-cheque:before { content: '\e619'; } /* '' */
+.icon-i-colonie:before { content: '\e61a'; } /* '' */
+.icon-i-crayon:before { content: '\e61b'; } /* '' */
+.icon-i-crayon-02:before { content: '\e61c'; } /* '' */
+.icon-i-divers:before { content: '\e61d'; } /* '' */
+.icon-i-doc-arbre:before { content: '\e61e'; } /* '' */
+.icon-i-document:before { content: '\e61f'; } /* '' */
+.icon-i-dossier:before { content: '\e620'; } /* '' */
+.icon-i-dossier-images:before { content: '\e621'; } /* '' */
+.icon-i-dossier-presse:before { content: '\e622'; } /* '' */
+.icon-i-dossier-trombonne:before { content: '\e623'; } /* '' */
+.icon-i-empire:before { content: '\e624'; } /* '' */
+.icon-i-enregistrer:before { content: '\e625'; } /* '' */
+.icon-i-enveloppe-fermee:before { content: '\e626'; } /* '' */
+.icon-i-enveloppe-fermee-cadenas:before { content: '\e627'; } /* '' */
+.icon-i-enveloppe-ouverte:before { content: '\e628'; } /* '' */
+.icon-i-enveloppe-ouverte-cadenas:before { content: '\e629'; } /* '' */
+.icon-i-etoile:before { content: '\e62a'; } /* '' */
+.icon-i-facebook:before { content: '\e62b'; } /* '' */
+.icon-i-feuille-01:before { content: '\e62c'; } /* '' */
+.icon-i-feuille-02:before { content: '\e62d'; } /* '' */
+.icon-i-fleche-agrandissement:before { content: '\e62e'; } /* '' */
+.icon-i-fleche-bas:before { content: '\e62f'; } /* '' */
+.icon-i-fleche-deplacement:before { content: '\e630'; } /* '' */
+.icon-i-fleche-droite:before { content: '\e631'; } /* '' */
+.icon-i-fleche-droite-btn:before { content: '\e632'; } /* '' */
+.icon-i-fleche-gauche:before { content: '\e633'; } /* '' */
+.icon-i-fleche-gauche-btn:before { content: '\e634'; } /* '' */
+.icon-i-fleche-haut:before { content: '\e635'; } /* '' */
+.icon-i-fleche-haut-bas:before { content: '\e636'; } /* '' */
+.icon-i-fleche-tourne-gauche:before { content: '\e637'; } /* '' */
+.icon-i-gregorien:before { content: '\e638'; } /* '' */
+.icon-i-guillemet-ferme:before { content: '\e639'; } /* '' */
+.icon-i-guillement-ouvert:before { content: '\e63a'; } /* '' */
+.icon-i-hebreu:before { content: '\e63b'; } /* '' */
+.icon-i-heraldique:before { content: '\e63c'; } /* '' */
+.icon-i-horloge:before { content: '\e63d'; } /* '' */
+.icon-i-imprimer:before { content: '\e63e'; } /* '' */
+.icon-i-indien:before { content: '\e63f'; } /* '' */
+.icon-i-information:before { content: '\e640'; } /* '' */
+.icon-i-islamique:before { content: '\e641'; } /* '' */
+.icon-i-julien:before { content: '\e642'; } /* '' */
+.icon-i-legion:before { content: '\e643'; } /* '' */
+.icon-i-lettre:before { content: '\e644'; } /* '' */
+.icon-i-livre:before { content: '\e645'; } /* '' */
+.icon-i-logo-cadeau-com:before { content: '\e646'; } /* '' */
+.icon-i-loupe-droite:before { content: '\e647'; } /* '' */
+.icon-i-loupe-gauche:before { content: '\e648'; } /* '' */
+.icon-i-macaron-arbre-genea:before { content: '\e649'; } /* '' */
+.icon-i-macaron-marianne:before { content: '\e64a'; } /* '' */
+.icon-i-mariage:before { content: '\e64b'; } /* '' */
+.icon-i-marianne:before { content: '\e64c'; } /* '' */
+.icon-i-maya:before { content: '\e64d'; } /* '' */
+.icon-i-membres:before { content: '\e64e'; } /* '' */
+.icon-i-moustache:before { content: '\e64f'; } /* '' */
+.icon-i-news:before { content: '\e650'; } /* '' */
+.icon-i-no-voir:before { content: '\e651'; } /* '' */
+.icon-i-objectif-01:before { content: '\e652'; } /* '' */
+.icon-i-parfum:before { content: '\e653'; } /* '' */
+.icon-i-perse:before { content: '\e654'; } /* '' */
+.icon-i-perso:before { content: '\e655'; } /* '' */
+.icon-i-perso-tour:before { content: '\e656'; } /* '' */
+.icon-i-pile-livres:before { content: '\e657'; } /* '' */
+.icon-i-prelevement:before { content: '\e658'; } /* '' */
+.icon-i-punaise:before { content: '\e659'; } /* '' */
+.icon-i-r-arbre:before { content: '\e65a'; } /* '' */
+.icon-i-r-document:before { content: '\e65b'; } /* '' */
+.icon-i-r-enveloppe:before { content: '\e65c'; } /* '' */
+.icon-i-resistance-belge:before { content: '\e65d'; } /* '' */
+.icon-i-r-imprimer:before { content: '\e65e'; } /* '' */
+.icon-i-r-membres:before { content: '\e65f'; } /* '' */
+.icon-i-r-partage:before { content: '\e660'; } /* '' */
+.icon-i-r-rouage:before { content: '\e661'; } /* '' */
+.icon-i-statistique:before { content: '\e662'; } /* '' */
+.icon-i-supprimer-croix-01:before { content: '\e663'; } /* '' */
+.icon-i-supprimer-croix-02:before { content: '\e664'; } /* '' */
+.icon-i-telecharger-pdf:before { content: '\e666'; } /* '' */
+.icon-i-titre-arbre:before { content: '\e667'; } /* '' */
+.icon-i-titre-blason:before { content: '\e668'; } /* '' */
+.icon-i-titre-boussole:before { content: '\e669'; } /* '' */
+.icon-i-titre-boutique:before { content: '\e66a'; } /* '' */
+.icon-i-titre-bulle:before { content: '\e66b'; } /* '' */
+.icon-i-titre-bulle-3points:before { content: '\e66c'; } /* '' */
+.icon-i-titre-calendrier-15:before { content: '\e66d'; } /* '' */
+.icon-i-titre-chronique:before { content: '\e66e'; } /* '' */
+.icon-i-titre-livre-ouvert:before { content: '\e66f'; } /* '' */
+.icon-i-titre-loupe:before { content: '\e671'; } /* '' */
+.icon-i-titre-loupe-plus:before { content: '\e672'; } /* '' */
+.icon-i-titre-parchemin:before { content: '\e673'; } /* '' */
+.icon-i-titre-pile-livre:before { content: '\e674'; } /* '' */
+.icon-i-tombe:before { content: '\e675'; } /* '' */
+.icon-i-valide-01:before { content: '\e676'; } /* '' */
+.icon-i-viewer-ajout-membre:before { content: '\e678'; } /* '' */
+.icon-i-viewer-dossier-1:before { content: '\e679'; } /* '' */
+.icon-i-viewer-loupe-moins:before { content: '\e67a'; } /* '' */
+.icon-i-viewer-loupe-plus:before { content: '\e67b'; } /* '' */
+.icon-i-voir:before { content: '\e67c'; } /* '' */
+.icon-i-puce:before { content: '\e67d'; } /* '' */
+.icon-i-feuille-logo:before { content: '\e67e'; } /* '' */
+.icon-i-plus:before { content: '\e67f'; } /* '' */
+.icon-i-moins:before { content: '\e680'; } /* '' */
+.icon-i-r-document-vide:before { content: '\e681'; } /* '' */
+.icon-i-r-rouage-vide:before { content: '\e682'; } /* '' */
+.icon-i-telecharger-lien-web:before { content: '\e683'; } /* '' */
+.icon-i-parametre:before { content: '\e684'; } /* '' */
+.icon-i-macaron-100-garantie-1:before { content: '\e685'; } /* '' */
+.icon-i-cadeaux:before { content: '\e686'; } /* '' */
+.icon-i-question-1:before { content: '\e687'; } /* '' */
+.icon-i-desabonnement:before { content: '\e688'; } /* '' */
+.icon-i-zero-risque:before { content: '\e689'; } /* '' */
+.icon-i-dossier-loupe:before { content: '\e68a'; } /* '' */
+.icon-premium-badge:before { content: '\e800'; } /* '' */
+.icon-news:before { content: '\e8b3'; } /* '' */
+.icon-i-directions:before { content: '\e8b4'; } /* '' */
+.icon-i-reduction:before { content: '\e8b5'; } /* '' */
+.icon-i-alert-add:before { content: '\e8b6'; } /* '' */
+.icon-i-calc-relationship:before { content: '\e8b7'; } /* '' */
+.icon-i-relationship-no:before { content: '\e8b8'; } /* '' */
+.icon-i-tree:before { content: '\e8b9'; } /* '' */
+.icon-shield-check-f:before { content: '\e8bb'; } /* '' */
+.icon-baseline-mail:before { content: '\e8bd'; } /* '' */
+.icon-i-outline-file:before { content: '\e8be'; } /* '' */
+.icon-i-reglages:before { content: '\e900'; } /* '' */
+.icon-i-resultat-0:before { content: '\e901'; } /* '' */
+.icon-i-resultat-1:before { content: '\e902'; } /* '' */
+.icon-i-resultat-2:before { content: '\e903'; } /* '' */
+.icon-i-sosa:before { content: '\e904'; } /* '' */
+.icon-i-avatar-h-f-03:before { content: '\e905'; } /* '' */
+.icon-i-fanion:before { content: '\e906'; } /* '' */
+.icon-i-calendrier-vide:before { content: '\e907'; } /* '' */
+.icon-i-twitter:before { content: '\e908'; } /* '' */
+.icon-i-twitter-rond:before { content: '\e909'; } /* '' */
+.icon-i-rond-fleche-droite:before { content: '\e90a'; } /* '' */
+.icon-i-archive-num:before { content: '\e90c'; } /* '' */
+.icon-i-nouveaute:before { content: '\e90e'; } /* '' */
+.icon-arbre-ascendant-3:before { content: '\e90f'; } /* '' */
+.icon-arbre-classique:before { content: '\e910'; } /* '' */
+.icon-arbre-descendant-1:before { content: '\e911'; } /* '' */
+.icon-arbre-familial-1:before { content: '\e912'; } /* '' */
+.icon-arbre-fiche:before { content: '\e913'; } /* '' */
+.icon-double-caret:before { content: '\e914'; } /* '' */
+.icon-i-fleche-vide-bas:before { content: '\e915'; } /* '' */
+.icon-i-fb:before { content: '\e916'; } /* '' */
+.icon-i-fb-rond:before { content: '\e917'; } /* '' */
+.icon-i-facebook-f:before { content: '\e918'; } /* '' */
+.icon-i-piece-filae:before { content: '\e919'; } /* '' */
+.icon-i-cloche-sonne:before { content: '\e91a'; } /* '' */
+.icon-i-facebook-plein:before { content: '\e91b'; } /* '' */
+.icon-i-valide-02:before { content: '\e91c'; } /* '' */
+.icon-i-supprimer-croix-03:before { content: '\e91d'; } /* '' */
+.icon-i-valide-03:before { content: '\e91e'; } /* '' */
+.icon-i-hints:before { content: '\e91f'; } /* '' */
+.icon-i-hints-01:before { content: '\e920'; } /* '' */
+.icon-i-no-hints:before { content: '\e921'; } /* '' */
+.icon-i-guillemet-ferme_old:before { content: '\e951'; } /* '' */
+.icon-i-guillemet-ouvert_old:before { content: '\e953'; } /* '' */
+.icon-i-hints-02:before { content: '\e958'; } /* '' */
+.icon-i-sapin:before { content: '\e98b'; } /* '' */
+.icon-i-titre-livre:before { content: '\e99c'; } /* '' */
+.icon-i-twitter-rond-vide:before { content: '\e9a7'; } /* '' */
+.icon-i-outline-lock:before { content: '\ea31'; } /* '' */
+.icon-i-arrow-left:before { content: '\e6711'; } /* '\e6711' */
+.icon-i-arrow-right:before { content: '\e6712'; } /* '\e6712' */
+/////////////////////////////
+/*  FIN DE LA SECTION TYPO*/
+////////////////////////////
