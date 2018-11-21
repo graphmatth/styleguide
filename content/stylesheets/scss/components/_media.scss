@@ -1,0 +1,118 @@
+//////////////////////////////////
+/*  Bloc Media Filae : home page/landing page paywall 20%    */
+//////////////////////////////////
+
+.media-filae-title {
+    font-size: 16px;
+    color: $grey-01;
+    text-align: center;
+    margin-top: 30px;
+}
+.media-container {
+    display: block;
+    max-width: 980px;
+    margin: 20px auto 50px auto;
+    .media-filae {
+        width: 100%;
+        text-align: justify;
+        padding: 0 10px;
+        height: 94px;
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 100%;
+        }
+    }
+ 
+    .item {
+        display: inline-block;
+        text-align: center;
+    }
+
+    img {
+
+        &.tf1 {
+            width: 96px;
+        }
+
+        &.france-tv {
+            width: 144px;
+        }
+
+        &.m6 {
+            width: 56px;
+        }
+
+        &.bfm {
+            width: 48px;
+        }
+
+        &.le-parisien {
+            width: 104px;
+        }
+
+        &.rtl {
+            width: 60px;
+        }
+
+        &.france-inter {
+            width: 60px;
+        }
+
+        &.europe-1 {
+            width: 90px;
+        }
+    }
+
+
+    @media (max-width: 480px) {
+        img {
+            padding: 0 10px;
+
+            &.tf1 {
+                width: 60px;
+            }
+
+            &.france-tv {
+                width: 80px;
+            }
+
+            &.m6 {
+                width: 46px;
+            }
+
+            &.bfm {
+                width: 46px;
+            }
+
+            &.le-parisien {
+                width: 80px;
+            }
+
+            &.rtl {
+                width: 47px;
+            }
+
+            &.france-inter {
+                width: 45px;
+            }
+
+            &.europe-1 {
+                width: 73px;
+            }  
+        }
+    }
+
+    @media (max-width: 768px) {
+        .media-filae {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .item {
+            display: inline-block;
+            width: 24%;
+            margin-bottom: 20px;
+        }
+    }
+}

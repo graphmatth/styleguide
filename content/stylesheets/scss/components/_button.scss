@@ -1,0 +1,235 @@
+
+// reset Bootstrap
+.btn:focus, .btn:active, .btn:active:focus,.bootstrap-select .dropdown-toggle:focus, *:focus  {
+    outline: 0 !important;
+    outline-width: 0px !important;
+    @include box-shadow(none);
+}
+.modal-footer .btn {
+    white-space: normal;
+}
+.btn {
+    @include border-radius(22px);
+
+    i{
+        vertical-align: top;
+    }
+}
+.btn-large {
+    font-size: 17px;
+    @include border-radius(40px);
+    padding: 10px 19px;
+}
+.btn-small {
+    font-size: 14px;
+    @include border-radius(40px);
+    padding: 6px 11px;
+    line-height: 20px;
+}
+.btn-action {
+    background-color: $coral !important;
+    border: 1px solid $coral;
+    color: $white;
+    white-space: normal;
+    &.free-trial {
+        padding: 8px 19px;
+        height: 48px;
+        font-size: 20px;
+        display: table;
+        border-radius: 24px;
+        span,
+        i {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+}
+.btn-action:hover, .btn-action:focus {
+    background-color: #f35a5b !important;
+    color: $white;
+    border: 1px solid $coral;
+}
+.btn-default {
+    background-color: transparent;
+    border: 1px solid $light-indigo;
+    color: $light-indigo;
+}
+.btn-default:hover, .btn-default:focus {
+    background-color: transparent !important;
+    color: $coral;
+    border: 1px solid $coral;
+}
+.btn-action-bkgd {
+    background-color: $white;
+    border: 1px solid $white;
+    color: $coral;
+}
+.btn-action-bkgd:hover, .btn-action-bkgd:focus {
+    background-color: rgba(255,  255,  255,  0.9) !important;
+    color: $coral;
+    border: 1px solid rgba(255,  255,  255,  0.9);
+}
+.btn-default-bkgd {
+    background-color: transparent;
+    border: 1px solid $white;
+    color: $white;
+}
+.btn-default-bkgd:hover, .btn-default-bkgd:focus {
+    background-color: $white !important;
+    color: $coral;
+    border: 1px solid $white;
+}
+span.title-connexion {
+    margin-bottom: 26px;
+    font-size: 36px;
+    margin-top: 20px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    margin: .67em 0;
+    display: block;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+.btn-opacity {
+    opacity: 0.5;
+}
+.btn-action.disabled, .btn-danger.disabled {
+    color: $white;
+}
+.btn-secondary{
+    background: $indigo;
+    color: $white;
+
+    &:hover{
+        background: darken( $indigo, 10% );
+        color: $white;
+    }
+} 
+
+// Button with caret
+.btn-caret-container {
+    @include flexbox;
+    @include align-items(flex-end);
+    @include justify-content(center);
+    .btn-caret {
+        @include flexbox;
+        @include align-items(flex-end);
+        @include justify-content(center);
+        background-color: $coral !important;
+        border: 1px solid $coral;
+        color: $white;
+        white-space: normal;
+        border-radius: 40px;
+        padding: 10px 19px;
+        
+
+        span {
+            margin-left: auto;
+            font-size: 17px;
+
+        }
+        i {
+            @include flexbox;
+            @include align-items(center);  
+            margin-left: auto;
+            font-size: 24px;
+        }
+    }
+
+}
+
+.link-white {
+    color: $white;
+    &:hover {
+        color: $white;
+        text-decoration: underline;
+    }
+}
+
+
+.btn-abo {
+    white-space: nowrap;
+}
+
+
+a.back-to-top {
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    z-index: 999;
+    right: 28px;
+    bottom: 90px;
+    background: $coral;
+    @include border-radius(50px);
+    border: none;
+}
+a:hover.back-to-top {
+    background-color: #d34243;
+}
+a.back-to-top i {
+    color: $white;
+    font-size: 50px;
+}
+
+
+// PAGINATION 
+
+//------------ pagination de tableau
+.pagination-table{
+    display: inline-block;
+    width: 100%;
+    height: 44px;
+    margin-top: 10px;
+    @media (max-width: 991px) {
+        height:auto;
+        margin-top:0;
+        padding: 10px 0 14px 0;
+    }
+
+    &:after {
+        display: block;
+        content: '';
+        clear: left;
+    }
+
+    div{
+        margin: 0 !important;
+        line-height: 44px;
+        @media (max-width: 991px) {
+            line-height: 25px;
+        }
+
+        &.simple_numbers_no_ellipses{
+            line-height: inherit;
+        }
+    }
+    
+}
+
+// button with animation
+.btn-flipper{
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 0.5s;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { /* IE10 et IE11 */
+        display:block;
+    }
+
+    &.flipped {
+        -webkit-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { /* IE10 et IE11 */
+            display:none;
+        }
+    }
+
+    .btn {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+}

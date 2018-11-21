@@ -1,0 +1,40 @@
+@import '../../../helpers/variables';
+@import '../../../helpers/mixin/_mixin';
+
+#popup-1erdoc.first-doc {
+
+    .cache-img-consult {
+        .close {
+            text-shadow: none;
+            display: block;
+            i {
+                background-color: $indigo;
+                font-size: 16px;
+                padding: 2px;
+            }
+        }
+
+        .close-end {
+            display: none;
+        }
+    }
+
+    .new-modal-dialog {
+        .modal-header {
+            padding-bottom: 0;
+            .individu-name {
+                color: $indigo;
+            }
+        }
+    }
+
+    .btn {
+        font-weight: 700;
+    }
+}
+#popup-1erdoc {
+    #congratulationsText {
+        padding: 35px 0 35px 0;
+        line-height: inherit !important;
+    }
+}

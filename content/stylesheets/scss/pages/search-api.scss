@@ -1,0 +1,314 @@
+@import '../helpers/_variables';
+@import '../helpers/mixin/_mixin';
+
+
+#search-api-container {
+    // SEARCH BLOC ON STORM BG
+    .recherche {
+        color: $white;
+        height: auto !important;
+        padding-bottom: 0;
+
+        .search-api-title {
+            text-align:center;
+            font-size: 42px;
+            margin-top: 40px;
+        }
+    
+        .search-api-subtitle {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 400;
+            color: $white;
+        }
+
+        .search-api-tips {
+            font-size: 17px;
+            text-align: center;
+            margin-top: 45px;
+            display: block;
+            width: 100%;
+        }
+
+        .btn.btn-action.btn-large {
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+    }
+
+    // CIVIL STATUS SECTION
+    .archives {
+        .archives-title {
+            text-align:center;
+            font-size: 38px;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+
+        .archives-subtitle {
+            font-size: 17px;
+        }
+
+        .portable-viewer {
+            width: 50%;
+            margin: 0 auto;
+            display: block;
+            margin-top: 50px;
+        }
+        .map-section {
+            @include flexbox; 
+            @include flex(0,1,auto); 
+            margin-top: 30px;
+            &-02 {
+                margin-top: 110px;
+            }
+            @media screen and (max-width: $break-medium) {
+                position: relative;
+                margin: 0 auto;
+                width: 100%;
+                display: block;
+            }
+            .bloc-stat-container {
+                @include flexbox; 
+                @include flex-direction(column);
+                @include justify-content(space-between);
+                text-align: center;
+                width: 33%;
+                .stat-container {
+                    font-size: 20px;
+                    .stat-bloc {
+                        text-align: center;
+                        font-weight: bold;
+                        .number-recensement {
+                            color: $coral;
+                            text-align: center;
+                        }
+                        .legend-number {
+                        color: $storm;
+                        }
+                    }
+    
+                    .separator-bloc {
+                        border-top: 2px solid $storm;
+                        width: 50px;
+                        margin: 20px auto;
+                        display: block;
+                    }
+                }
+    
+                .year {
+                    color: $coral;
+                    font-size: 70px;
+                    img {
+                        width: 30%;
+                        max-width: 112px;
+                        align-content:center;
+                        margin-left: 0px;
+                        margin-top:50px;
+                        @media all and (max-width: 767px) {
+                            width: 25%;
+                            margin-bottom:50px;
+                        }
+                    }
+                }
+    
+                .legend-map {
+                    @include flexbox;
+                    @include align-items(center);
+                    @include justify-content(flex-start);
+    
+                    @media screen and (max-width: $break-medium) {
+                        padding: 30px;
+                    }
+                    .color-legend {
+                        width: 25px;
+                        height: 25px;
+                        display: inline-block;
+                        background-color: $coral;
+                        border: 2px solid $coral-light; 
+                        margin-right: $spacing;
+    
+                        &.year-02 {
+                            margin-left: $spacing;
+                            background-color: $grey-04;
+                        }
+                        &.year-03 {
+                            margin-left: $spacing;
+                            background-color: $grey-05;
+                        }
+                    }
+                }
+                @media screen and (max-width: $break-medium) {
+                    position: relative;
+                    margin: 0 auto;
+                    width: 100%;
+                    display: block;
+                }
+    
+            }
+            .map-container {
+                width: 67%;
+                .map {
+                    display: block;
+                    margin: 0 auto;
+                    width: 90%;
+                    @media screen and (max-width: $break-medium) {
+                        width: 75%;
+                    }                
+                }
+                @media screen and (max-width: $break-medium) {
+                    position: relative;
+                    width: 100%;
+                    display: block;
+                }
+    
+            }
+        }
+    
+    }
+       
+        h4 {
+            color: $coral;
+            font-weight: 700;
+            font-size: 16px;
+            margin-top: 0;
+            margin-bottom: 5px;
+          }
+    
+          h4 + p {
+            font-size: 14px !important;
+          }
+          .box-stat-title {
+            color: $storm;
+            font-size: 20px;
+          }
+          .box-stat-container {
+            margin-top: 30px;
+            .name-container {
+              font-weight: 500;
+            }
+            .box-stat-title {
+              &.ortho-title {
+                margin-top: 35px;
+              }
+            }
+            .born-number-container {
+              background-color: #f0f1f3;
+              padding-top: 20px;
+              padding-bottom: 20px;
+              .born-number {
+                color: $coral;
+                font-size: 30px;
+              }
+              .born-text {
+                color: $storm;
+                font-size: 16px;
+              }
+              .period {
+                color: #1e1e1e;
+              }
+              .born-img {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+              }
+              .born-legend {
+                font-weight: lighter;
+                margin-bottom: 15px;
+                font-size: 12px;
+              }
+              .lastnameDetailsFlash {
+                object {
+                  width: 100%;
+                }
+              }
+            }
+      
+            .line-rank {
+              @include flexbox; 
+              a {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+      
+              div {
+                white-space: nowrap;
+              }
+            }
+          }
+        .source-title {
+          line-height: 1.4;
+          color: $black-02;
+        }
+        .bloc-source-explanation {
+          font-size: 20px;
+          text-align: center;
+          color: $storm;
+          line-height: 28px;
+          margin-top: 45px;
+          margin-bottom: 35px;
+         }
+        .source-text {
+          width: 75%;
+          margin-bottom: 0;
+          @media (min-width: 768px) {
+              width: 100%;
+          }
+        }
+        .bloc-source-container {
+          margin: 0px -15px 0px -15px;
+          .bloc-source {
+            margin: 0 0 15px 0;
+            img {
+                width: auto;
+                max-width: 100%;
+                margin: 0 auto;
+                display: block;
+                
+                @media all and (min-width: 600px) and (max-width: 767px) {
+                    height: 68px;
+                    width: auto;
+                }
+
+            }
+          }
+        }
+
+    .cta-search {
+        margin-top: 20px;
+        .btn-text-center {
+            @include flexbox;
+            @include align-items(flex-end);
+            @include justify-content(center);
+            margin-top: 20px;
+
+            .btn-action {
+                @include flexbox; 
+                @include justify-content(center);
+                @include align-items(flex-end);
+                span {
+                white-space: nowrap;
+                }
+
+                i {
+                    margin-right: -6px;
+                }
+        
+            }
+        }
+    }
+
+    .quote-search {
+        margin: 60px 0 80px 0px;
+    }
+
+
+    @media (max-width: 480px) {
+        .text-center {
+            text-align: center;
+        }
+    }
+}
+

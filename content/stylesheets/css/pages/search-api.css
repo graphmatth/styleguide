@@ -1,0 +1,287 @@
+/*Corail*/
+/*Bleu orage*/
+/*Vert => couleur complementaire corail*/
+/*btn */
+/* Liens */
+/* Typo */
+#search-api-container .recherche {
+  color: #FFF;
+  height: auto !important;
+  padding-bottom: 0; }
+  #search-api-container .recherche .search-api-title {
+    text-align: center;
+    font-size: 42px;
+    margin-top: 40px; }
+  #search-api-container .recherche .search-api-subtitle {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFF; }
+  #search-api-container .recherche .search-api-tips {
+    font-size: 17px;
+    text-align: center;
+    margin-top: 45px;
+    display: block;
+    width: 100%; }
+  #search-api-container .recherche .btn.btn-action.btn-large {
+    margin-top: 10px;
+    margin-bottom: 40px; }
+#search-api-container .archives .archives-title {
+  text-align: center;
+  font-size: 38px;
+  margin-top: 20px;
+  margin-bottom: 5px; }
+#search-api-container .archives .archives-subtitle {
+  font-size: 17px; }
+#search-api-container .archives .portable-viewer {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+  margin-top: 50px; }
+#search-api-container .archives .map-section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -moz-box-flex: 0;
+  -moz-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  margin-top: 30px; }
+  #search-api-container .archives .map-section-02 {
+    margin-top: 110px; }
+  @media screen and (max-width: 767px) {
+    #search-api-container .archives .map-section {
+      position: relative;
+      margin: 0 auto;
+      width: 100%;
+      display: block; } }
+  #search-api-container .archives .map-section .bloc-stat-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    text-align: center;
+    width: 33%; }
+    #search-api-container .archives .map-section .bloc-stat-container .stat-container {
+      font-size: 20px; }
+      #search-api-container .archives .map-section .bloc-stat-container .stat-container .stat-bloc {
+        text-align: center;
+        font-weight: bold; }
+        #search-api-container .archives .map-section .bloc-stat-container .stat-container .stat-bloc .number-recensement {
+          color: #FF5555;
+          text-align: center; }
+        #search-api-container .archives .map-section .bloc-stat-container .stat-container .stat-bloc .legend-number {
+          color: #222255; }
+      #search-api-container .archives .map-section .bloc-stat-container .stat-container .separator-bloc {
+        border-top: 2px solid #222255;
+        width: 50px;
+        margin: 20px auto;
+        display: block; }
+    #search-api-container .archives .map-section .bloc-stat-container .year {
+      color: #FF5555;
+      font-size: 70px; }
+      #search-api-container .archives .map-section .bloc-stat-container .year img {
+        width: 30%;
+        max-width: 112px;
+        align-content: center;
+        margin-left: 0px;
+        margin-top: 50px; }
+        @media all and (max-width: 767px) {
+          #search-api-container .archives .map-section .bloc-stat-container .year img {
+            width: 25%;
+            margin-bottom: 50px; } }
+    #search-api-container .archives .map-section .bloc-stat-container .legend-map {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      align-items: center;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      -webkit-justify-content: flex-start;
+      -moz-justify-content: flex-start;
+      justify-content: flex-start; }
+      @media screen and (max-width: 767px) {
+        #search-api-container .archives .map-section .bloc-stat-container .legend-map {
+          padding: 30px; } }
+      #search-api-container .archives .map-section .bloc-stat-container .legend-map .color-legend {
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        background-color: #FF5555;
+        border: 2px solid #fadcdc;
+        margin-right: 10px; }
+        #search-api-container .archives .map-section .bloc-stat-container .legend-map .color-legend.year-02 {
+          margin-left: 10px;
+          background-color: #6a7787; }
+        #search-api-container .archives .map-section .bloc-stat-container .legend-map .color-legend.year-03 {
+          margin-left: 10px;
+          background-color: #a2a9b4; }
+    @media screen and (max-width: 767px) {
+      #search-api-container .archives .map-section .bloc-stat-container {
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        display: block; } }
+  #search-api-container .archives .map-section .map-container {
+    width: 67%; }
+    #search-api-container .archives .map-section .map-container .map {
+      display: block;
+      margin: 0 auto;
+      width: 90%; }
+      @media screen and (max-width: 767px) {
+        #search-api-container .archives .map-section .map-container .map {
+          width: 75%; } }
+    @media screen and (max-width: 767px) {
+      #search-api-container .archives .map-section .map-container {
+        position: relative;
+        width: 100%;
+        display: block; } }
+#search-api-container h4 {
+  color: #FF5555;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 5px; }
+#search-api-container h4 + p {
+  font-size: 14px !important; }
+#search-api-container .box-stat-title {
+  color: #222255;
+  font-size: 20px; }
+#search-api-container .box-stat-container {
+  margin-top: 30px; }
+  #search-api-container .box-stat-container .name-container {
+    font-weight: 500; }
+  #search-api-container .box-stat-container .box-stat-title.ortho-title {
+    margin-top: 35px; }
+  #search-api-container .box-stat-container .born-number-container {
+    background-color: #f0f1f3;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    #search-api-container .box-stat-container .born-number-container .born-number {
+      color: #FF5555;
+      font-size: 30px; }
+    #search-api-container .box-stat-container .born-number-container .born-text {
+      color: #222255;
+      font-size: 16px; }
+    #search-api-container .box-stat-container .born-number-container .period {
+      color: #1e1e1e; }
+    #search-api-container .box-stat-container .born-number-container .born-img {
+      display: block;
+      margin: 0 auto;
+      width: 100%; }
+    #search-api-container .box-stat-container .born-number-container .born-legend {
+      font-weight: lighter;
+      margin-bottom: 15px;
+      font-size: 12px; }
+    #search-api-container .box-stat-container .born-number-container .lastnameDetailsFlash object {
+      width: 100%; }
+  #search-api-container .box-stat-container .line-rank {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    #search-api-container .box-stat-container .line-rank a {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    #search-api-container .box-stat-container .line-rank div {
+      white-space: nowrap; }
+#search-api-container .source-title {
+  line-height: 1.4;
+  color: #303f4c; }
+#search-api-container .bloc-source-explanation {
+  font-size: 20px;
+  text-align: center;
+  color: #222255;
+  line-height: 28px;
+  margin-top: 45px;
+  margin-bottom: 35px; }
+#search-api-container .source-text {
+  width: 75%;
+  margin-bottom: 0; }
+  @media (min-width: 768px) {
+    #search-api-container .source-text {
+      width: 100%; } }
+#search-api-container .bloc-source-container {
+  margin: 0px -15px 0px -15px; }
+  #search-api-container .bloc-source-container .bloc-source {
+    margin: 0 0 15px 0; }
+    #search-api-container .bloc-source-container .bloc-source img {
+      width: auto;
+      max-width: 100%;
+      margin: 0 auto;
+      display: block; }
+      @media all and (min-width: 600px) and (max-width: 767px) {
+        #search-api-container .bloc-source-container .bloc-source img {
+          height: 68px;
+          width: auto; } }
+#search-api-container .cta-search {
+  margin-top: 20px; }
+  #search-api-container .cta-search .btn-text-center {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    -webkit-align-items: flex-end;
+    -moz-align-items: flex-end;
+    align-items: flex-end;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    margin-top: 20px; }
+    #search-api-container .cta-search .btn-text-center .btn-action {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      -webkit-align-items: flex-end;
+      -moz-align-items: flex-end;
+      align-items: flex-end; }
+      #search-api-container .cta-search .btn-text-center .btn-action span {
+        white-space: nowrap; }
+      #search-api-container .cta-search .btn-text-center .btn-action i {
+        margin-right: -6px; }
+#search-api-container .quote-search {
+  margin: 60px 0 80px 0px; }
+@media (max-width: 480px) {
+  #search-api-container .text-center {
+    text-align: center; } }
+
+/*# sourceMappingURL=search-api.css.map */

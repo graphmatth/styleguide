@@ -1,0 +1,51 @@
+/////////////////////////
+///// Home connected////
+///////////////////////
+
+
+/////////// Custom styles for the form search on home connected
+.bloc-contenu-search-home {
+    margin-bottom: $spacing-large;
+    padding: $spacing-medium;
+}
+
+.formulaire-recherche {
+    // Add margin bottom on add spouse link
+    @media (min-width: 768px) {
+        .plusoptions {
+            &.step-5 {
+                margin-bottom: $spacing;
+            }
+        }
+    }
+
+    // Change width column bootstrap for the search form
+    @media (min-width: 992px) {
+        .col-md-11 {
+            &.left-search {
+                width: 93.66666667%;
+            }
+        }
+    
+        .col-md-1 {
+            &.right-search {
+                width: 6.33333333%;
+            }
+        }
+    }
+
+     // submmit buton search home connected
+    .submit-container {
+        padding-left: $spacing;
+        #validate {
+            padding: 0;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+
+            i{
+                top:3px;
+            }
+        }
+    }
+}

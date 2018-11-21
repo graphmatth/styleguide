@@ -1,0 +1,1130 @@
+
+/*---------------------------------- Navigation classique */
+.arbre-classique, .arbre-descendant {
+    font-family: "Lato",  sans-serif;
+    margin-bottom: 40px;
+}
+.arbre-classique .individu {
+    border-bottom: 1px solid $grey-01;
+    margin-bottom: 10px;
+}
+.arbre-classique .individu h1 {
+    float: left;
+    margin: 0 0 10px -16px;
+    font-size: 30px;
+}
+.arbre-classique .individu h1 span+span {
+    font-weight: normal;
+    font-size: 18px;
+    margin: 0 0 0 10px;
+}
+.arbre-classique .individu h1 span+span+span {
+    font-weight: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $white;
+    padding: 2px 10px 2px 10px;
+    background: $grey-01;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    margin: 0 0 0 10px;
+}
+.arbre-classique .individu h1 span+span+span.femme {
+    background: #f99;
+}
+.arbre-classique .individu h1 span+span+span.homme {
+    background: #9cc;
+}
+.arbre-classique .individu a {
+    color: $grey-02;
+    float: right;
+    margin: 0 -16px 0 0;
+}
+.arbre-classique .individu a:hover {
+    color: $coral;
+}
+
+/*----- Onglets Evènements, Documents, Notes --- */
+.arbre-classique .document-individu {
+    background: $white;
+    border: 1px solid $grey-02;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin: 40px 0 0 0;
+}
+.arbre-classique .document-individu .nav-tabs>li {
+    width: 33.3333%;
+    text-align: center;
+    font-size: 15px;
+}
+.arbre-classique .document-individu .nav-tabs>li>a {
+    border-color: transparent $white transparent transparent;
+    color: $black;
+    background: rgba(213,  216,  218,  0.7);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    padding: 14px 0px 14px 0px;
+    margin-right: 0;
+    padding-left: 5px;
+}
+.arbre-classique .document-individu .nav-tabs>li>a:hover {
+    text-decoration: none;
+    background: rgba(213,  216,  218,  0.6);
+}
+.arbre-classique .document-individu .nav-tabs>li:last-child>a {
+    border-color: transparent transparent transparent transparent;
+}
+.arbre-classique .document-individu .nav-tabs>li.active>a, .arbre-classique .document-individu .nav-tabs>li.active>a:focus, .arbre-classique .document-individu .nav-tabs>li.active>a:hover {
+    border-color: transparent $grey-02 transparent transparent;
+    color: $black;
+    background: $white;
+}
+.arbre-classique .document-individu .nav-tabs>li.active:last-child>a, .arbre-classique .document-individu .nav-tabs>li.active:last-child>a:focus, .arbre-classique .document-individu .nav-tabs>li.active:last-child>a:hover {
+    border-color: transparent transparent transparent transparent;
+    text-decoration: none;
+}
+.arbre-classique .document-individu .nav-tabs {
+    border: 0;
+    margin: 0 -15px 17px -15px;
+}
+
+/*--- Onglet Evènements --*/
+.arbre-classique .document-individu .timeline li .timeline-badge {
+    height: 20px;
+    width: 20px;
+}
+.arbre-classique .document-individu .timeline li:before {
+    left: 10px;
+}
+.arbre-classique .document-individu .timeline li .timeline-panel {
+    left: 18px;
+    width: 100%}
+.arbre-classique .document-individu .timeline .timeline-info {
+    display: inline-block;
+    vertical-align: top;
+}
+.arbre-classique .document-individu .timeline-title {
+    width: 85%}
+.arbre-classique .document-individu a {
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+.arbre-classique .document-individu a:hover {
+    text-decoration: underline;
+}
+.arbre-classique .document-individu a i {
+    color: $grey-02;
+    font-size: 24px;
+}
+.arbre-classique .document-individu a+a i {
+    color: $white;
+    font-size: 44px;
+}
+.arbre-classique .document-individu .timeline-info p a i {
+    background: none;
+    color: $indigo;
+    float: inherit;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+.arbre-classique .document-individu a:hover i {
+    opacity: 0.8;
+}
+.arbre-classique .document-individu h3 a i {
+    color: $indigo;
+    background: none;
+    float: inherit;
+    font-size: 18px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+.arbre-classique .document-individu h3 a:hover i {
+    color: $indigo;
+}
+.arbre-classique .document-individu a.fiche-complete {
+    background: $white;
+    border-top: 1px solid $grey-02;
+    display: inherit;
+    margin: 13px -15px 0 -15px;
+    padding: 16px 10px;
+    text-align: center;
+    color: $black;
+    font-size: 15px;
+}
+.arbre-classique .document-individu a.fiche-complete:hover {
+    background: rgba(213,  216,  218,  0.7);
+    color: $black;
+    text-decoration: none;
+}
+.arbre-classique .document-individu .dropdown-menu>li>a {
+    color: $black;
+}
+.arbre-classique .document-individu .dropdown-menu>li>a:hover {
+    color: $coral;
+    text-decoration: none;
+}
+
+/* --- Onglet Documents -- */
+.arbre-classique .document-individu .fiche-arbre-document i.icon-i-piece-filae {
+    font-size: 44px;
+    padding: 20px 0 0 15px;
+}
+.arbre-classique .document-individu .fiche-arbre-document a:hover i.icon-i-piece-filae {
+    color: $grey-02;
+}
+.arbre-classique .document-individu .fiche-arbre-document i.icon-note {
+    font-size: 44px;
+    padding: 17px 0 0 24px;
+}
+.arbre-classique .document-individu .fiche-arbre-document a:hover i.icon-note {
+    color: $grey-02;
+}
+.arbre-classique .document-individu #document nav {
+    text-align: center;
+}
+.arbre-classique .document-individu .classement-doc li i {
+    font-size: 18px;
+}
+
+/* --- Branches -- */
+.arbre-classique .branche-arbre-classique .remonter {
+    text-align: center;
+    height: 39px;
+}
+.arbre-classique .branche-arbre-classique .remonter i {
+    background: $grey-02;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 31px;
+    color: $storm;
+}
+.arbre-classique .branche-arbre-classique .remonter a:hover i {
+    background: rgba(129,  138,  145,  0.7);
+}
+.arbre-classique .branche-arbre-classique .generation-3 ul li {
+    border-top: 1px solid $grey-02;
+    border-left: 1px solid $grey-02;
+    border-right: 1px solid $grey-02;
+    border-bottom: 0;
+    padding: 3px 5px 1px;
+    background: $white;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    position: relative;
+    height: 27px;
+}
+.arbre-classique .branche-arbre-classique .generation-3 ul li+li {
+    border-top: 1px solid $grey-02;
+    border-left: 1px solid $grey-02;
+    border-right: 1px solid $grey-02;
+    border-bottom: 1px solid $grey-02;
+    padding: 3px 5px 1px;
+    -webkit-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-topright: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.arbre-classique .branche-arbre-classique .generation-3 ul li+li.inconnu {
+    border-top: 2px dashed $grey-02;
+    border-bottom: 2px dashed $grey-02;
+}
+.arbre-classique .branche-arbre-classique .generation-3 ul li.inconnu {
+    border-top: 2px dashed $grey-02;
+    border-left: 2px dashed $grey-02;
+    border-right: 2px dashed $grey-02;
+    border-bottom: 0;
+    padding: 0;
+    background: $white;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    height: 27px;
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+}
+.arbre-classique .branche-arbre-classique .generation-3 ul li.inconnu+li.inconnu {
+    border-top: 2px dashed $grey-02;
+    border-left: 2px dashed $grey-02;
+    border-right: 2px dashed $grey-02;
+    border-bottom: 2px dashed $grey-02;
+    padding: 3px 5px 0px;
+    -webkit-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-topright: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/* Chrome */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    .arbre-classique .branche-arbre-classique .generation-3 ul li.inconnu {
+        padding: 3px 5px 1px;
+    }
+    .arbre-classique .branche-arbre-classique .generation-3 ul li.inconnu+li.inconnu {
+        padding: 3px 5px 1px;
+    }
+}
+
+@media screen and (min-width: 0\0) {
+    .arbre-classique .branche-arbre-classique .generation-3 ul li.inconnu {
+        padding: 4px 5px 1px;
+    }
+
+    .arbre-classique .branche-arbre-classique .generation-3 ul li.inconnu+li.inconnu {
+        padding: 3px 5px 1px;
+    }
+}
+
+.arbre-classique .branche-arbre-classique .generation-3 ul li.inconnu+li {
+    border-top: 2px dashed $grey-02;
+}
+
+.arbre-classique .branche-arbre-classique .generation-3 ul li:hover {
+    background: rgba(213,  216,  218,  0.4);
+}
+
+.arbre-classique .branche-arbre-classique .generation-3 li span.cercle {
+    height: 18px;
+    width: 18px;
+    border: 3px solid $grey-01;
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.arbre-classique .branche-arbre-classique .generation-3 li span.cercle.homme {
+    border: 3px solid #9cc;
+}
+
+.arbre-classique .branche-arbre-classique .generation-3 li span.cercle.femme {
+    border: 3px solid #f99;
+}
+
+.arbre-classique .branche-arbre-classique .generation-3 li i {
+    font-size: 15px;
+    color: $storm;
+    float: right;
+}
+
+.arbre-classique .branche-arbre-classique .generation-3 li p {
+    display: inline-block;
+    margin: 0 0 0 5px;
+    max-width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+.arbre-classique .branche-arbre-classique .generation-3 li a {
+    color: $black;
+    display: block;
+}
+
+.arbre-classique .branche-arbre-classique .generation-3 li a .top-hints-container {
+    top: -5px;
+    left: -5px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+}
+
+.arbre-classique .branche-arbre-classique .generation-3 li:hover {
+    background: rgba(213,  216,  218,  0.4);
+}
+
+.arbre-classique .branche-arbre-classique .generation-3 li p span {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.arbre-classique .branche-arbre-classique .generation-3 li .ajout {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: normal;
+    margin: -3px 0 0 0;
+    max-width: inherit;
+    text-align: center;
+}
+
+.arbre-classique .branche-arbre-classique .generation-3 li a:hover, .arbre-classique .branche-arbre-classique .generation-3 li a:focus {
+    text-decoration: none;
+}
+
+.arbre-classique .branche-arbre-classique .generation-3 li:first-child .ajout {
+    margin: -2px 0 0 0;
+}
+
+.arbre-classique .branche-arbre-classique .generation-3 li .ajout.femme {
+    color: $women-color-dark;
+}
+
+.arbre-classique .branche-arbre-classique .generation-3 li .ajout.homme {
+    color: #9cc;
+}
+
+.arbre-classique .branche-arbre-classique .generation-2 {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid $grey-02;
+    background: $white;
+
+    position: relative;
+}
+
+.arbre-classique .branche-arbre-classique .generation-2.inconnu {
+    border: 2px dashed $grey-02;
+    padding: 6px 5px 4px;
+    height: 71px;
+}
+
+.arbre-classique .branche-arbre-classique .generation-2.inconnu-consult .ajout {
+    font-size: 32px;
+    margin: 7px 0 13px 0;
+}
+
+.arbre-classique .branche-arbre-classique .generation-2 .lien {
+    height: 1px;
+    width: 9px;
+    position: absolute;
+    right: -10px;
+    background-color: $grey-01;
+    top: 50%;
+}
+
+.arbre-classique .branche-arbre-classique .row div+div .generation-2 .lien {
+    height: 1px;
+    width: 9px;
+    position: absolute;
+    left: -10px;
+    background-color: $grey-01;
+    top: 50%}
+.arbre-classique .branche-arbre-classique .generation-2 a {
+    text-decoration: none;
+    color: $black;
+    display: block;
+    padding: 10px 5px 4px;
+}
+.arbre-classique .branche-arbre-classique .generation-2:hover {
+    background: rgba(213,  216,  218,  0.4);
+}
+.arbre-classique .branche-arbre-classique .generation-2 .profil {
+    height: 48px;
+    margin: auto;
+    width: 48px;
+    float: left;
+}
+.arbre-classique .branche-arbre-classique .generation-2 .profil.image img {
+    height: 48px;
+    width: 48px;
+    border-width: 3px;
+}
+.arbre-classique .branche-arbre-classique .generation-2 .profil .initiale {
+    color: $white;
+    font-weight: 400;
+    font-size: 19px;
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+.arbre-classique .branche-arbre-classique .generation-2 .profil i {
+    background: $white;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    color: $storm;
+    float: right;
+    font-size: 14px;
+    margin: -6px 0 0;
+    padding: 3px;
+    position: relative;
+}
+.arbre-classique .branche-arbre-classique .generation-2 .profil img+i {
+    margin: -17px 0 0;
+}
+.arbre-classique .branche-arbre-classique .generation-2 .info-perso {
+    display: inline-block;
+    margin: 0 0 0 6px;
+    width: 61%;
+    height: 50px;
+    position: relative;
+}
+.arbre-classique .branche-arbre-classique .generation-2 .info-perso div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%}
+.arbre-classique .branche-arbre-classique .generation-2 .info-perso p {
+    margin: 0;
+    font-size: 12px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+}
+.arbre-classique .branche-arbre-classique .generation-2 .info-perso p+p {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.arbre-classique .branche-arbre-classique .generation-2 .info-perso p+p+p {
+    font-size: 11px;
+    font-style: italic;
+    font-weight: normal;
+    text-transform: inherit;
+}
+.arbre-classique .branche-arbre-classique .generation-2 .info-perso p:last-child {
+    text-transform: none;
+    font-weight: normal;
+}
+.arbre-classique .branche-arbre-classique .generation-2 .ajout {
+    display: block;
+    font-size: 51px;
+    font-weight: bold;
+    line-height: 1.1;
+    margin: -6px 0 6px 0;
+    max-width: inherit;
+    text-align: center;
+}
+.arbre-classique .branche-arbre-classique .generation-2 .ajout.femme {
+    color: $women-color-dark;
+}
+.arbre-classique .branche-arbre-classique .generation-2 .ajout.homme {
+    color: #9cc;
+}
+.arbre-classique .branche-arbre-classique .lien-generation-3 {
+    height: 31px;
+    width: 1px;
+    margin: 4px auto 0;
+    background: $grey-01;
+}
+.arbre-classique .branche-arbre-classique .lien-generation-3:before {
+    content: "\e67d";
+    font-family: "icomoon";
+    font-size: 7.5px;
+    left: -3px;
+    position: relative;
+    top: -10px;
+    vertical-align: top;
+    color: $grey-01;
+}
+.arbre-classique .branche-arbre-classique .generation-1 {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid $grey-02;
+    background: $white;
+    padding: 17px 14px 10px 14px;
+    position: relative;
+}
+.arbre-classique .branche-arbre-classique .generation-1.inconnu {
+    border: 2px dashed $grey-02;
+    padding: 16px 14px 10px 14px;
+    cursor: pointer;
+}
+.arbre-classique .branche-arbre-classique .generation-1.inconnu-consult .ajout {
+    font-size: 50px;
+    margin: 9px 0 10px 0;
+}
+.arbre-classique .branche-arbre-classique .generation-1 .profil {
+    float: left;
+    height: 66px;
+    margin: auto 0;
+    width: 66px;
+}
+.arbre-classique .branche-arbre-classique .generation-1 .profil.image img {
+    height: 66px;
+    width: 66px;
+    border-width: 4px;
+}
+.arbre-classique .branche-arbre-classique .generation-1 .info-perso {
+    display: inline-block;
+    margin: 0 0 0 11px;
+    width: 65%;
+    height: 70px;
+    position: relative;
+}
+.arbre-classique .branche-arbre-classique .generation-1 .info-perso div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%}
+.arbre-classique .branche-arbre-classique .generation-1 .info-perso p {
+    font-size: 16px;
+    margin: 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.arbre-classique .branche-arbre-classique .generation-1 a {
+    color: $black;
+    text-decoration: none;
+    display: block;
+}
+.arbre-classique .branche-arbre-classique .generation-1 .profil i {
+    background: $white none repeat scroll 0 0;
+    border-radius: 50%;
+    color: $storm;
+    float: right;
+    font-size: 14px;
+    margin: -5px 0 0;
+    padding: 3px;
+    position: relative;
+}
+.arbre-classique .branche-arbre-classique .generation-1.active>a {
+    display: block;
+}
+.arbre-classique .branche-arbre-classique .generation-1.active .profil i {
+    background: $storm none repeat scroll 0 0;
+    border-radius: 50%;
+    color: $white;
+    float: right;
+    font-size: 14px;
+    margin: -5px 0 0;
+    padding: 3px;
+    position: relative;
+}
+.arbre-classique .branche-arbre-classique .generation-1.active a+a {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: $grey-02;
+}
+.arbre-classique .branche-arbre-classique .generation-1.active:hover a+a, .arbre-classique .branche-arbre-classique .generation-1.active a+a:hover {
+    color: $white;
+}
+.arbre-classique .branche-arbre-classique .generation-1 .profil img+i {
+    margin: -17px 0 0 !important;
+}
+.arbre-classique .branche-arbre-classique .generation-1 .info-perso p+p {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.arbre-classique .branche-arbre-classique .generation-1 .info-perso p+p+p {
+    font-style: italic;
+    font-size: 13px;
+    text-transform: inherit;
+    font-weight: normal;
+}
+.arbre-classique .branche-arbre-classique .generation-1 .info-perso p:last-child {
+    font-weight: normal;
+    text-transform: none;
+    font-style: normal;
+    font-size: 16px;
+}
+.arbre-classique .branche-arbre-classique .generation-1 .profil .initiale {
+    color: $white;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 15px 0 0;
+    text-align: center;
+}
+.arbre-classique .branche-arbre-classique .generation-1:hover {
+    background: rgba(213,  216,  218,  0.4);
+}
+.arbre-classique .branche-arbre-classique .generation-1.active {
+    background: $storm;
+}
+.arbre-classique .branche-arbre-classique .generation-1.active a {
+    color: $white;
+}
+.arbre-classique .branche-arbre-classique .generation-1 .ajout {
+    display: block;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.1;
+    margin: 19px 0 32px 0;
+    max-width: inherit;
+    text-align: center;
+}
+.arbre-classique .branche-arbre-classique .generation-1 .ajout.femme {
+    color: $women-color-dark;
+}
+.arbre-classique .branche-arbre-classique .generation-1 .ajout.homme {
+    color: #9cc;
+}
+.arbre-classique .branche-arbre-classique .dropdown .generation-1 .info-perso {
+    width: 56%;
+    height: 70px;
+    display: inline-block;
+    position: relative;
+}
+.arbre-classique .branche-arbre-classique .dropdown .generation-1 .info-perso div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%}
+.arbre-classique .branche-arbre-classique .dropdown .generation-1+button.btn-cercle {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    vertical-align: top;
+    width: 18%}
+.arbre-classique .branche-arbre-classique .dropdown .generation-1+button.btn-cercle span.caret-cercle {
+    background: $grey-01;
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    display: inline-block;
+    height: 103px;
+    line-height: 103px;
+    margin: 0;
+    width: 100%}
+.arbre-classique .branche-arbre-classique .dropdown .generation-1+button.btn-cercle span.caret-cercle i {
+    color: $white;
+}
+.arbre-classique .branche-arbre-classique div.col-lg-6+div.col-lg-6 .dropdown .generation-1 .lien {
+    background-color: $grey-01;
+    top: 50%;
+    height: 1px;
+    width: 10px;
+    transform: translateY(-50%);
+    left: -10px;}
+.arbre-classique .branche-arbre-classique .dropdown .generation-1 p.num-epoux {
+    font-size: 12px;
+    position: absolute;
+    right: 72px;
+    top: 4px;
+    color: $grey-01;
+}
+.arbre-classique .branche-arbre-classique .dropdown .generation-1 .info-perso p:nth-last-child(2) {
+    font-weight: normal;
+    text-transform: none;
+}
+.arbre-classique .branche-arbre-classique .dropdown-menu li .generation-1 {
+    border: 0;
+    border-bottom: 1px solid #dad9d4;
+}
+.arbre-classique .branche-arbre-classique .dropdown-menu li:last-child .generation-1 {
+    border: 0;
+}
+.arbre-classique .branche-arbre-classique .no-parent {
+    opacity: 0.4;
+    pointer-events: none;
+}
+.arbre-classique .branche-arbre-classique .inconnu-consult {
+    opacity: 0.4;
+    pointer-events: none;
+}
+.arbre-classique .branche-arbre-classique .dropdown-menu.menu-cercle {
+    left: 0;
+    min-width: 100%;
+    padding: 0;
+}
+.arbre-classique .branche-arbre-classique .dropdown-menu li:nth-last-child(2) .generation-1 {
+    border-bottom: 0;
+}
+.arbre-classique .branche-arbre-classique .dropdown-menu li:last-child a {
+    padding: 0;
+}
+
+.arbre-classique .branche-arbre-classique ul.dropdown-menu {
+    border: inherit;
+}
+.arbre-classique .branche-arbre-classique ul.dropdown-menu li .ajout {
+    background: $white none repeat scroll 0 0;
+    border: 3px dashed #dad9d4;
+    border-radius: 3px 3px 0 0;
+    font-size: 19px;
+    padding: 19px;
+    text-align: center;
+    color: $grey-01;
+}
+.arbre-classique .branche-arbre-classique .dropdown-menu li .ajout:hover {
+    background: rgba(213,  216,  218,  0.4);
+}
+.arbre-classique .branche-arbre-classique .dropdown-menu.menu-cercle .generation-1 .info-perso {
+    width: 73%}
+.arbre-classique .branche-arbre-classique .dropdown-menu.menu-cercle .generation-1 {
+    position: relative;
+}
+.arbre-classique .branche-arbre-classique .dropdown-menu.menu-cercle .generation-1 .num-epoux {
+    right: 12px;
+}
+.arbre-classique .branche-arbre-classique div.col-lg-6:first-child .generation-1 .lien {
+    height: 1px;
+    width: 9px;
+    position: absolute;
+    right: -9px;
+    background-color: $grey-01;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arbre-classique .branche-arbre-classique div.col-lg-6+div.col-lg-6 .generation-1 .lien {
+    height: 1px;
+    width: 9px;
+    position: absolute;
+    left: -10px;
+    background-color: $grey-01;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.arbre-classique .branche-arbre-classique .lien-generation-2 {
+    height: 65px;
+    width: 1px;
+    margin: -29px 50% 0;
+    background: $grey-01;
+}
+.arbre-classique .branche-arbre-classique .lien-generation-2:before {
+    content: "\e67d";
+    font-family: "icomoon";
+    font-size: 7.5px;
+    left: -4px;
+    position: relative;
+    top: -11px;
+    vertical-align: top;
+    color: $grey-01;
+}
+.arbre-classique .branche-arbre-classique .generation-0 .ajout {
+    border: 3px dashed $grey-02;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 19px;
+    text-align: center;
+    font-size: 19px;
+    background: $white;
+}
+.arbre-classique .branche-arbre-classique .generation-0 a .ajout {
+    color: $grey-01;
+}
+.arbre-classique .branche-arbre-classique .generation-0 .generation-0-individu {
+    border-left: 1px solid $grey-02;
+    border-right: 1px solid $grey-02;
+    border-bottom: 1px solid $grey-02;
+    padding: 9px 10px 6px 10px;
+    background: $white;
+    position: relative;
+}
+.arbre-classique .branche-arbre-classique .generation-0 .generation-0-individu:last-child {
+    -webkit-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.arbre-classique .branche-arbre-classique .generation-0 a {
+    color: $black;
+    text-decoration: none;
+    display: block;
+}
+.arbre-classique .branche-arbre-classique .generation-0 .generation-0-individu .profil {
+    float: left;
+    height: 48px;
+    margin: auto;
+    width: 48px;
+}
+.arbre-classique .branche-arbre-classique .generation-0 .generation-0-individu .profil.image img {
+    height: 48px;
+    width: 48px;
+    border-width: 4px;
+}
+.arbre-classique .branche-arbre-classique .generation-0 .generation-0-individu .profil img+i {
+    margin: -17px 0 0;
+}
+.arbre-classique .branche-arbre-classique .generation-0 .generation-0-individu .info-perso {
+    display: inline-block;
+    margin: 0 0 0 6px;
+    width: 71%;
+    height: 55px;
+    position: relative;
+}
+.arbre-classique .branche-arbre-classique .generation-0 .generation-0-individu .info-perso div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%}
+.arbre-classique .branche-arbre-classique .generation-0 .generation-0-individu .info-perso p {
+    font-size: 12px;
+    margin: 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.arbre-classique .branche-arbre-classique .generation-0 .generation-0-individu .info-perso p+p {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.arbre-classique .branche-arbre-classique .generation-0 .generation-0-individu .info-perso p+p+p {
+    font-weight: inherit;
+    font-style: italic;
+    text-transform: none;
+}
+.arbre-classique .branche-arbre-classique .generation-0 .generation-0-individu .info-perso p:last-child {
+    font-weight: normal;
+    text-transform: none;
+    font-style: normal;
+}
+.arbre-classique .branche-arbre-classique .generation-0 .generation-0-individu .profil .initiale {
+    color: $white;
+    font-size: 19px;
+    font-weight: 400;
+    margin: 10px 0 0;
+    text-align: center;
+}
+.arbre-classique .branche-arbre-classique .generation-0 .generation-0-individu .profil i {
+    background: $white none repeat scroll 0 0;
+    border-radius: 50%;
+    color: $storm;
+    float: right;
+    font-size: 14px;
+    margin: -6px 0 0;
+    padding: 3px;
+    position: relative;
+}
+.arbre-classique .branche-arbre-classique .generation-0 .generation-0-individu:hover, .arbre-classique .branche-arbre-classique .generation-0 .ajout:hover {
+    background: rgba(213,  216,  218,  0.4);
+}
+.arbre-classique .branche-arbre-classique .generation-0.consultation>a {
+    cursor: inherit;
+}
+.arbre-classique .branche-arbre-classique .generation-0.consultation .ajout {
+    border: 1px solid $grey-02;
+    font-size: 16px;
+    padding: 11px;
+    pointer-events: none;
+}
+.arbre-classique .branche-arbre-classique .lien-generation-1 {
+    height: 36px;
+    width: 1px;
+    margin: 0 50% 0;
+    background: $grey-01;
+}
+.arbre-classique .branche-arbre-classique .lien-generation-1.enfant {
+    height: 82px;
+    width: 1px;
+    margin: -46px auto 0;
+    background: $grey-01;
+}
+.arbre-classique .branche-arbre-classique .lien-generation-1.enfant:before {
+    content: "\e67d";
+    font-family: "icomoon";
+    font-size: 7.5px;
+    left: -3px;
+    position: relative;
+    top: -11px;
+    vertical-align: top;
+    color: $grey-01;
+}
+.arbre-classique .branche-arbre-classique .invisible>.lien-generation-1.enfant:before {
+    visibility: visible;
+}
+
+.container.arbre-classique {
+	.branche-arbre-classique {
+		.generation-3 {
+			ul {
+				li.inconnu {
+					padding: 0;
+					+ .inconnu {
+						padding: 0;
+					}
+				}
+			}
+		}
+
+		.generation-2 {
+			&.inconnu {
+				padding: 0;
+				@include flexbox;
+				@include justify-content(center);
+				@include align-items(center);
+				a {
+					padding: 0;
+				}
+			}
+			.ajout {
+				margin: 0;
+				margin: 0;
+				@include flexbox;
+				@include justify-content(center);
+				@include align-items(center);
+				width: 100%;
+				height: 71px;
+			}
+		}
+	} 
+}
+
+@media (max-width: 1200px) {
+/* ===================================================================================================================================================================
+    ========================================================== ARBRE =================================================================================================
+    ===================================================================================================================================================================
+    ===================================================================================================================================================================
+    ====================*/
+    /* ======================================================================================================== DEBUT Menu arbre */
+    .nav-arbre .nav li {
+        padding: 7px 9px 10px;
+    }
+    .nav-arbre .nav li.recherche-arbre input {
+        width: 254px;
+    }
+    .nav-arbre li a .icon-i-dossier-trombonne+text+span {
+        display: none;
+    }
+    .nav-arbre li.recherche-arbre a .icon-i-loupe-gauche {
+        font-size: 27px;
+    }
+    /* ======================================================================================================== DEBUT Fusion -- */
+    /* Header fiche fusion : nom, photo, dates, père, mère, conjoint ... */
+    .header-fusion .img-profil {
+        height: 74px;
+        width: 74px;
+    }
+    .header-fusion .img-profil i {
+        font-size: 34px;
+        height: 74px;
+        width: 74px;
+    }
+    .header-fusion .img-profil img {
+        height: 74px;
+        width: 74px;
+    }
+    .fiche-fusion-2 .body-fusion .timeline>li>.timeline-panel input.special-entre-seul {
+        width: 67% !important;
+    }
+    /* ======================================================================================================== DEBUT Création d'Arbre Tunnel de création -- */
+    /* =========================================================== DEBUT Résultat recherche (arbre tunnel) -- */
+    /* ========================================== SANS RESULTAT */
+    .creation-arbre-resultat .astuce button+button {
+        margin: 10px 0 0 0;
+    }
+    /* ========================================== SANS RESULTAT */
+    .creation-arbre-resultat.aucun #completechamp button {
+        margin: 0;
+    }
+    /* =========================================================== FIN Résultat recherche (arbre tunnel) -- */
+    /* ======================================================================================================== FIN Création d'Arbre Tunnel de création -- */
+    /* ======================================================================================================== DEBUT Arbre en ligne -- */
+    /*---------------------------------- Navigation dans les arbre */
+    .reglage-arbre-lateral {
+        top: 170px;
+    }
+    /*---------------------------------- Navigation classique */
+    /*----- Onglets Evènements, Documents, Notes --- */
+    /*--- Onglet Evènements --*/
+    .arbre-classique .document-individu .timeline-title {
+        width: 79%;
+    }
+    /* --- Onglet Documents -- */
+    .classement-doc li {
+        margin: 0 18px 0 0;
+    }
+    /* --- Branches -- */
+    .arbre-classique .branche-arbre-classique .generation-3 li p {
+        max-width: 63%;
+    }
+    .arbre-classique .branche-arbre-classique .generation-2 .info-perso {
+        width: 50%
+    }
+    .arbre-classique .branche-arbre-classique .generation-1 .info-perso {
+        width: 57%
+    }
+    .arbre-classique .branche-arbre-classique .dropdown .generation-1 .info-perso {
+        width: 51%
+    }
+    .arbre-classique .branche-arbre-classique .dropdown-menu.menu-cercle .generation-1 .info-perso {
+        width: 66%
+    }
+    .arbre-classique .branche-arbre-classique .dropdown .generation-1 p.num-epoux {
+        right: 58px;
+    }
+    .arbre-classique .branche-arbre-classique .generation-0 .ajout {
+        padding: 19px 9px;
+    }
+    .arbre-classique .branche-arbre-classique .generation-0 .generation-0-individu .info-perso {
+        width: 63%
+    }
+    /*---------------------------------- DEBUT Navigation ascendante */
+    .arbre-ascendant .generation-active-famille .union ul li a {
+        max-width: 84%
+    }
+    .arbre-ascendant .lien-generation .lien-vertical-gene1,
+    .arbre-ascendant .lien-generation.gene-deux .lien-vertical,
+    .arbre-ascendant .lien-generation.gene-trois .lien-vertical,
+    .arbre-ascendant .lien-generation.gene-quatre .lien-vertical {
+        margin-left: 12px;
+    }
+    .arbre-ascendant .bloc-membre .info-perso {
+        width: 48%
+    }
+    .arbre-ascendant .bloc-membre .info-perso p {
+        max-width: 86%
+    }
+    .arbre-ascendant .lien-generation i.lien-horizontal-1perso:before {
+        width: 20px;
+    }
+    .arbre-ascendant .bloc-membre-couple li p {
+        max-width: 68%
+    }
+    .arbre-ascendant .bloc-membre-couple li i+span+p {
+        width: 60%;
+    }
+    /* ======================================================================================================== FIN Arbre en ligne -- */
+    /* ========================================================================================= DEBUT Option arbre : paramètres, confidentialité, invitations, gedcom */
+    .invitations table.messagerie-table tr .pseudo-table p {
+        max-width: 210px;
+    }
+    .invitations table.messagerie-table tr .pseudo-table {
+        width: 32%;
+    }
+    /* ========================================================================================= FIN Option arbre : paramètres, confidentialité, invitations, gedcom 
+  
+  /* ========================================================================================= DEBUT Liste des arbres */
+    .liste-arbre .donnees-arbre p+a div.profil+div {
+        width: 87%;
+    }
+    /* ========================================================================================= FIN Liste des arbres */
+}

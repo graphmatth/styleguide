@@ -1,0 +1,767 @@
+@import '../helpers/variables';
+@import '../helpers/mixin/_mixin'; 
+
+/* 5 bloc in this scss file
+    1. General style
+    2. Card component with different version : basic and principal card
+    3. Separator style between column
+    4. Version create tree with background dark : 3 parts General style +  Card component + Separator
+    5. Hints part 
+    6. Carousel part
+*/
+
+#containAll {
+    // Add table layout fixed to scroll inside the form in small screen size
+    table-layout: fixed;
+}
+////////////////////
+// 1. General style
+///////////////////
+
+.new-tree-container {
+    margin-top: $spacing-large;
+    margin-bottom: 100px;
+
+    .new-tree {
+        @include flexbox;
+        margin-top: 25px;
+    }
+
+    .new-tree-title {
+        display: inline;
+        margin-right: $spacing-medium;
+    }
+    .column {
+        width: 22.5%;
+        &.save {
+            padding: 0;
+            .save-title {
+                font-size: 17px;
+                display: block;
+            }
+
+            .btn-action {
+                display: block;
+                margin: $spacing-medium 0;   
+                width: 120px;
+                height: 40px;
+                font-size: 16px;
+            }
+
+            .checkbox {
+                margin:35px 0 $spacing 0;
+                .label-text {
+                    font-size: 15px;
+                }
+            }
+
+            .save-text {
+                font-size: 12px;
+                color: $grey-01;
+                padding-right: $spacing-medium;
+            }
+
+            .information {
+               font-size: 13px; 
+            }
+
+            .save-link {
+                font-size: 13px;
+            }
+        }
+    }
+
+    .column-parents{
+        width:51.4%;
+
+        .parent_side{
+            @include flexbox;
+
+            .column{
+                width: 100%; 
+                @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+                    @include flex-basis(auto);
+                    @include flex-grow(1);
+                    width: auto;
+                }
+            }
+        }
+
+        + .separator-tree{
+            border:0;
+        }
+    }
+
+    .column-grandparents{
+        width: 114%;
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            @include flex-basis(auto);
+            @include flex-grow(1);
+            width: auto;
+        }
+
+        .grandparent_side{
+            @include flexbox;
+        }
+    }
+
+    // Add partner CTA under princpal card
+    .add-partner {
+        width: auto;
+        border: 1px dashed $grey-06;
+        text-align: center;
+        margin-top: $spacing-large;
+        height: 30px;
+        line-height: 30px;
+        color: $light-indigo;
+        font-size: 12px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+/////////////////
+// 2. Cards style
+/////////////////
+.card {
+    width: 100%;
+    background-color: $white;
+    &__container {
+        min-height: 130px;
+        padding: 4px 16px 4px 16px;
+        border-radius: 3px;
+        position: relative;
+        border: 1px solid $grey-02;
+        &.focus-man {
+                border: 3px solid $men-color;
+                padding: 2px 14px 2px 14px;
+        }
+
+        &.focus-woman {
+                border: 3px solid $women-color;
+                padding: 2px 14px 2px 14px;
+        }
+        /////////////////////////
+        // Form style inside card
+        /////////////////////////
+
+        .form-group {
+            margin-bottom: 0;
+            width:100%;
+        }
+    
+        // custom input version for start a new tree
+        .form-control {
+            background-color: transparent !important;
+            height: 28px;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 1px solid $grey-06;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 6px 0 2px 0;
+
+            &.first-name {
+                margin: $spacing-small 0 0 0;
+                color: $black;
+            }
+
+            @include placeholder {
+                color: $grey-06;
+            }
+    
+            &:focus {
+                box-shadow: none;
+                border-bottom: 1px solid $coral;
+                border-radius: 0;
+            }
+        }
+
+        // personalise auto fill color in chrome
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus
+        textarea:-webkit-autofill,
+        textarea:-webkit-autofill:hover
+        textarea:-webkit-autofill:focus,
+        select:-webkit-autofill,
+        select:-webkit-autofill:hover,
+        select:-webkit-autofill:focus {
+            -webkit-text-fill-color: #555;
+            -webkit-box-shadow: 0 0 0px 1000px $white inset !important;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+
+        // Basic radio and input style 
+        .radio {
+            label {
+                color: $black;
+            }
+    
+            input[type="radio"]:checked ~ .circle {
+                border: 2px solid $light-indigo;
+            }
+    
+            .circle {
+                border: 2px solid $light-indigo;
+            }
+    
+            input[type="radio"]:checked ~ .check {
+                background-color: $light-indigo;
+            }
+    
+            .check {
+                background-color: $light-indigo;
+            }
+        }
+
+        .radio-inline {
+            margin: $spacing-small 0;
+        }
+
+        ////////////////////////////////////////////////
+        // Custom card for the principal one on the left
+        ////////////////////////////////////////////////
+        &--principal {
+            min-height: 280px;
+            border: 0px solid $storm;
+            background-color: $storm;
+            color: $white;
+            padding-top: 5px;
+            .radio {
+                label {
+                    color: $white !important;
+                }
+
+                input[type="radio"]:checked ~ .circle {
+                    border: 2px solid $white;
+                }
+
+                .circle {
+                    border: 2px solid $white;
+                }
+
+                input[type="radio"]:checked ~ .check {
+                    background-color: $white;
+                }
+
+                .check {
+                    background-color: $white;
+                }
+            }
+
+            .form-control {
+                color: $white;
+                &.first-name {
+                    color: $white;
+                }    
+                @include placeholder {
+                    color: darken( $white, 15% );
+                }
+            }
+
+            .bloc-bottom-container {
+                @include flexbox;
+                @include justify-content(space-between);
+                // @include align-items(flex-end);
+                font-size: 13px;
+                margin-bottom: $spacing-small;
+                &:last-child{
+                    margin: 0;
+                }
+                .birth {
+                    display: inline;
+                    width: 25%;
+                    text-align: center;
+                    font-size: 13px;
+                }
+        
+                .year {
+                    width: 39%; 
+                    @media (max-width: 1200px) {
+                        width: 36%;
+                    }
+                }
+        
+                .right {
+                    width: 81%;
+                }
+
+                .name-field {
+                    display: block;
+                    margin-top: $spacing;
+                }
+            }
+
+            // Bottom vertical separator of the pirncipal card
+            .separator {
+                width: 1px;
+                background-color: $grey-06;
+                height: 20px;
+                position: absolute;
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+                bottom: -20px;
+            }
+
+            // personalise auto fill color in chrome
+            input:-webkit-autofill,
+            input:-webkit-autofill:hover, 
+            input:-webkit-autofill:focus
+            textarea:-webkit-autofill,
+            textarea:-webkit-autofill:hover
+            textarea:-webkit-autofill:focus,
+            select:-webkit-autofill,
+            select:-webkit-autofill:hover,
+            select:-webkit-autofill:focus {
+                -webkit-text-fill-color: $white;
+                -webkit-box-shadow: 0 0 0px 1000px $storm inset !important;
+                transition: background-color 5000s ease-in-out 0s;
+            }
+        }
+
+        .profil-picture-container {
+            display: block;
+            .profil-picture {
+                width: 65px;
+                height: 65px;
+
+                @include flexbox;
+                @include align-items(center);
+                @include justify-content(center);
+        
+                margin: $spacing-small auto;
+                @include border-radius(50%);
+                overflow: hidden;
+                &.man {
+                    background-color: $men-color;
+                }
+        
+                &.woman {
+                    background-color: $women-color;
+                }
+        
+                &:hover {
+                    cursor: pointer;
+                }
+                img{
+                    @include border-radius(50%);
+                }
+            }
+        }
+        /////////////////////////////////////
+        // End custom style for principal card
+        //////////////////////////////////////
+    
+        // End custom css mother card
+    }
+
+    &__top {
+        margin: 0;
+        @include flexbox;
+        @include justify-content(space-between);
+
+        .circle-gender {
+            display: block;
+            background-color: $white;
+            width: 16px;
+            height: 16px;
+            @include border-radius(50%);
+            margin-top: 2px;
+
+            &.man {
+                border: 3px solid $men-color;
+            }
+            &.woman {
+                border: 3px solid $women-color;
+            }
+        }
+    }
+
+    // Basic bottom style card
+    &__bottom {
+        color: $light-indigo;
+        font-size: 13px;
+
+        a{
+            display: inline-block;
+            margin: 11px 0 7px;
+        }
+
+        .birth-div-container {
+            @include flexbox;
+            margin: 4px 0;
+
+            .birth.year {
+                width: 55px;
+                margin-right: $spacing;
+                @include flex-basis(0);
+                @include flex-grow(1);
+                @include flex-shrink(1);
+
+                +.form-group { 
+                    @include flex-basis(0);
+                    @include flex-grow(3);
+                    @include flex-shrink(1);  
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    .create-tree-error-message {
+        display: table;
+        font-weight: 700;
+        margin-top: $spacing-small;
+        margin-bottom: 0;
+        max-width: 100%;
+        >* {
+            display: table-cell;
+            vertical-align: top;
+            width: 80%;
+        }
+        i {
+            margin-right: $spacing-small;
+            width: 10%;
+        }
+    }
+}
+
+////////////////////////////////
+// 3. Separator style between column
+/////////////////////////////////
+.separator-tree {
+    position: relative;
+    width: 3.3%;
+    min-width: 33px;
+    border-right: 1px solid $white;
+    margin: 66px 18px 0 -13px;
+
+    // horizontal top block icon of the separator colum -->  --.-- 
+    .lien-horizontal-2perso {
+        // set style of the cicle icon
+        display: block;
+        margin: -1px 0 0 16px !important;
+        font-size: 6px;
+        color: $grey-01;
+        text-align: center;
+        width: 100%;
+        margin: 0px;
+        height: 8px;        // Add left and right bar to join horizontal block with :before & :after
+        &::before {
+            border-bottom: 1px solid #757585;
+            content: "";
+            left: 13px;
+            margin: 2px 0 0;
+            position: absolute;
+            transform: rotate(0deg);
+            width: 12px;
+        }
+
+        &:after {
+            border-bottom: 1px solid #757585;
+            content: "";
+            right: -19px;
+            margin: 2px 0 0;
+            position: absolute;
+            transform: rotate(0deg);
+            width: 13px;
+        }
+    }
+    &.marge-parent{
+        height: 20px;
+        margin-top: 0;
+    }
+
+    &.maternal{
+        margin-top:0;
+        height: 67px;
+
+        // horizontal top block icon of the separator colum -->  --.-- 
+        .lien-horizontal-2perso {
+            margin-top: 66px !important;
+
+            &::before {
+                width: 0;
+            }
+        }
+    }
+}
+
+////////////////////////////////
+// 4. Version create tree with background dark
+/////////////////////////////////
+
+// 1. General style
+.new-tree-dark-background{
+    background-color:$storm; 
+    
+    .new-tree-container{
+        margin-top: 0;
+        padding-top: 14px;
+        margin-bottom: 0;
+        padding-bottom: 40px;
+
+        .new-tree-title-container{
+            text-align: center;
+            color: $white;
+
+            .new-tree-title{
+                display: block;
+                margin-right: 0;
+                color: $white;
+                font-size: 36px;
+            }
+            a{
+                color: $coral;
+            }
+        }
+        .column {
+            &.save {
+                .save-title {
+                    color:$white;
+                }
+                .checkbox {
+                    .label-text {
+                        color:$white;
+                    }
+                }
+                .save-text {
+                    color:$white;
+                }
+    
+                a.information {
+                    color:$white;
+                    &.collapsed[data-toggle="collapse"]{
+                        &:before{
+                            border-color:transparent;
+                            border-left-color: $white;
+                        }
+                    }
+                    &[data-toggle="collapse"]{
+                        &:before{
+                            border-color: transparent;
+                            border-top-color: $white;
+                        }
+                        &+ div{
+                            &.collapse, &.collapsing {
+                                color:$white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // Add partner CTA under princpal card
+        .add-partner {
+            border-color: $white;
+            height: auto;
+            padding: 5px 0;
+            color: $light-indigo;
+            font-size: 14px;
+            background-color: $white;
+            @include border-radius(3px);
+            &:hover {
+                cursor: pointer;
+                span{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    
+// 2. Cards style
+   
+    .card {
+        background-color: $white-dark10;
+        &__container {
+            border-color: $white-dark10;
+            &.focus-man {
+                border-color:$men-color;
+            }
+
+            &.focus-woman {
+                border-color: $women-color;
+            }
+            
+            // Custom card for the principal one on the left
+            &--principal {
+                border-color: $white;
+                background-color: $white;
+                color: $black;
+                .radio {
+                    label {
+                        color: $black !important;
+                    }
+
+                    input[type="radio"]:checked ~ .circle {
+                        border-color: $light-indigo;
+                    }
+
+                    .circle {
+                        border-color: $light-indigo;
+                    }
+
+                    input[type="radio"]:checked ~ .check {
+                        background-color: $light-indigo;
+                    }
+
+                    .check {
+                        background-color: $light-indigo;
+                    }
+                }
+
+                .form-control {
+                    color: $black;
+                    @include placeholder {
+                        color: darken( $white, 40% );
+                    }
+                }
+
+                // Bottom vertical separator of the pirncipal card
+                .separator {
+                    background-color: $white;
+                }
+
+                // personalise auto fill color in chrome
+                input:-webkit-autofill,
+                input:-webkit-autofill:hover, 
+                input:-webkit-autofill:focus
+                textarea:-webkit-autofill,
+                textarea:-webkit-autofill:hover
+                textarea:-webkit-autofill:focus,
+                select:-webkit-autofill,
+                select:-webkit-autofill:hover,
+                select:-webkit-autofill:focus {
+                    -webkit-text-fill-color: $black;
+                    -webkit-box-shadow: 0 0 0px 1000px $white inset !important;
+                    transition: background-color 5000s ease-in-out 0s;
+                }
+            }
+            .profil-picture-container {
+                .profil-picture {
+                    i{
+                        color:$white;
+                    }
+                }
+            }
+            // End custom style for principal card
+        
+            // End custom css mother card
+        }
+
+        &__top {
+            .circle-gender {
+                background-color: $white-dark10;
+            }
+        }
+    }
+
+// 3. Separator style between column
+    .separator-tree {
+
+        // horizontal top block icon of the separator colum -->  --.-- 
+        .lien-horizontal-2perso {
+            // set style of the cicle icon
+            color: $white;  
+            &::before {
+                border-bottom-color: $white;
+            }
+
+            &:after {
+                border-bottom-color: $white;
+            }
+        }
+        // Full vertival line of the link between bloc and the bottom
+        .line {
+            border-bottom-color: $white;
+            border-left-color: $white;
+
+        }
+    }
+}
+
+/////////////////////////////////////
+// 5. Hints part 
+//////////////////////////////////////
+
+.list_hints{
+    padding: 45px 0 10px 0;
+    background-color: $white;
+    h2{
+        font-size: 36px;
+        margin: 0 0 6px 0;
+        &+ p{
+            font-size: 22px;
+            margin: 0 0 45px 0;
+        }
+    }
+}
+
+/////////////////////////////////////
+// 6. Carousel part
+//////////////////////////////////////
+
+.tweet-startNewTree {
+    margin: 0 auto 80px;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+
+    .new-tree-container::-webkit-scrollbar {
+            display: none;  // Safari and Chrome 
+            width: 0px;
+            background: transparent;
+    } 
+
+    header + .new-tree-container, .new-tree-dark-background .new-tree-container {
+        -ms-overflow-style: none;  // IE 10+
+        overflow: -moz-scrollbars-none;  // Firefox
+        overflow: scroll;
+    
+        .new-tree::-webkit-scrollbar {
+            display: none;  // Safari and Chrome 
+            width: 0px;
+            background: transparent;
+    } 
+
+        .new-tree {
+            @include flex-wrap(wrap);
+            width: 720px;
+            overflow: scroll; 
+            -ms-overflow-style: none;  // IE 10+
+            overflow: -moz-scrollbars-none;  // Firefox
+        }
+
+    
+        // Make last column under the tree in responsive
+        .column {
+            @include flex($fg: 1, $fs: 1, $fb: 0%);
+            -ms-flex: 1 0 auto;
+            &.save {
+               width: 100%;
+               @include flex($fg: 0, $fs: 0, $fb: 100%);
+               -ms-flex: 1 0 auto;
+            }
+        }
+    }
+
+    .new-tree-container{
+        .column-parents{
+            width:60%;
+    
+            &+ .separator-tree{
+                display:none;
+            }
+        }
+        .column-grandparents{
+            width: 50%;
+        }
+    } 
+}

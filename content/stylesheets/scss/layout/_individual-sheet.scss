@@ -1,0 +1,119 @@
+/* INDIVIDUAL SHEET */
+
+.individual-sheet {
+	margin-bottom:50px;
+	.tab-information-link {
+		.badge.badge-hints {
+			background-color: $coral;
+		}
+	}
+}
+
+.filter-hints {
+	&__container {
+		@include flexbox;
+		@media (max-width: 600px) {
+			@include flex-direction(column);
+
+			.new-hints-right {
+				margin: $spacing 0;
+				margin-left: inherit; 
+				width: 245px;
+			}
+		}
+	}
+	
+	&__item {
+		margin-right: $spacing-small;
+		padding: 3px 8px;
+		border-radius: 5px;
+		color: $indigo;
+		height: 26px;
+		width: max-content;
+		&:hover {
+			cursor: pointer;
+		}
+
+		&.active {
+			background-color: $indigo;
+			color: white;
+		}
+	}
+}
+
+// Blur Img who is display when a user hasn't a premium account
+.hints-blur {
+	&__container {
+		position: relative;
+		padding-bottom: 35px;
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	&__img {
+		height: 100%;
+		width: 100%;
+		// Make img container on background width absolute positioning
+		position: absolute;
+		z-index: 1;
+		display: block;
+		img {
+			height: auto;
+			width: 100%;
+			// Turn img to relative to make his div parent (in absolute) take full height 
+			position: relative;
+			display: block;
+		}
+	}
+
+	&__cta-container {
+		text-align: center;
+		margin-bottom: 50px;
+		.cta {
+			@include flexbox;
+			@include justify-content(center);
+			margin-bottom: $spacing-small;
+		}
+		&+ p{
+			font-weight:normal;
+		}
+
+	}
+
+	&__text {
+		// relative make text position on top
+		position: relative;
+		z-index: 10;
+		font-size: 15px;
+		padding-top: 55px;
+		text-align: center;
+		font-weight: $bold;
+		@media (max-width: 1199px) {
+			padding-top: 30px;
+		}
+
+		.first-line {
+			margin: $spacing-medium 0 35px 0;
+			@media (max-width: 1199px) {
+				margin: 13px 0 23px 0;
+			}
+		}
+	}
+	
+	.icon-premium {
+		position: relative;
+		z-index: 100;
+		font-size: 72px;
+		color: $coral;
+		width: 100%;
+	}
+
+	//delete br in small screen <1200
+	@media (max-width: 1199px) {
+		br.rwd-break {
+			display: none;
+		}
+	}
+}

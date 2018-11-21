@@ -1,0 +1,598 @@
+.promo {
+    min-height: 60px;
+    background-color: $yellow;
+    .promo-container {
+        min-height: 74px;
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(center);
+    }
+
+    .promo-title {
+        color: $storm;
+        font-size: 30px;
+        font-weight: $bold;
+        text-align: center;
+
+        @media (max-width: 480px) {
+            font-size: 20px;
+        }
+    }
+
+    &:hover { 
+        .promo-title {
+            text-decoration: underline;
+        }
+    } 
+}
+
+.link-bandeau {
+    + .home-full {
+        .home-intro {
+            padding-top: 100px;
+        }
+    }
+    .offer-yellow-bg {
+        float: inherit;
+        margin: 0 auto;
+        display: block;
+        max-width: 430px;
+    }
+}
+
+
+/////////////////////
+/* BANDEAU Annonce */
+/////////////////////
+
+/* Bandeau gratuité lancement Filae */
+.bandeau-gratuite {
+    background: $storm;
+    height: 110px;
+
+    &.lancement-filae {
+        background: #0288d1;
+        height: 110px;
+        background-image: url(../../img/home/drapeau-bandeau-annonce.png);
+        background-repeat: repeat-y;
+        background-position: right;
+    }
+    
+    &.fixed{
+        position: fixed;
+        width: 100%; 
+        z-index: 1004;
+
+        @media (max-width: 992px) { 
+            height: auto;
+        }
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    + .bandeau-gratuite { 
+        padding-top: 20px;
+        background:$dark-indigo;
+
+        + .SeoSem{
+            margin-top:20px;
+        }
+
+        @media (max-width: 992px) {
+            padding-top: 0;
+
+            + .SeoSem{
+                margin-top:0;
+            }
+        }
+        @media (max-width: 767px) {
+
+            + .SeoSem{
+                margin-top:72px;
+            }
+        }
+    }
+}
+
+/* Bandeau OFFRE BOXE */
+
+.bandeau-gratuite.offer-box {
+    height: auto;
+    background: $dark-indigo;
+    height: 120px;
+    color: white;
+}
+
+.bandeau-gratuite.offer-box .container {
+    position: relative;
+} 
+
+.bandeau-gratuite.offer-box h1, .bandeau-gratuite.offer-box a, .bandeau-gratuite.offer-box h2, .bandeau-gratuite.offer-box p {
+    color: white;
+}
+
+.bandeau-gratuite.offer-box h1 {
+    font-size: 3.5rem;
+    margin-top: 25px;
+}
+
+.bandeau-gratuite.offer-box h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-top: 27px;
+}
+.bandeau-gratuite.offer-box .btn-action {
+        margin:  38px 0;
+        width: 130px;
+        white-space: nowrap;
+
+}
+.bandeau-gratuite.offer-box .illustration-1 {
+    background-image: url(../../../img/home/v2/coffret-filae.png);
+    background-position: left bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    // height: 190px;
+    // width: 222px;
+    height: 163px;
+    width: 97px;
+    margin: 0px 0 0 0;
+    position: absolute;
+    left: 0; 
+    top: 0;
+    z-index: 10;
+}
+
+.bandeau-gratuite.offer-box .offer-box-round {
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+    border: 2px solid rgba(255, 255, 255, 1);
+    color: white;
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    left: 100px;
+    top: 20px;
+    font-weight: 600;
+    font-size: 13px;
+    border-radius: 50%;
+    text-align: center;
+    transform: rotate(-10deg);
+}
+
+@media (max-width: 767px) {
+    .bandeau-gratuite.offer-box {
+        height: 200px;
+        text-align: center;
+    }
+    .bandeau-gratuite.offer-box .offer-box-round {
+        right: 20px;
+        left: inherit;
+    }
+    .bandeau-gratuite.offer-box .btn-center {
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .bandeau-gratuite.offer-box .btn-action {
+        margin: 15px auto;
+    }
+}
+
+@media (max-width: 650px) {
+    .bandeau-gratuite.offer-box {
+        height: 470px;
+    }
+
+    .bandeau-gratuite.offer-box .illustration-1 {
+        margin: auto;
+        position: absolute;
+        top: -50px; left: 0; bottom: 0; right: 0;
+    }
+
+    .offer-box-subtitle span {
+        display: block;
+    }
+
+    
+    .bandeau-gratuite.offer-box h1 {
+        margin-bottom: 250px;
+    }
+    .initial {
+        position: initial;
+    } 
+
+    .bandeau-gratuite.offer-box .offer-box-round {
+        top: 100px;
+    }
+
+ }
+
+ @media (max-width: 326px) {
+    .bandeau-gratuite.offer-box {
+        padding: 35px 0;
+        height: 500px;
+    }
+ }
+/* FIN OFFER BOXE */
+
+.bandeau-gratuite.promo-filae, .bandeau-gratuite.recensements,  .bandeau-gratuite.andriveau {
+    background: $dark-indigo;
+    .btn-center {
+        text-align: right;
+        @media (max-width:768px) { 
+            text-align: center;
+        }
+    }
+}
+
+.bandeau-gratuite.andriveau {
+    @media (max-width:581px) { 
+        text-align: center;
+    }
+}
+
+.bandeau-gratuite.promo-filae h1, .bandeau-gratuite.recensements h1,  .bandeau-gratuite.andriveau h1 {
+    color: $white;
+    font-size: 21px;
+    margin: 28px 0 0 0;
+    text-align: center;
+    display: inline-block;
+    line-height: normal;
+    width: 100%;
+    @media (max-width:581px) { 
+        br {
+            display: none;
+        }
+    }
+}
+
+.bandeau-gratuite.andriveau h1 {
+    margin: 22px 0 0 0 !important;
+}
+.bandeau-gratuite.promo-filae-extra h1 {
+    color: $storm;
+    font-size: 21px;
+    margin: 28px 0 0 0;
+    text-align: center;
+    display: inline-block;
+    line-height: normal;
+    width: 73%}
+.bandeau-gratuite.lancement-filae h1 {
+    width: 52%;
+}
+.bandeau-gratuite.lancement-filae h1 {
+    width: 100%;
+    color: $white;
+    font-size: 29px;
+    margin: 21px 0 0;
+    text-align: center;
+    display: inline-block;
+    line-height: 35px;
+
+    span {
+        display: block;
+        font-weight: bold;
+    }
+
+}
+.bandeau-gratuite.lancement-filae h1.offer10 {
+    width: 100%}
+.bandeau-gratuite.promo-filae h1 span, .bandeau-gratuite.recensements h1 span, .bandeau-gratuite.promo-filae-extra h1 span {
+    display: block;
+    font-weight: bold;
+}
+
+.bandeau-gratuite {
+    
+    .illustration-1 {
+        background-position: left bottom;
+        background-repeat: no-repeat;
+        display: inline-block;
+        height: 110px;
+        width: 184px;
+        margin: 15px 0 0 0;
+    }
+    &.promo-filae {
+        .illustration-1 {
+            background-image: url(../../img/home/portable-viewer-2017-bandeau-annonce-7j.png);
+        }
+    }
+
+    &.lancement-filae {
+
+        .illustration-1 {
+            background-image: url(../../img/home/viewer-op8mai2017-bandeau-annonce.png);
+        }
+
+        .illustration-2 {
+            background-image: url(../../img/home/prisonniers-bandeau-annonce-1418.png);
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            display: inline-block;
+            height: 110px;
+            width: 183px;
+        }
+
+        @media (max-width: 1200px) {
+            h1 {
+                font-size: 25px;
+            }
+        }
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 23px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                @include calc(width, '100% - 160px');
+                margin-top: 3px;
+            }
+
+            .left-responsive {
+                text-align: left !important;
+            }
+        }
+
+        @media (max-width: 590px) {
+            background-image: none;
+            h1 {
+                width: 100%;
+                font-size: 20px;
+                line-height: auto;
+            }
+        }
+    }
+}
+
+.bandeau-gratuite.recensements .illustration-1 {
+    background-image: url(../../img/home/viewer-1906_160.png);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    display: inline-block;
+    position: absolute;
+    height: 110px;
+    width: 184px;
+    margin: 15px 0 0 0;
+}
+
+.bandeau-gratuite.recensements .illustration-2 {
+    background-image: url(../../img/home/viewer-1872_160.png);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    display: inline-block;
+    position: absolute;
+    height: 110px;
+    width: 184px;
+    margin: 15px 0 0 0;
+}
+
+
+.bandeau-gratuite.andriveau {
+    height: 90px;
+    @media (max-width:767px) {
+        height: auto;
+    } 
+}
+
+.bandeau-gratuite.andriveau .illustration-3 {
+    background-image: url(../../img/andriveau/fiches-andriveau.png);
+    background-size: cover;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    display: inline-block;
+    position: absolute;
+    height: 66px;
+    width: 200px;
+    top: 24px;
+
+}
+
+
+.bandeau-gratuite.lancement-filae .illustration-1, .bandeau-gratuite.recensements .illustration-1 {
+    background-position: right bottom;
+}
+.bandeau-gratuite.promo-filae .illustration-1 img {
+    margin-top: 32px;
+}
+.bandeau-gratuite.promo-filae .illustration-2 {
+    background-image: url(../../img/home/banniere-jean-luc-beaucarnot.jpg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 110px;
+    width: 326px;
+    position: relative;
+}
+.bandeau-gratuite.decompte {
+    background: transparent;
+    margin-top: 0;
+    height: auto;
+}
+.bandeau-gratuite.decompte .free-offer-texte {
+    display: inline-block;
+    margin-top: -12px;
+    color: $coral;
+}
+.bandeau-gratuite.decompte .free-offer-texte i {
+    padding-right: 5px;
+    float: left;
+}
+.bandeau-gratuite.decompte .free-offer-texte p {
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+}
+.bandeau-gratuite.promo-filae .btn-action, .bandeau-gratuite.recensements .btn-action, .bandeau-gratuite.promo-filae-extra .btn-action, .bandeau-gratuite.andriveau .btn-action  {
+    margin: 33px 0;
+}
+
+.bandeau-gratuite.andriveau .btn-action {
+    padding: 6px 19px;
+}
+
+.bandeau-gratuite.andriveau .btn-action {
+    margin: 26px 0;
+}
+.full-beta .container.page {
+    margin-top: 30px;
+}
+
+/* Bandeau bleu nouvelles données pages home non connectée -- */
+.bandeau-new-donnees {
+    background: #2b71ad;
+    text-align: center;
+    padding: 0 35px 0 0;
+    margin: 0;
+    border-radius: 0;
+    left: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1030;
+}
+.bandeau-new-donnees h1 {
+    color: $white;
+    display: inline-block;
+    font-size: 19px;
+    margin: 8px 0 8px;
+}
+.bandeau-new-donnees h1 a {
+    color: $white;
+}
+.bandeau-new-donnees.alert-dismissible .close {
+    top: 6px;
+    color: $white;
+}
+.bandeau-new-donnees+#containAll .navbar-fixed-top {
+    top: 38px;
+}
+.bandeau-new-donnees+#containAll .intro {
+    margin-top: 38px;
+}
+.bandeau-new-donnees+#containAll .container.home-connectee {
+    margin-top: 114px;
+}
+
+
+.banner-box-container {
+    display: block;
+    background-color: $dark-indigo;
+    color: $white;
+    height: 120px;
+    img {
+        position: absolute;
+        width: 97px;
+        top: 0;
+        height: auto;
+        margin-top: $spacing-small;
+    }
+    /*
+        Desactivate br for now
+        He is activate in offer-yellow-bg div on < 992px screen size
+    */
+    br {
+        display: none;
+    }
+
+    .offer-box-round {
+        display: table;
+        height: 80px;
+        width: 80px;
+        margin: 20px 0 20px 83px;
+        border: 2px solid $white;
+        @include border-radius(50%);
+        color: white;
+        text-align: center;
+        span {
+            display: table-cell;
+            vertical-align: middle;
+            @include rotate(-10);
+            font-weight: 600;
+            font-size: 13px;
+            border-radius: 50%;
+            text-align: center;
+        }
+    }
+
+    .banner-box-text {
+        display: table;
+        width: 100%;
+        height: 120px;
+        text-align: center;
+        div:first-child {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            width: 100%;
+            padding: 0 $spacing-medium;
+
+            h2 {
+                color: $white;
+                margin-top: 0;
+                font-size: 2.2rem;
+                font-weight: 600;
+            }
+
+            .offer-yellow-bg {
+                float: inherit; 
+                max-width: 400px;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    } 
+
+    .btn-action-container {
+        text-align: right;
+    }
+
+    .btn-action {
+        margin: 38px 0;
+        width: 130px;
+        white-space: nowrap;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .banner-box-container {
+        .container {
+            width: inherit;
+        }
+
+        .offer-box-subtitle {
+            max-width: 365px;
+            margin: 0 auto $spacing auto;
+        }
+
+        .offer-yellow-bg {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .banner-box-container {
+        height: auto;
+        .banner-box-img-container {
+            height: 150px;
+            width: 163px;
+            display: block;
+            margin: 0 auto 0px auto;
+        }
+    
+        .btn-action-container {
+            text-align: center;
+        }
+        .btn-action {
+            margin: $spacing-medium 0;
+        }
+    }
+}

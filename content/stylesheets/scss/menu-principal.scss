@@ -1,0 +1,1134 @@
+@import 'helpers/variables';
+@import 'helpers/mixin/_mixin';
+
+// Principal structure
+.navbar {
+    border: 0;
+    background: $coral; 
+
+    // Logo container
+    .navbar-brand {
+        float: left;
+        font-size: 18px;
+        height: auto;
+        line-height: 20px;
+        padding: 8px 23px;
+          margin-left: -15px;  
+        // Logo container
+        img {
+            width: 97px;
+            margin: 3px 0 0 0; 
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+              /* IE10+ CSS styles go here */
+              height: 29px;;
+            } 
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    // Nav on the right
+    .navbar-collapse.second-nav {
+        // ul nav
+        ul {
+          margin: 0; 
+        }
+
+        #profilHover {
+          position: relative;
+          @include flexbox;
+            min-height: 50px;
+        }
+
+        .dropdown, .drop-no-msg {
+            background: transparent;
+            margin: 0;
+            // Margin reset
+            
+            // Icon connected style   
+            .icon-connected {
+                display: block;
+                padding: 13px 9px 7px 9px;
+
+                i {
+                    position: relative;
+                }
+            }
+
+            &:hover {
+                background: $white; 
+                > a {
+                    color: $black;
+                }
+            }
+
+            ul li > a {
+                color: $black;
+            }
+            .dropdown-menu {
+                top: 50px; 
+            }
+        }
+
+
+
+        // Hints section
+
+        // Icon nav hints
+        i.icon-i-hints {
+            font-size: 26px; 
+        }
+
+
+        .dropdown-menu.menu-hints {
+            width: 330px;
+            left: auto;
+            right: 0;
+            padding: 8px 0 0 0;
+
+            .no-hints-nav {
+              padding: 12px $spacing-large $spacing-large $spacing-large;
+              .icon-i-hints {
+                  font-size: 65px;
+                  color: $coral;
+                }
+                
+                h3 {
+                  color: $coral;
+                  font-size: 20px;
+                  margin-top: 15px;
+                  margin-bottom: 15px;
+                }
+
+                p {
+                  text-align: center;
+                  max-width: 230px;
+                  margin: 0 auto;
+                  line-height: 1.3;
+                }
+            }
+
+            @media (max-width: 480px) {
+              width: 285px;
+              left: auto;
+              right: -97px;
+              padding: 8px 0 0 0
+            }
+
+            .title-dropdown-hints {
+                color: $grey-01;
+                font-weight: $bold;
+                font-style: italic;
+                font-size: 17px;
+                padding: 0 15px;
+            }
+
+            .hints-name{
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            } 
+
+            .badge {
+              height: 20px;
+              padding: 4px 7px;
+              margin: 2px 0 0 5px;
+              min-width: inherit;
+            }
+
+            .hints {
+                border-bottom: 1px solid $grey-02;
+                a {
+                    padding: 7px 15px 7px 7px;
+                    border-left: 8px solid $white;
+                    &:hover {
+                        border-left: 8px solid $coral;
+                        color: $black;
+                    }
+                }
+                &__container {
+                    @include flexbox;
+                    @include align-items(center);
+                    width: 100%;
+                }
+                
+                &__img {
+                    min-width: 40px;
+                    min-height: 40px;
+                    width: 40px;
+                    height: 40px;
+                    @include align-self(end);
+
+                    border-radius: 50px;
+                    text-align: center;
+                    color: $white;
+                    position: relative;
+
+                    .initial {
+                        line-height: 40px;
+                    }
+
+                    &.man {
+                      background-color: $men-color;
+                      .img-hints {
+                        border: 3px solid $men-color;
+                      }
+                    }
+
+                    &.woman {
+                      background-color: $women-color;
+                      .img-hints {
+                        border: 3px solid $women-color; 
+                      }
+                    }
+
+                    &.unknow {
+                      background-color: $grey-02;
+                      .img-hints {
+                        border: 3px solid $grey-02; 
+                      }
+                    }
+
+                    .img-hints {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                    }
+                        
+                    i {
+                        position: absolute;
+                        bottom: -6px;
+                        right: -6px;
+                        font-size: 12px;
+                        padding: 2px;
+                        color: $grey-01;
+                        background-color: white;
+                        border-radius: 50%;
+                    }
+                }
+
+                &__content {
+                    // Calcul full width with the img/avatar = 40px and the icon 
+                    @include calc(width, '100% - 60px');
+
+                    padding: 0 $spacing;
+                }
+
+                &__type {
+                    @include flexbox; 
+                    width: 100%;
+                    p {
+                        font-size: 16px;
+                        margin-bottom: 0;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        display: block;
+                        float: left;
+                    }
+                }
+                
+                &__name {
+                    display: block;
+                    width: 100%;
+                    float: left;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    font-weight: 700;
+
+                    .name {
+                      text-transform: uppercase;
+                    }
+                }
+
+                &__tree {
+                    font-size: 12px;
+                    color: $grey-01;
+                    font-style: italic;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    display: block;
+                    float: left;
+                    width: 100%;
+                    .date {
+                        font-style: normal;
+                    }
+                }
+
+                &__icon {
+                    width: auto;
+                    img {
+                      height: 20px;
+                    } 
+                }
+
+                &:last-of-type {
+                    border-top: 1px solid $grey-02; 
+                    background-color: red;
+              }
+
+              // Delete last border
+              + .bottom-hints {
+                  border-top: 0;
+                  .tree-name {
+                    border-top: 0;
+                    max-width: 235px;
+                    float: left;
+                    margin: 2px 0;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  }
+
+                  .badge {
+                    margin: 0 0 0 7px;
+                  }
+                }
+            }
+            
+            .bottom-hints {
+                &__container {
+                    @include justify-content(flex-start);
+                    @include align-items(center);
+                    padding: 3px 15px;
+                    
+                    &:first-child {
+                      padding: 10px 15px 0px 15px;
+                    }
+                    &:last-child {
+                      padding: 3px 15px 10px 15px;
+                    }
+                }
+
+                &__tree {
+                    // @include calc(max-width, '100% - 70px');
+                    display: inline-block;
+                    margin: 2px 0;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+
+            li {
+                margin: 0;
+                width: 100%;
+
+                a {
+                    @include flexbox;
+                    @include justify-content(space-between);
+                    width: 100%;
+                }
+
+                &:last-child {
+                    border-top: 1px solid $grey-02; 
+                }
+            }
+        }
+    }
+}
+
+////////////////////////////////////////////////////////////
+
+.navbar ul > li > a, .navbar .second-nav ul > li > a {
+  font-size: 17px;
+  text-decoration: none;
+  color: $white; }
+
+.navbar .dropdown-menu li > a {
+  font-size: 17px;
+  text-decoration: none;
+  color: $black; }
+
+.navbar .navbar-nav > li > a:hover {
+  background-color: inherit;
+  background: $white;
+  color: $black; }
+
+.navbar.menu-simple .container a.connexion-on:hover {
+  color: $indigo !important; }
+
+.navbar .navbar-nav > li > a.active {
+  background-color: inherit;
+  background: $white;
+  color: $black; }
+
+.nav > li > a:focus {
+  border: 0;
+  color: $black;
+  background: $white; }
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background: $white;
+  color: $black; }
+
+.navbar-collapse {
+  float: left; }
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  background-color: $white;
+  color: $coral; }
+
+.dropdown-menu > li > a {
+  padding: 5px 15px; }
+
+.navbar .navbar-nav .dropdown-menu .dropdown-header {
+  font-size: 16px;
+  padding: 3px 0 3px 15px;
+  white-space: nowrap; }
+
+.navbar-toggle {
+  background-color: $white; }
+
+.navbar-toggle:hover, .navbar-toggle:focus {
+  opacity: 0.9; }
+
+/* ------ MENU DE DROITE => CONNEXION ETC ---- */
+.navbar-collapse.second-nav {
+  float: right; }
+
+.navbar-collapse.second-nav li {
+  display: inline-block;
+  margin: 8px 10px 0 0;}
+
+.navbar-collapse.second-nav li.btn-texte-menu {
+  float: left;
+  margin: 8px 7px 0; }
+
+.navbar-collapse.second-nav li + li {
+  margin: 12px 0 0 0;
+  vertical-align: top; }
+
+  .navbar-collapse.second-nav .btn-action.inscription {
+    border: 1px solid white;
+    padding: 6px 16px;
+    color: white;
+  }
+
+  .navbar-collapse.second-nav .btn-action.inscription:hover {
+    color: $coral;
+    background-color: white !important;
+
+  }
+
+.navbar-collapse.second-nav .btn-action-bkgd {
+  color: $coral; }
+
+.navbar-collapse.second-nav li.btn-connexion > a {
+  display: inline-block;
+  height: 29px; }
+
+.navbar-collapse.second-nav li.btn-connexion > a:hover {
+  color: $white; }
+
+.navbar-collapse.second-nav li a.btn:hover {
+  opacity: 1; }
+
+#profilHover a.notification i::after {
+  content:" ";
+  position:absolute;
+  background: $mint;
+  color:white;
+  width:18px;
+  height:18px;
+  text-align:center;
+  line-height:18px;
+  border-radius:50%;
+  border: 2px solid white;
+  top: -9px;
+  right: -9px;
+}
+
+.navbar-collapse.second-nav li.dropdown ul li > a:hover {
+  color: $coral;
+  background: $white; }
+
+.navbar .second-nav ul li > a {
+  font-size: 17px; }
+
+
+
+/* -- dropdown messages --*/
+.second-nav .dropdown-menu.menu-message {
+  width: 290px;
+  left: auto;
+  right: 0;
+  padding: 0; }
+
+.second-nav .dropdown-menu.menu-message li {
+  margin: 0;
+  clear: left;
+  width: 100%;
+  border-bottom: 1px solid $grey-02;
+  margin: -5px 0 0 0;
+  position: relative;
+  cursor: pointer; }
+
+.second-nav .dropdown-menu.menu-message li:first-child {
+  margin: 0; }
+
+.second-nav .dropdown-menu.menu-message li:last-child {
+  border-bottom: 0;
+  padding: 10px 10px 10px 19px;
+  @include border-radii(0px, 0, 4px, 4px);
+}
+
+.second-nav .dropdown-menu.menu-message li:last-child:hover {
+  background: rgba(213, 216, 218, 0.2); }
+
+.second-nav .dropdown-menu.menu-message li:last-child a:hover {
+  background: transparent;
+  color: $black; }
+
+.second-nav .dropdown-menu.menu-message li.non-lu {
+  background: rgba(213, 216, 218, 0.2); }
+
+.second-nav .dropdown-menu.menu-message li a {
+  padding: 0; }
+
+.second-nav .dropdown-menu.menu-message li a .selection {
+  background: transparent;
+  float: left;
+  width: 8px;
+  height: 81px; }
+
+.second-nav .dropdown-menu.menu-message li + li {
+  vertical-align: inherit; }
+
+.second-nav .dropdown-menu.menu-message li:hover a .selection {
+  background: $coral; }
+
+.second-nav .dropdown-menu.menu-message li a .profil {
+  background: $grey-01;
+  @include border-radius(50%);
+  float: left;
+  height: 48px;
+  margin: 20px 10px 10px 8px;
+  width: 48px; }
+
+.second-nav .dropdown-menu.menu-message li a .profil.homme {
+  background: $men-color; }
+
+.second-nav .dropdown-menu.menu-message li a .profil.femme {
+  background: $women-color; }
+
+.second-nav .dropdown-menu.menu-message li a .profil .initiale {
+  color: $white;
+  font-size: 19px;
+  font-weight: 400;
+  margin: 10px 0 0;
+  text-align: center; }
+
+.second-nav .dropdown-menu.menu-message li a .profil.image img {
+    @include border-radius(50%);
+    height: 48px;
+    width: 48px;
+    border: 0; 
+}
+
+.second-nav .dropdown-menu.menu-message li a .message {
+  float: left;
+  margin: 10px 10px 10px 0;
+  width: 70%; }
+
+.second-nav .dropdown-menu.menu-message li a .message p {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.second-nav .dropdown-menu.menu-message li a .message .pseudo, .second-nav .dropdown-menu.menu-message li a:hover .message .pseudo, .second-nav .dropdown-menu.menu-message li a:focus .message .pseudo {
+  font-size: 15px;
+  margin: 0;
+  max-width: 72%;
+  color: $black; }
+
+.second-nav .dropdown-menu.menu-message li a .message .objet, .second-nav .dropdown-menu.menu-message li a:hover .message .objet, .second-nav .dropdown-menu.menu-message li a:focus .message .objet {
+  font-size: 16px;
+  margin: 0;
+  color: $black; }
+
+.second-nav .dropdown-menu.menu-message li.non-lu a .message .objet, .second-nav .dropdown-menu.menu-message li.non-lu a:hover .message .objet, .second-nav .dropdown-menu.menu-message li.non-lu a:focus .message .objet {
+  font-weight: bold; }
+
+.second-nav .dropdown-menu.menu-message li a .message .texte {
+  font-size: 12px;
+  color: $storm;
+  margin: 0; }
+
+.second-nav .dropdown-menu.menu-message li a .message .texte span {
+  color: $storm;
+  font-weight: bold; }
+
+.second-nav .dropdown-menu.menu-message li a .message .date {
+  color: $storm;
+  margin: 12px 10px 0 0;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+  top: 0;
+  font-size: 11px;
+  margin: 11px; }
+
+/* -- dropdown compte --*/
+.second-nav .dropdown-menu.menu-compte {
+  width: 220px;
+  left: auto;
+  right: 0;
+  padding: 0; }
+
+.second-nav .dropdown-menu.menu-compte li {
+  margin: 0;
+  width: 100%; }
+
+.second-nav .dropdown-menu.menu-compte li a:hover, .second-nav .dropdown-menu.menu-compte li a:focus {
+  color: $black; }
+
+.second-nav .dropdown-menu.menu-compte li:last-child {
+  border-top: 1px solid $grey-02; }
+
+.second-nav .dropdown-menu.menu-compte li a {
+  margin: 0 0 0 12px; }
+
+.second-nav .dropdown-menu.menu-compte li.compte {
+  padding: 10px;
+  border-bottom: 1px solid $grey-02;
+  background: none; }
+
+.second-nav .dropdown-menu.menu-compte li.compte + li {
+  clear: left;
+  margin: -2px 0 0 0; }
+
+.second-nav .dropdown-menu.menu-compte li.compte .profil {
+  background: $grey-01;
+  @include border-radius(50%);
+  float: left;
+  height: 60px;
+  width: 60px;
+  margin: 0 10px 0 0; }
+
+.second-nav .dropdown-menu.menu-compte li.compte .profil.homme {
+  background: $men-color; }
+
+.second-nav .dropdown-menu.menu-compte li.compte .profil.femme {
+  background: $women-color; }
+
+.second-nav .dropdown-menu.menu-compte li.compte .profil .initiale {
+  color: $white;
+  font-size: 19px;
+  font-weight: 400;
+  margin: 17px 0 0 0;
+  text-align: center; }
+
+.second-nav .dropdown-menu.menu-compte li.compte .profil.image img {
+  @include border-radius(50%);
+  height: 60px;
+  width: 60px;
+  border: 0; 
+}
+
+.second-nav .dropdown-menu.menu-compte li.compte .message {
+  float: left;
+  width: 63%; }
+
+.second-nav .dropdown-menu.menu-compte li.compte .message .pseudo {
+  font-size: 14px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+  font-weight: bold; }
+
+.second-nav .dropdown-menu.menu-compte li.compte .message .pseudo a {
+  margin: 0; }
+
+.second-nav .dropdown-menu.menu-compte li.compte .message .name {
+  font-size: 13px;
+  line-height: 18px;
+  margin: 6px 0 0; }
+
+/* -----------------------  popover connexion -------------------------------- */
+.btn-connexion .popover-content {
+  width: 290px; }
+
+.btn-connexion .popover .connexion input, .popover .connexion input {
+  margin: 0 0 10px 0; }
+
+.btn-connexion .popover .connexion a, .popover .connexion a {
+  display: block;
+  text-align: center;
+  margin: 0 0 10px 0; }
+
+.btn-connexion .popover .connexion a:last-child, .popover .connexion a:last-child {
+  font-weight: normal; }
+
+.btn-connexion .popover .connexion .separation-gris, .popover .connexion .separation-gris {
+  margin: 14px -15px; }
+
+.btn-connexion .popover .connexion a.btn:hover, .popover .connexion a.btn:hover {
+  color: $white; }
+
+.popover .connexion label {
+  font-weight: normal; }
+
+.popover .connexion label input {
+  margin: 7px 4px 17px; }
+
+.page-contenu {
+  margin-top: 72px; }
+
+/*---------------------------------------------------------------- A RETIRER pour la nouvelle charte ------------------------------------------*/
+.btn-orange-2 {
+  float: right;
+  font-weight: bold;
+  margin: 8px;
+  padding: 7px 11px;
+  background: $coral;
+  color: $white; }
+
+.btn-orange-2:hover, .btn-orange-2:focus {
+  background: #d34243;
+  color: $white; }
+
+.btn-orange-2 {
+  float: right;
+  font-weight: bold;
+  margin: 8px;
+  padding: 7px 11px;
+  background: $coral;
+  color: $white;
+  font-size: 14px; }
+
+.btn-orange-2:hover, .btn-orange-2:focus {
+  background: #d34243;
+  color: $white; }
+
+.btn-vert-2 {
+  float: right;
+  font-weight: bold;
+  margin: 8px;
+  padding: 7px 11px;
+  background: $white;
+  color: $coral;
+  font-size: 14px;
+  line-height: 18px;
+  @include border-radius(22px);
+}
+
+.btn-vert-2:hover, .btn-vert-2:focus {
+  background: $white;
+  color: #d34243; }
+
+/*---------------------------------------------------------------- FIN A RETIRER pour la nouvelle charte ------------------------------------------*/
+/* -----------------------  popover connexion -------------------------------- */
+.btn-connexion .popover-content {
+  width: 290px; }
+
+.btn-connexion .popover .connexion input, .popover .connexion input {
+  margin: 0 0 10px 0; }
+
+.btn-connexion .popover .connexion a, .popover .connexion a {
+  display: block;
+  text-align: center;
+  margin: 0 0 10px 0; }
+
+.btn-connexion .popover .connexion a:last-child, .popover .connexion a:last-child {
+  font-weight: normal; }
+
+.btn-connexion .popover .connexion .separation-gris, .popover .connexion .separation-gris {
+  margin: 14px -15px; }
+
+.btn-connexion .popover .connexion a.btn:hover, .popover .connexion a.btn:hover {
+  color: $white; }
+
+.popover .connexion label {
+  font-weight: normal; }
+
+.popover .connexion label input {
+  margin: 7px 4px 17px; }
+
+.page-contenu {
+  margin-top: 72px; }
+
+/*------- Harmonie avec l'ancien style du site btn orange dans popoover ----- */
+.btn-connexion .popover .connexion a, .popover .connexion a {
+  color: $coral;
+  text-decoration: underline; }
+
+.btn-connexion .popover .connexion .btn-action, .popover .connexion .btn-action {
+  background: $coral;
+  border-color: $coral;
+  text-decoration: none;
+  color: $white; }
+
+.btn-connexion .popover .connexion a#fb-login, .popover .connexion a#fb-login {
+  color: #3e69af;
+  font-weight: bold; }
+
+.btn-connexion .popover .connexion .input-lg, .popover .connexion .input-lg {
+  font-size: 13px;
+  height: 35px;
+  padding: 7px; }
+
+.popover .connexion h5 {
+  color: $coral;
+  font-weight: bold;
+  margin: 0 0 5px 0; }
+
+.popover .connexion label.label-box {
+  display: table;
+  margin: 3px 0 0; }
+
+.popover {
+  max-width: 500px;
+  z-index: 1100; }
+
+.connexion p.bg-danger {
+  max-width: 315px; }
+
+/* ================================================================= POPUP POPVER ETC GENERALES */
+/* ======================================================================================================== FIN Menu Principal -- */
+/* ================================================================================================ DEBUT Menu page abonnement (paywall) + pages connexion -- */
+.menu-simple.navbar {
+  background: $white;
+  height: 96px; }
+
+.menu-simple .navbar-brand {
+  padding: 0 23px 0;
+  float: left; }
+
+.menu-simple .navbar-brand img {
+  width: 164px;
+  height: auto;
+
+ }
+
+.menu-simple a {
+  float: right;
+  margin: 35px 0;
+  font-size: 16px; }
+
+.menu-simple button.close {
+  font-size: 40px;
+  margin: 27px 0 0 0; }
+
+/* =================================================================================================== FIN Menu page abonnement (paywall) + pages connexion -- */
+/* ======================================================================================================== DEBUT Pied -- */
+footer {
+  background: $dark-indigo;
+  padding: 30px 0 0 0 !important;
+  position: relative;
+  height: 53px;
+
+ }
+
+.small-footer {
+  width: 100%;
+  height: 53px;
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  background: transparent; }
+
+.full-beta .small-footer, .essai-7j footer {
+  bottom: 0; }
+
+.essai-7j.activ-code .small-footer {
+  position: relative; }
+
+.essai-7j .small-footer {
+  bottom: auto;
+  margin-top: 130px; }
+
+.small-footer .principal-footer {
+  background-color: $storm; }
+
+footer article {
+  margin: 6px 0 17px 0; }
+
+footer ul.nav {
+  height: auto; }
+
+footer li {
+  clear: none;
+  font-size: 100%;
+  margin: 0; }
+
+footer ul.nav li:first-child {
+  font-family: "Lato", sans-serif;
+  font-size: 17px;
+  line-height: 1.5em;
+  font-weight: bold;
+  color: $white;
+  margin: 6px 0 5px; }
+
+footer ul.nav li:first-child + li p {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: $white;
+  margin: 6px 0 0 0; }
+
+footer ul.nav li a {
+  font-family: "Lato", sans-serif;
+  color: $white !important;
+  font-size: 14px;
+  line-height: 1.8;
+  padding: 0; }
+
+footer a.twitter i.icon-genea, footer a.fb i.icon-genea {
+  color: $white;
+  float: left;
+  font-size: 16px;
+  margin: 11px 18px 0 0; }
+
+footer a.twitter:hover i.icon-genea, footer a.fb:hover i.icon-genea, footer a.twitter:focus i.icon-genea, footer a.fb:focus i.icon-genea {
+  color: rgba(255, 255, 255, 0.8); }
+
+a.fb {
+  background: none;
+  height: auto;
+  margin: auto;
+  width: auto; }
+
+footer ul.nav li a:hover, footer ul.nav li a:focus {
+  background: none;
+  text-decoration: underline; }
+
+footer .principal-footer {
+  background-color: $storm;
+  color: $white;
+  padding: 16px 0 7px;
+  text-align: center;
+  font-size: 14px; 
+  height: 53px;}
+
+footer .principal-footer a {
+  color: $white;
+  text-decoration: none; }
+
+footer .principal-footer a:hover { 
+  text-decoration: underline; }
+
+/* ======================================================================================================== FIN Pied -- */
+/* ======================================================================================================== DEBUT page abonnement (paywall) + pages connexion -- */
+.footer-connexion {
+  text-align: center;
+  bottom: 0;
+  position: absolute;
+  height: 100px;
+  left: 0;
+  padding: 28px 0 0;
+  width: 100%; 
+
+  @media (max-height: 550px){
+    position: inherit;
+  }
+
+  a {
+    text-align: center;
+    font-size: 18px;
+    color: $white;
+
+    i {
+      font-size: 32px;
+      margin: -4px 0 0 0;
+      vertical-align: middle; 
+    }
+
+    span {
+      display: inline-block;
+      margin: 4px 0 0 10px; 
+    }
+  }
+}
+
+
+/* ======================================================================================================== fin page abonnement (paywall) + pages connexion -- */
+/* ====================================================================================================================================================================================
+==================================================================================  media queries  ================================================================================
+====================================================================================================================================================================================
+============================================================================================================================================================================= */
+@media (max-width: 1200px) {
+  /*======================================================================== 1200px ============================================================== */ }
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: ecran (992) + largeur tablette portrait (767px) -- */
+@media (max-width: 992px) {
+  /*======================================================================== 992px ============================================================== */
+  /* -------------------------------------------------------------------------------------------------------- DEBUT Menu Principal -- */
+  .navbar-brand {
+    padding: 8px 11px; }
+
+  .btn-vert-2, .home-full a.btn-vert-2.btn-lg {
+    padding: 7px 3px; }
+
+  /* -------------------------------------------------------------------------------------------------------- FIN Menu Principal -- */
+  /* -------------------------------------------------------------------------------------------------------- DEBUT page abonnement (paywall) + pages connexion -- */
+  .footer-connexion {
+    margin: 0 auto;
+    position: inherit;
+    width: 100%; 
+  }
+
+  /* -------------------------------------------------------------------------------------------------------- FIN page abonnement (paywall) + pages connexion -- */ }
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: largeur tablette portrait -- */
+@media (max-width: 767px) {
+  /*======================================================================== 767 px ============================================================== */
+  /* -------------------------------------------------------------------------------------------------------- DEBUT Menu principal -- */
+  .navbar-brand {
+    padding: 18px 11px 0 11px; }
+
+  .navbar-brand img {
+    margin: -7px 0 -1px 5px; }
+
+    // make principal nav align on responsive
+    .navbar-principal {
+      left: 108px;
+      z-index: 10;
+    }
+
+  .navbar-toggle {
+    float: left;
+    border-color: transparent;
+    margin-right: 0; }
+
+  .navbar-toggle .icon-bar {
+    background-color: $coral; }
+
+  .navbar > .container > .navbar-header {
+    float: left; }
+
+  .second-nav ul {
+    margin: 0 -15px; }
+
+  .navbar-collapse {
+    position: absolute;
+    top: 50px; }
+
+  .navbar-collapse.second-nav {
+    position: relative;
+    top: 0;
+    margin-right: 0; }
+
+  .navbar .navbar-nav {
+    @include border-radius(4px);
+    background-color: $white;
+    border: 0;
+    color: $black;
+    margin: 0 0 0 5px;
+    @include box-shadow(0 6px 12px rgba(0, 0, 0, 0.176));
+    min-width: 209px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 3px 7px 8px 8px; }
+
+  .navbar ul > li > a {
+    color: $black; }
+
+  .navbar .navbar-nav > li > a.active {
+    color: $coral; }
+
+  .navbar .navbar-nav > li > a:hover {
+    background-color: $white;
+    color: $coral; }
+
+  .navbar-nav .open .dropdown-menu > li > a, .navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 6px 15px 6px 10px; }
+
+  .second-nav .icon-i-perso-tour {
+    margin: -5px 13px 0 -22px;
+    font-size: 30px; }
+
+  .navbar .navbar-collapse .nav > li > a {
+    padding: 6px 5px; }
+
+  .navbar-collapse.second-nav .dropdown-menu {
+    left: -153px; }
+
+  .navbar .navbar-nav li span.beta-xs {
+    font-size: 16px; }
+
+  .navbar.navbar-nav li span.beta-xs a {
+    display: block;
+    margin: 4px 5px 8px 14px;
+    text-decoration: none; }
+
+  .btn-vert-2 {
+    padding: 7px 3px; }
+
+
+
+  /* -------------------------------------------------------------------------------------------------------- FIN Menu principal -- */
+  /* -------------------------------------------------------------------------------------------------------- DEBUT Footer -- */
+  footer article div:nth-child(3) ul, footer article div:last-child ul {
+    margin-top: 15px; }
+
+  footer {
+    padding: 0;
+    display: block;
+    height: auto; }
+
+  /* -------------------------------------------------------------------------------------------------------- FIN Footer -- */ 
+}
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: largeur telephone-- */
+@media (max-width: 496px) {
+  /*======================================================================== 496 px ============================================================== */
+  /* -------------------------------------------------------------------------------------------------------- DEBUT Menu principal -- */
+  .btn-connexion .popover-content {
+    width: 240px; }
+
+  /* -------------------------------------------------------------------------------------------------------- FIN Menu principal -- */
+  /* -------------------------------------------------------------------------------------------------------- DEBUT Footer -- */
+  footer ul.nav li a {
+    line-height: 2.5; }
+
+  /* -------------------------------------------------------------------------------------------------------- FIN Footer -- */
+  /* -------------------------------------------------------------------------------------------------------- DEBUT Message Cookie -- */
+  .cookiebanner-close button {
+    padding: 9px 14px !important;
+    margin: 11px 0 12px 27px !important;
+    line-height: 20px !important; }
+
+  /* -------------------------------------------------------------------------------------------------------- FIN Message Cookie -- */ 
+}
+
+/*# sourceMappingURL=menu-principal.css.map */
+
+@media (max-width: 345px) {
+  footer .principal-footer {
+    height: 83px;
+  }
+}
+
+// Unknow styles nav
+
+.navbar-collapse.second-nav ul#profilHover .icon-connected-container {
+  display: block;
+}
+
+// Not nav styles -- to clean
+.search-footer  footer.small-footer {
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  width: 100%;
+  display: table-row;
+  height: 53px;
+  padding-top: 0 !important;
+}
+
+.search-footer  .principal-footer {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+
+
+.navbar .popover.bottom > .arrow {
+  border-bottom-color: white; }
+
+.navbar.filterbar .popover.bottom > .arrow {
+  border-bottom-color: #999;
+}
+

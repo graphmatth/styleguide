@@ -1,0 +1,50 @@
+
+header+.container, header+script+.container, .container.page, .container.page-contenu, .container.messagerie, .container.liste-arbre, .container.alerte, .container.archive, .container.historique, .container.messagerie, .container.resume-arbre, .container.home-connectee, .container.resultat-ec, .container.paiement-cheque, .tunnelB, .tunnelB, .container-fusion {
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+.container-fusion {
+    min-height: 883px;
+}
+.container.page.page-departement {
+    margin-bottom: 0;
+    margin-top: 50px;
+    min-height: 74vh;
+}
+.container.espace-client, .container.option-arbre, .container.sondage-reflexe {
+    margin-bottom: 30px;
+    margin-top: 50px;
+    height: auto;
+    min-height: auto;
+}
+.container.liste-individus {
+    margin-bottom: 30px;
+    margin-top: 50px;
+    height: auto;
+    min-height: 94vh;
+}
+
+.container.liste-individus .row {
+    /* Overide grid less framework */
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.container.liste-individus 
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+}
+
+.container-fluid.navbar-arbre {
+    padding: 15px;
+    min-height: 50px;
+}
+
+.reglage-arbre-lateral+.container {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    height: 88vh;
+}

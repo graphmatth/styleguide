@@ -1,0 +1,379 @@
+#bodypagetag {
+    display: table;
+}
+
+#bodypagetag footer {
+    display: table-row;
+    bottom: 0;
+    z-index: 10;
+}
+
+
+#bodypagetag #containAll {
+    min-height: auto;
+}
+
+
+// IE 10 correction to make sticky footer 
+@media screen and (min-width:0\0) {
+    #bodypagetag #containAll {
+        min-height: 100vh;
+    }
+}
+
+///////////////////
+/* STRUCTURES GENERAL */
+///////////////////
+html {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: inherit;
+}
+
+body {
+    padding-top: 0px !important;
+    font-family: "Lato",  sans-serif;
+    color: $black;
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+
+}
+
+body.search-footer {
+    display: table;
+    width: 100%;
+    -webkit-overflow-scrolling: touch
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+footer {
+    width: 100%;
+    display: table-row;
+    position: relative;
+    margin-top: auto;
+}
+
+.search-footer header {
+    min-height: 50px;
+}
+
+
+///////////////////
+/* LAYOUT */
+///////////////////
+
+#containAll {
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+#containAll header {
+    min-height: 50px;
+}
+
+.side-collapse-container, #containAll {
+    display: table;
+    width: 100%;
+}
+
+.page-contenu {
+    flex-grow: 1;
+}
+
+#individualSheet {
+   margin-bottom: auto;
+   overflow: hidden;
+   min-height: 94vh;
+}
+
+#newlayouttree {
+   margin-bottom: auto;
+   overflow: hidden;
+    min-height: 94vh;
+   width: 100%;
+}
+
+
+// Mediametrie iframe
+#da_iframe {
+    position: absolute;
+    top: 0;
+}
+
+/* Main layout Result Person */ 
+.subtitle-person-tree-information-container {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 0px;
+    font-size: 24px;
+    @media screen and (max-width: 767px) {
+        margin-top: 40px;
+    }
+}
+
+input.three-input {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+
+// Color error message three creation
+.create-tree-error-message {
+    color: $danger;
+}
+
+// Responsive br break
+@media (max-width: 550px) {
+    .rwd-break {
+        display: none;
+    } 
+}
+
+@media (max-width: 768px) {
+    .rwd-break.banner {
+        display: none;
+    } 
+}
+
+@media (max-width: 880px) {
+    .rwd-break.home {
+        display: none;
+    } 
+}
+
+.argument-1 {
+    color: rgb(54, 62, 99);
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    line-height: 22.85px;
+    text-align: center;
+}
+
+
+// basic-style for map 
+#map-canvas {	
+    height: 680px;	
+    position: relative;	
+}	
+	
+.map-coorect-place-container {	
+    position: relative;	
+}	
+	
+.map-coorect-place-container #map-canvas {	
+    height: 80vh;	
+	
+}	
+	
+@media (max-width: 992px) {	
+    .map-coorect-place-container #map-canvas {	
+        height: 83.5vh;	
+    }   	
+}	
+	
+@media (max-width: 768px) {	
+    .map-coorect-place-container #map-canvas {	
+        height: 81vh;	
+    }   	
+}	
+	
+@media (max-width: 400px) {	
+    .map-coorect-place-container #map-canvas {	
+        height: 79vh;	
+    }   	
+}
+
+.offer-yellow-bg {
+    float: left;
+    color: $storm;
+    padding: 5px;
+    width: auto;
+    clear: left;
+    background-color: $yellow;
+    font-weight: 800;
+    font-size: 1.7rem;
+}
+
+.offer-yellow-bg-container {
+    display: block;
+    min-height: 30px;
+}
+
+@media (max-width: 767px) {
+    .filae-box-offer {
+        .offer-yellow-bg {
+            font-size: 1.4rem;
+            width: 100%;
+            text-align: center;
+        }
+    } 
+}
+
+  /******************  Import or attach with no tree  *****************/  
+  
+
+#option-fiche-resultat {
+    .attach_create_tree_ {
+        .attach-no-tree-cta {
+            .btn:hover {
+                color: $white;
+            }
+
+            .no-thanks-link:hover {
+                background-color: inherit;
+                color: $light-indigo;
+                
+            }
+        }
+    }
+}
+
+  .attach_create_tree_ {
+    border: 1px solid #ddd;
+    @include border-radius(4px);
+    padding: 15px;
+
+        p{
+            font-size:16px;
+            line-height:24px;
+            margin-bottom:16px;
+            width: 85%;
+        }
+
+        .attach-no-tree-cta {
+            @include flexbox;
+            @include justify-content(space-between);
+            @include align-items(center);
+                .btn {
+                    line-height: 15px;
+                }
+
+                .btn:hover {
+                    color: $white;
+                }
+    
+                .no-thanks-link:hover {
+                    background-color: inherit;
+                    color: $light-indigo;
+                    
+                }
+        }
+
+        div{
+            margin-bottom: 16px;
+            a + a {
+                display: inline-block;
+                font-size: 12px;
+                line-height: 30px;
+            }
+
+        }
+    &.dropdown-menu{
+        left: auto;
+        right: 0;
+        width: 240px;
+
+        p{
+            width: 100%;
+        }
+    }
+  }
+  
+  
+  /******************  END Import or attach with no tree  *****************/
+
+  .no-hints,
+  .search-hints {
+      @include flexbox;
+      @include flex-direction(column);
+      @include justify-content(center);
+      min-height: 305px;
+      padding: $spacing;
+      i.icon-i-hints {
+          color: $coral;
+          font-size: 60px !important;
+      }
+      .no-hints-subtitle {
+          color: $coral;
+          margin: $spacing-large 0;
+          font-size: 20px;
+      }
+      .no-hints-text {
+          font-size: 13px;
+          max-width: 225px;
+          margin: 0 auto;
+      }
+  }
+
+  .search-hints {
+      .no-hints-text {
+          max-width: 260px;
+      }
+  } // BADGE HINTS
+  .badge-hints {
+      height: 20px;
+      padding: 4px 7px;
+      margin: 2px 0 0 5px;
+      min-width: inherit;
+  } //loader circle
+  .loader-circle {
+      margin-bottom: $spacing-large;
+      span {
+          display: inline-block;
+          width: 12px;
+          height: 12px;
+          border-radius: 100%;
+          background-color: $grey-02;
+          margin: 5px 0 5px 7px;
+          opacity: 0;
+          &:nth-child(1) {
+              @include animation(opacitychange 2s ease-in-out infinite);
+          }
+          &:nth-child(2) {
+              @include animation(opacitychange 1s ease-in-out 0.333333s infinite);
+          }
+          &:nth-child(3) {
+              @include animation(opacitychange 1s ease-in-out 0.6666666s infinite);
+          }
+      }
+  } // END HINTS
+  
+$loader-delay: 1;
+$loader-color: $coral;
+$loader-size: 12px;
+.loader {
+    margin-bottom: $spacing-large;
+    >span {
+        display: inline-block;
+        width: $loader-size;
+        height: $loader-size;
+        margin: 0 4px;
+        background: $loader-color;
+        opacity: 0;
+        @include border-radius(50%);
+        @include animation(loader-fade 1s infinite);
+        &:nth-child(1) {
+            animation-delay: 0s;
+        }
+        &:nth-child(2) {
+            animation-delay: 1.2s;
+        }
+        &:nth-child(3) {
+            animation-delay: 2.4s;
+        }
+    }
+}

@@ -1,0 +1,1289 @@
+/* -- Dans les popup -- */
+
+.modal-content .bs-callout {
+    margin: 0;
+}
+
+.modal-content .bs-callout .modal-body,
+.modal-content .bs-callout .modal-footer {
+    padding: 0;
+    border-top: 0;
+}
+
+.modal-content .bs-callout .modal-footer {
+    margin: 30px 0 0 0;
+}
+
+.modal-content .bs-callout div {
+    margin: 0;
+}
+
+.bg-essai-7j .intl-tel-input #phone {
+    outline: -webkit-focus-ring-color auto 0px;
+    margin-bottom: 15px !important;
+}
+
+.bg-essai-7j .intl-tel-input.complete-phone #phone {
+    margin-bottom: 15px !important;
+}
+
+.intl-tel-input.allow-dropdown.complete-phone .flag-container {
+    margin-top: 20px;
+}
+
+.bg-essai-7j .bootstrap-select .dropdown-toggle.btn,
+.bg-essai-7j .bootstrap-select .dropdown-toggle.btn:hover,
+.bg-essai-7j .bootstrap-select .dropdown-toggle.btn:active {
+    background-color: transparent !important;
+}
+
+
+/* Popup facebook */
+
+.inscr-conn .form-inscr-conn {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+/*----------------------- POPUP => Importer : question est-ce la mm personne ? --- */
+
+.question-correspondance {
+    margin: 27px 0 0 -10px;
+    min-height: 64px;
+    width: 120%
+}
+
+.question-correspondance .lien-g {
+    float: left;
+    height: 1px;
+    width: 30%;
+    margin: 34px 0 0 0;
+    border-bottom: 2px dashed $coral;
+}
+
+.question-correspondance .lien-question {
+    width: 40%;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    color: $white;
+    font-size: 30px;
+    min-height: 64px;
+    line-height: 64px;
+}
+
+.question-correspondance .lien-d {
+    float: left;
+    height: 1px;
+    width: 30%;
+    margin: 34px 0 0 0;
+    border-bottom: 2px dashed $coral;
+}
+
+.modal-body.mini-arbre.pad50 {
+    padding: 50px 0;
+}
+
+/* ======================================================================================================== FIN Fiche résultat d'un arbre ( à partir des résultats de recherches) -- */
+/*-------------------------------------------------------------------------- POPUP FICHE ARBRE --- */
+/* ======================================================================================================== DEBUT Import -- */
+
+.modal-body.mini-arbre .individu-connu.individu-parente {
+    border: 3px dashed #337ab7;
+    margin: -2px 0 0;
+    cursor: pointer;
+}
+
+.modal-body.mini-arbre .individu-connu.individu-parente:hover,
+.modal-body.mini-arbre .individu-connu.individu-parente:focus {
+    background: #337ab7 none repeat scroll 0 0;
+    border: 3px solid #337ab7;
+}
+
+.modal-body.mini-arbre .individu-connu.individu-parente:hover p,
+.modal-body.mini-arbre .individu-connu.individu-parente:hover span,
+.modal-body.mini-arbre .individu-connu.individu-parente:focus p,
+.modal-body.mini-arbre .individu-connu.individu-parente:focus span {
+    color: $white;
+}
+
+.modal-body.mini-arbre .individu-connu.individu-centrale-correspondant {
+    border: 3px solid $white;
+    margin: -2px 0 0;
+}
+
+.modal-body.mini-arbre .individu-correspondant .profil:after {
+    content: "\e91e";
+    font-family: "icomoon" !important;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-transform: none;
+    color: $white;
+    font-size: 25px;
+}
+
+.modal-body.mini-arbre .individu-correspondant.individu-principal .profil:after {
+    margin: 10px 0 0 0px;
+    display: block;
+}
+
+.modal-body.mini-arbre .individu-inconnu .profil:after {
+    margin: -3px 0 0 -3px;
+    display: block;
+}
+
+.modal-body.mini-arbre .individu-correspondant.individu-inconnu,
+.modal-body.mini-arbre .correspondant-multiple.individu-inconnu {
+    background: $white none repeat scroll 0 0;
+    border: 2px solid $white;
+}
+
+.modal-body.mini-arbre .individu-correspondant.individu-inconnu p {
+    color: $black;
+    margin: 0;
+}
+
+.modal-content .modal-body.liens-familiaux-arbre .generation {
+    clear: left;
+}
+
+.modal-content .modal-body.liens-familiaux-arbre .generation:last-child {
+    margin: 0 0 22px 0;
+}
+
+/* ligne grands-parents */
+
+.modal-content .modal-body.liens-familiaux-arbre .generation .marge-grd-parent,
+.modal-content .modal-body.liens-familiaux-arbre .generation .marge-grd-parent-2,
+.modal-content .modal-body.liens-familiaux-arbre .generation .individu-connu {
+    float: left;
+}
+
+.modal-content .modal-body.liens-familiaux-arbre .generation .marge-grd-parent {
+    height: 50px;
+    width: 2.816901%
+}
+
+.modal-content .modal-body.liens-familiaux-arbre .generation .marge-grd-parent-2 {
+    height: 50px;
+    width: 5.633802%
+}
+
+.modal-content .modal-body.liens-familiaux-arbre .generation .individu-connu {
+    height: 50px;
+    width: 22.183098%;
+    border: 1px solid $white;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    line-height: 47px;
+    min-height: 50px;
+    position: relative;
+    text-align: center;
+}
+
+.modal-body.mini-arbre .individu-connu,
+.modal-body.mini-arbre .enfant-connu,
+.modal-body.mini-arbre .individu-correspondant,
+.modal-body.mini-arbre .individu-parente {
+    height: 68px;
+}
+
+.modal-body.mini-arbre .enfant-connu {
+    overflow: hidden;
+}
+
+.modal-body.mini-arbre .individu-connu .profil,
+.modal-body.mini-arbre .enfant-connu .profil,
+.modal-body.mini-arbre .individu-inconnu .profil {
+    float: left;
+    height: 45px;
+    margin: auto;
+    width: 45px;
+    margin: 10px 0 0 8px;
+}
+
+.modal-body.mini-arbre .individu-connu .dropdown .profil {
+    margin: 10px 0 0 1px !important;
+}
+
+.modal-body.mini-arbre .individu-connu .dropdown.open ul li a {
+    padding-left: 6px;
+}
+
+.modal-body.mini-arbre .individu-connu .dropdown.open ul li:last-child a {
+    padding-left: 0;
+}
+
+.modal-body.mini-arbre .individu-connu .profil .initiale,
+.modal-body.mini-arbre .enfant-connu .profil .initiale,
+.modal-body.mini-arbre .individu-inconnu .profil .initiale {
+    display: block;
+    color: $white;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 12px 0px 0;
+    text-align: center;
+}
+
+.modal-body.mini-arbre .individu-connu .profil .initiale {
+    padding: 12px 0 0 5px;
+    width: 39px;
+}
+
+.modal-body.mini-arbre .enfant-connu .profil .initiale {
+    padding: 14px 0 0 0px;
+}
+
+.modal-body.mini-arbre .individu-parente .profil .initiale {
+    width: 45px;
+    height: 45px;
+}
+
+.modal-body.mini-arbre .individu-connu .profil.image img,
+.modal-body.mini-arbre .individu-inconnu .profil.image img,
+.modal-body.mini-arbre .enfant-connu .profil.image img,
+.modal-body.mini-arbre .individu-parente .profil.image img {
+    border-width: 2px;
+    height: 45px;
+    width: 45px;
+}
+
+.modal-body.mini-arbre .individu-principal .profil.image img {
+    display: none;
+}
+
+.modal-body.mini-arbre .individu-inconnu .dropdown>div .info-perso {
+    margin: 8px -16px 0 0;
+}
+
+.modal-body.mini-arbre .individu-connu .dropdown>div .info-perso {
+    margin: 8px 8px 0 0;
+    width: 56%;
+    padding-left: 5px;
+}
+
+.modal-body.mini-arbre .individu-connu .info-perso,
+.modal-body.mini-arbre .enfant-connu .info-perso,
+.modal-body.mini-arbre .individu-inconnu .info-perso {
+    display: inline-block;
+    height: 48px;
+    margin: 8px 10px 0 6px;
+    position: relative;
+    width: 50%
+}
+
+.modal-body.mini-arbre .individu-connu .info-perso div,
+.modal-body.mini-arbre .enfant-connu .info-perso div,
+.modal-body.mini-arbre .individu-inconnu .info-perso div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%
+}
+
+.modal-body.mini-arbre .individu-connu .info-perso p,
+.modal-body.mini-arbre .enfant-connu .info-perso p,
+.modal-body.mini-arbre .individu-inconnu .info-perso p {
+    display: block;
+    text-align: left;
+    font-size: 12px;
+    margin: 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #000;
+    line-height: 12px;
+}
+
+.modal-body.mini-arbre .individu-parente .info-perso p {
+    color: $white;
+}
+
+.modal-body.mini-arbre .individu-connu .info-perso div p:last-child,
+.modal-body.mini-arbre .enfant-connu .info-perso div p:last-child,
+.modal-body.mini-arbre .individu-inconnu .info-perso div p:last-child {
+    font-style: normal;
+}
+
+.modal-body.mini-arbre .individu-connu .info-perso p:nth-child(2),
+.modal-body.mini-arbre .enfant-connu .info-perso p:nth-child(2),
+.modal-body.mini-arbre .individu-inconnu .info-perso p:nth-child(2) {
+    font-weight: bold;
+}
+
+.modal-body.mini-arbre .individu-connu .material-icons,
+.modal-body.mini-arbre .enfant-connu .material-icons {
+    background: $white none repeat scroll 0 0;
+    border-radius: 50%;
+    color: $grey-01;
+    float: right;
+    font-size: 11px;
+    margin: 2px 0 0;
+    padding: 2px;
+    position: relative;
+}
+
+.modal-body.mini-arbre .individu-principal .material-icons {
+    background: $storm none repeat scroll 0 0;
+    border-radius: 50%;
+    color: $white;
+    float: right;
+    font-size: 11px;
+    margin: 2px 0 0;
+    padding: 2px;
+    position: relative;
+}
+
+.modal-body.mini-arbre .individu-inconnu.individu-parente .material-icons {
+    background: $storm none repeat scroll 0 0;
+    border-radius: 50%;
+    color: $white;
+    float: right;
+    font-size: 11px;
+    margin: -10px 0 0;
+    padding: 2px;
+    position: relative;
+}
+
+.modal-body.mini-arbre .individu-inconnu .material-icons {
+    background: $white none repeat scroll 0 0;
+    border-radius: 50%;
+    color: $grey-01;
+    float: right;
+    font-size: 11px;
+    margin: -10px 0 0;
+    padding: 2px;
+    position: relative;
+}
+
+.modal-body.mini-arbre .individu-connu .image .material-icons,
+.modal-body.mini-arbre .enfant-connu .image .material-icons,
+.modal-body.mini-arbre .individu-parente .material-icons,
+.modal-body.mini-arbre .individu-principal .material-icons {
+    margin: -12px 0 0;
+}
+
+.modal-body.mini-arbre .individu-principal .material-icons {
+    display: none;
+}
+
+.modal-body.mini-arbre .lien-left:before {
+    content: "\e67d";
+    font-family: "icomoon";
+    font-size: 4.5px;
+    left: -7px;
+    position: relative;
+    vertical-align: top;
+    color: $grey-01;
+}
+
+.modal-body.mini-arbre .individu-inconnu .lien-left:before {
+    top: -31px;
+}
+
+.modal-body.mini-arbre .lien-dropdown .lien-left:before {
+    top: -28px;
+}
+
+.modal-body.mini-arbre .individu-connu .lien-left:before,
+.modal-body.mini-arbre .individu-correspondant .lien-left:before {
+    top: -1px;
+}
+
+.modal-body.mini-arbre .individu-connu .lien-right,
+.modal-body.mini-arbre .individu-inconnu .lien-right {
+    height: 1px;
+    width: 7px;
+    position: absolute;
+    right: -10px;
+    background-color: $grey-01;
+    top: 50%
+}
+
+.modal-body.mini-arbre .individu-connu .lien-left,
+.modal-body.mini-arbre .individu-inconnu .lien-left {
+    height: 1px;
+    width: 7px;
+    position: absolute;
+    left: -10px;
+    background-color: $grey-01;
+    top: 50%
+}
+
+.modal-body.mini-arbre .individu-connu .lien-left,
+.modal-body.mini-arbre .individu-inconnu .individu-correspondant .lien-left {
+    line-height: normal !important;
+    top: 49%
+}
+
+.modal-body.mini-arbre .individu-inconnu.individu-correspondant .lien-left {
+    line-height: 3px !important;
+}
+
+.modal-body.mini-arbre .lien-connu-parent-enfant {
+    height: 65px;
+    width: 1px;
+    margin: -29px 50% 0;
+    background: $grey-01;
+}
+
+.modal-body.mini-arbre .lien-connu-enfant-frere-soeur {
+    border-left: 1px solid $grey-01;
+    border-right: 1px solid $grey-01;
+    border-top: 1px solid $grey-01;
+    height: 30px;
+    margin: 0 -16px 0 -15px;
+}
+
+.modal-body.mini-arbre .lien-inconnu-parent-enfant {
+    height: 29px;
+    width: 0;
+    border-right: 1px dotted $grey-01;
+    margin: 0 0 0 -15px;
+}
+
+.modal-body.mini-arbre .lien-connu-parent-enfant-bas {
+    height: 60px;
+    width: 0;
+    border-left: 1px solid $grey-01;
+    margin: -30px 0 0 -15px;
+}
+
+.modal-body.mini-arbre .lien-connu-parent-enfant-bas-bas {
+    height: 30px;
+    width: 106px;
+    border-right: 1px solid $grey-01;
+    border-top: 1px solid $grey-01;
+    margin: 0 0 0 -15px;
+}
+
+.modal-body.mini-arbre .individu-inconnu .femme,
+.modal-body.mini-arbre .lien-dropdown .femme {
+    color: #f99;
+}
+
+.modal-body.mini-arbre .individu-inconnu .homme,
+.modal-body.mini-arbre .lien-dropdown .homme {
+    color: #9cc;
+}
+
+.modal-content .modal-body.liens-familiaux-arbre .generation .individu-connu p {
+    margin: 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    line-height: normal;
+    vertical-align: middle;
+    width: 100%;
+    font-size: 11px;
+}
+
+.modal-content .modal-body.liens-familiaux-arbre .generation .individu-connu p .bold {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.modal-content .modal-body.liens-familiaux-arbre .generation .individu-connu.inconnu p .bold {
+    font-size: 18px;
+}
+
+.modal-content .modal-body.liens-familiaux-arbre .generation .lien-grd-parent-a,
+.modal-content .modal-body.liens-familiaux-arbre .generation .lien-grd-parent-b,
+.modal-content .modal-body.liens-familiaux-arbre .generation .lien-grd-parent-c,
+.modal-content .modal-body.liens-familiaux-arbre .generation .lien-grd-parent-d,
+.modal-content .modal-body.liens-familiaux-arbre .generation .lien-grd-parent-e,
+.modal-content .modal-body.liens-familiaux-arbre .generation .lien-grd-parent-f {
+    float: left;
+}
+
+.modal-content .modal-body.liens-familiaux-arbre .generation .lien-grd-parent-a {
+    height: 18px;
+    width: 11.091549%
+}
+
+.modal-content .modal-body.liens-familiaux-arbre .generation .lien-grd-parent-b {
+    height: 18px;
+    width: 24.823943%;
+    border-bottom: 2px solid #337ab7;
+    border-left: 2px solid #337ab7;
+    border-right: 2px solid #337ab7;
+}
+
+.modal-content .modal-body.liens-familiaux-arbre .generation .lien-grd-parent-c {
+    height: 18px;
+    width: 27.816901%
+}
+
+.modal-content .modal-body.liens-familiaux-arbre .generation .lien-grd-parent-d {
+    height: 18px;
+    width: 23.591549%;
+    border-right: 2px solid #337ab7;
+}
+
+.modal-content .modal-body.liens-familiaux-arbre .generation .lien-grd-parent-e {
+    height: 18px;
+    width: 52.816901%
+}
+
+.modal-content .modal-body.liens-familiaux-arbre .generation .lien-grd-parent-f {
+    height: 18px;
+    width: 23.591549%;
+    border-left: 2px solid #337ab7;
+}
+
+.modal-content .modal-body.liens-familiaux-arbre .generation .marge-parent-a,
+.modal-content .modal-body.liens-familiaux-arbre .generation .marge-parent-b,
+.modal-content .modal-body.liens-familiaux-arbre .generation .lien-parent-a,
+.modal-content .modal-body.liens-familiaux-arbre .generation .lien-parent-b {
+    float: left;
+}
+
+.modal-content .modal-body.liens-familiaux-arbre .generation .marge-parent-a {
+    height: 50px;
+    width: 11.971830%
+}
+
+.modal-content .modal-body.liens-familiaux-arbre .generation .marge-parent-b {
+    height: 50px;
+    width: 30.985915%
+}
+
+.modal-content .modal-body.liens-familiaux-arbre .generation .lien-parent-a {
+    height: 18px;
+    width: 23.591549%
+}
+
+.modal-content .modal-body.liens-familiaux-arbre .generation .lien-parent-b {
+    height: 18px;
+    width: 52.816901%;
+    border-bottom: 2px solid #337ab7;
+    border-left: 2px solid #337ab7;
+    border-right: 2px solid #337ab7;
+}
+
+
+@import '_first-consultation';
+@import '_email';
+@import '_password';
+@import '_phone';
+
+
+.intl-tel-input.allow-dropdown {
+    z-index: 10;
+}
+
+#popup-1erdoc {
+    .modal-dialog {
+        &.popup-size {
+            max-width: 725px;
+            opacity: 0.95;
+            width: 100%;
+        }
+    }
+
+    .popup-freetrial-layout {
+        max-width: 725px;
+        opacity: 0.95;
+        width: 100%;
+        
+        &.new-modal-dialog {
+            .popup-essai {
+                padding: 0 25px;
+            }
+        }
+
+       
+        .complete-user-profile-pop-up {
+             
+            .form-group {
+                //reset width form-group for complete user-popup
+                max-width: inherit;
+                .faux-input {
+                    &.register { 
+                        padding: 26px 0 5px 0;
+                    }
+                }
+
+                [data-toggle="floatLabel"]+label {
+                    left: 15px;
+                    top: 17px;
+                }
+            }
+
+            p.fake-input-line-2 {
+                top: 10px;
+                color: $grey-01;
+                text-align: left; 
+            }
+
+            .birth { 
+                padding: 26px 0 5px 0;
+            }
+
+            #userYearBirth {
+                padding: 34px 0 0 0;
+            }
+
+            .complete-phone  {
+                width: 100%;
+
+                .complete-phone-label {
+                    top: 17px;
+                    z-index: 10;
+                }
+
+                .intl-tel-input.allow-dropdown {
+                    width: 100%;
+                }
+                #phone {
+                    width: 100%;
+                    border-bottom: 1px solid #ccc;
+                }
+            }
+
+            .txt-check {
+                text-align: left;
+            }
+            .bloc-phone{
+                text-align: left;
+                .checkbox{
+                    max-width: 100%;
+                }
+
+            }
+        }
+
+
+        // Reset boostrp float on pop up 
+        .col-xs-12.col-sm-12.col-md-12.col-lg-12.freetrial-left.paywall-left {
+            float: inherit;
+        }
+
+        .explenation-not-eligible {
+            line-height: inherit !important;
+        }
+
+        .form-group {
+            margin: 0 auto;
+            max-width: 300px;
+            
+            label {
+                left: 0;
+                position: absolute
+            }
+    
+            [data-toggle="floatLabel"] + label {
+                left: 0;
+            }
+    
+            .show-password {
+                text-transform: inherit;
+            } 
+    
+            .form-control {
+                &:focus {
+                    border-bottom: 1px solid $coral;   
+                }
+            }
+        }
+    
+        .btn-free-container {
+            margin: $spacing-medium auto $spacing-large auto;
+            text-align: center;
+            .btn {
+                padding: 8px 16px;
+                font-weight: $bold;
+            }
+        }
+    
+        .legal-notice-container {
+    
+            p.legal-notice {
+                &:last-child {
+                    margin-top: $spacing-medium;
+                }
+    
+                color: $grey-01;
+                font-size: 11px !important;
+                line-height: inherit !important;
+                text-align: center; 
+            } 
+        }
+
+        //Code css
+
+        .code-phone-container {
+            .form-control {
+                margin: 0 auto;
+                max-width: 300px;
+                font-weight: $bold;
+            }
+
+            .error-message {
+                margin: 0 auto;
+                max-width: 300px;
+                font-size: 11px !important;
+                color: $danger;
+                text-align: left;
+                line-height: inherit !important;
+                i {
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+
+
+////////////////////
+/* POP UP - MODAL */
+///////////////////
+
+body.modal-open {
+    padding-right: 0px !important;
+    // overflow-y: auto; 
+}
+.modal-dialog {
+    z-index: 2000000000 !important;
+}
+.modal-header .modal-title {
+    line-height: 1.42857;
+    margin: 0 22px 0 0;
+}
+.modal-dialog .modal-content .modal-header+.modal-footer {
+    border-top: 0;
+}
+.modal-header .btn+.btn {
+    margin-bottom: 0;
+    margin-right: 5px;
+}
+.modal.no-body .modal-body {
+    display: none;
+}
+.modal.no-body .modal-header, .modal.no-body .modal-footer {
+    border: 0;
+}
+.modal-body textarea {
+    resize: vertical;
+}
+
+/* popup - Bouton "connexion/inscription" */
+.connexion .bloc-connexion {
+    width: 44%;
+    float: left;
+    height: 415px;
+}
+.connexion .bloc-inscription {
+    width: 55%;
+    float: left;
+}
+.connexion .separation-bloc {
+    width: 1px;
+    background: $coral;
+    height: 394px;
+    float: left;
+    margin: 15px 0 15px 0;
+}
+.btn-fb {
+    color: #3e69af;
+    font-family: "Lato",  sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+.icone-btn-fb {
+    background: transparent url("../../img/icones.png") no-repeat scroll -353px -34px;
+    display: inline-block;
+    height: 31px;
+    margin: -8px 9px -8px 0;
+    width: 32px;
+}
+.connexion .modal-header, .connexion .modal-footer {
+    border: none;
+}
+.connexion .modal-footer {
+    padding: 0 0 15px 0;
+    text-align: center;
+    margin: 0;
+}
+.connexion .modal-header {
+    padding: 15px 10px 0 15px;
+}
+.connexion .bloc-connexion .modal-header button.close {
+    display: none;
+}
+.connexion input, .connexion select {
+    margin: 0 0 7px 0;
+}
+.connexion .bloc-inscription label.label-box {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin: -6px 0 0 0;
+}
+.connexion .bloc-inscription label.label-box input {
+    margin: 0 6px 0 0;
+}
+.connexion span.ecran-bl {
+    display: block;
+}
+
+/* Popup - champs en ligne => form-inline */
+.form-inline label {
+    font-weight: normal;
+    margin: 0 5px 5px 0;
+}
+
+/* Popup lightbox galerie photo */
+.ekko-lightbox-container {
+    position: relative;
+}
+.ekko-lightbox-nav-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%}
+.ekko-lightbox-nav-overlay a {
+    z-index: 100;
+    display: block;
+    width: 49%;
+    height: 100%;
+    font-size: 30px;
+    color: $white;
+    text-shadow: 2px 2px 4px $white;
+    opacity: 0;
+    filter: dropshadow(color=#333,  offx=2,  offy=2);
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
+}
+.ekko-lightbox-nav-overlay a:empty {
+    width: 49%}
+.ekko-lightbox a:hover {
+    text-decoration: none;
+    opacity: 1;
+}
+.ekko-lightbox .glyphicon-chevron-left {
+    left: 0;
+    float: left;
+    padding-left: 15px;
+    text-align: left;
+}
+.ekko-lightbox .glyphicon-chevron-right {
+    right: 0;
+    float: right;
+    padding-right: 15px;
+    text-align: right;
+}
+.ekko-lightbox .modal-footer {
+    text-align: left;
+}
+
+/* popup - Bouton "Imprimer" fiche individu (venant de la recherche ou d'un arbre directement) */
+.imprimer-membre .modal-header {
+    border-bottom: 0;
+}
+.imprimer-membre .modal-footer {
+    border-top: 0;
+}
+.imprimer-membre .modal-body {
+    padding: 0 15px;
+}
+.imprimer-membre .photo {
+    width: 130px;
+    float: left;
+    margin: 0 10px 0 0;
+    height: 130px;
+}
+.imprimer-membre .photo img {
+    width: 110px;
+    height: 130px;
+}
+.imprimer-membre .info {
+    width: 72%;
+    float: left;
+    box-shadow: none;
+}
+.imprimer-membre .info li label {
+    width: 84px;
+    text-align: right;
+}
+.imprimer-membre .info li span {
+    margin: 0 0 0 5px;
+}
+.imprimer-membre .evenement, #imprimer-membre .biblio, #imprimer-membre .proche {
+    margin: 10px 0 0 0;
+}
+.imprimer-membre table tr.sujet {
+    background: #f3f3f3;
+    color: $storm;
+    font-size: 13px;
+    font-weight: bold;
+}
+.imprimer-membre table {
+    border: 1px solid #ccc;
+    margin: 6px 0 0 0;
+    width: 100%}
+.imprimer-membre table td {
+    border: 1px solid #ccc;
+    vertical-align: top;
+    padding: 5px;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.icon-evenement-o {
+    background-image: url("../../img/icones.png?100215.png");
+    background-position: -482px -48px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 22px;
+    margin: 0 3px 0 0;
+    width: 26px;
+}
+.icon-biblio-o {
+    background-image: url("../../img/icones.png?100215.png");
+    background-position: -511px -48px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 22px;
+    margin: 0 3px 0 0;
+    width: 26px;
+}
+.icon-proche-o {
+    background-image: url("../../img/icones.png?100215.png");
+    background-position: -541px -48px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 22px;
+    margin: 0 3px 0 0;
+    width: 28px;
+}
+.imprimer-membre .biblio img {
+    float: left;
+    height: 80px;
+    margin: 0 10px 0 0;
+}
+.imprimer-membre .proche td {
+    width: 647px;
+}
+.imprimer-membre .proche span {
+    margin: 0 0 0 15px;
+}
+.imprimer-membre .proche label {
+    color: $grey-01;
+    font-weight: normal;
+    margin: 0 5px 3px 0;
+}
+.imprimer-membre i.icon-note {
+    background-image: url("../../img/icones.png?100215.png");
+    background-position: -568px -5px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 37px;
+    margin: 0 0 0 8px;
+    width: 32px;
+}
+.imprimer-membre i.icon-photo {
+    background-image: url("../../img/icones.png?100215.png");
+    background-position: -531px -8px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 32px;
+    margin: 0 0 0 6px;
+    width: 32px;
+}
+.imprimer-membre .icon-union {
+    background-image: url("../../img/icones.png");
+    background-position: -434px -138px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 17px;
+    margin: 0 3px 0 0;
+    width: 19px;
+}
+.imprimer-membre .puce-femme {
+    background: #f99 none repeat scroll 0 0;
+    border-radius: 4px;
+    display: inline-block;
+    height: 8px;
+    margin: 0 3px;
+    width: 8px;
+}
+.imprimer-membre .puce-neutre {
+    background: $coral none repeat scroll 0 0;
+    border-radius: 4px;
+    display: inline-block;
+    height: 8px;
+    margin: 0 3px;
+    width: 8px;
+}
+.imprimer-membre .puce-homme {
+    background: #9cc none repeat scroll 0 0;
+    border-radius: 4px;
+    display: inline-block;
+    height: 8px;
+    margin: 0 3px;
+    width: 8px;
+}
+
+/* Petite fenetre de dialogue => message de validation de suppression des modifications sur fiche individu */
+.dream_alert {
+    position: fixed;
+    top: 50%;
+    left: 49%;
+    box-shadow: 0 0 3px $black;
+    z-index: 10000;
+    margin-left: -60px;
+    margin-top: -60px;
+    width: 370px;
+    padding: 50px 20px;
+    background: $black;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.alert-icon.alert-icon-center.alert-icon-loading, .alert-icon.alert-icon-center.alert-icon-error {
+    content: "";
+    font-family: "";
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.alert-icon.alert-icon-center.alert-icon-loading:before {
+    content: ""}
+
+.alert-icon.alert-icon-center.alert-icon-loading:after {
+    content: url("../../img/icon-load-center.gif");
+}
+
+.alert-icon.alert-icon-center.alert-icon-error:after {
+    content: url("../../img/icon-error.png");
+}
+
+.alert-icon.alert-icon-center.alert-icon-success:before {
+    content: "\e91c"}
+.alert-icon.alert-icon-center.alert-icon-cloche:before {
+    content: "\e91a"}
+.alert-icon.alert-icon-center {
+    color: $white;
+    font-size: 50px;
+    font-family: "icomoon";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    position: relative;
+    text-transform: none;
+    top: 1px;
+    margin: 0 0 20px 0;
+}
+.dream_alert span {
+    color: $white;
+    font-size: 18px;
+}
+
+/*  Message informatif (ex : popup sur le passage de genealogie.com a filae) */
+.modal .message-informatif .modal-body {
+    padding: 0;
+}
+.modal .message-informatif .close {
+    color: $white;
+    float: right;
+    font-size: 25px;
+    opacity: 0.6;
+    position: absolute;
+    right: 14px;
+    z-index: 10;
+}
+.modal .message-informatif img {
+    width: 304px;
+    -webkit-border-top-right-radius: 6px;
+    -webkit-border-bottom-right-radius: 6px;
+    -moz-border-radius-topright: 6px;
+    -moz-border-radius-bottomright: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    float: right;
+}
+.modal .message-informatif .modal-content .row>div:first-child {
+    padding: 15px 15px 15px 30px;
+}
+.modal .message-informatif .modal-content .row>div:first-child p {
+    color: $storm;
+    font-size: 22px;
+    margin: 4px 0 15px 0;
+}
+.modal .message-informatif .modal-content .row>div:first-child p+p {
+    color: $storm;
+    font-size: 27px;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+}
+.modal .message-informatif .modal-content .row>div:first-child p+p+p {
+    color: $coral;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 33px 0 15px 0;
+}
+
+
+/* Popup */
+
+.new-modal-dialog .modal-footer, .new-modal-dialog .modal-header {
+    text-align: center;
+}
+.new-modal-dialog .modal-footer {
+    border-top: none;
+}
+.new-modal-dialog .modal-header .close {
+    margin-top: -2px;
+    position: absolute;
+    right: 33px;
+}
+.popup-mdp .modal-header .close, .popup-bg-essai .modal-header .close {
+    color: $white;
+    opacity: 0.8;
+}
+#popup-1erdoc {
+    .new-modal-dialog {
+        .modal-body {
+            padding: 0 0 15px 0;
+
+            img{
+                width: 100%;
+                @include  border-radii(5px, 5px, 0, 0);
+            }
+        }
+        .modal-header {
+            h4{
+                color: $storm;
+                font-size: 22px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+        .modal-footer {
+            h4 {
+                color: $storm;
+                font-weight: normal;
+
+                &#initialText{
+                    padding:0 100px;
+                }
+            }
+            a {
+                margin: 20px 0;
+            }
+        } 
+    }
+}
+
+.popup-mdp {
+    background-color: rgba(70,  85,  105,  0.91);
+}
+.popup-mdp #partial-view-layer {
+    padding: 0 50px;
+    margin-bottom: 30px;
+}
+.popup-mdp h1 {
+    font-size: 31px;
+}
+.modal-dialog.new-modal-dialog p {
+    font-size: 16px !important;
+    margin: 0 0 4px 0;
+    line-height: 32px !important;
+}
+#popup-1erdoc .new-modal-dialog .popup-essai {
+    padding: 0 50px;
+    .bg-essai-7j {
+        padding: 0 15px;
+        .bloc-phone {
+            #phone {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.new-modal-dialog .checkbox {
+    display: inline-block;
+}
+
+/* ------------------------- Popup Activation essai gratuit -- */
+#popup-1erdoc .modal-dialog, #popup-1erdoc .modal-dialog.popup-size {
+    width: 680px;
+    margin: 10% auto;
+    z-index: 2000000000 !important;
+}
+#popup-1erdoc .new-modal-dialog {
+    margin-bottom: 0;
+}
+#popup-1erdoc h4 {
+    color: #d34243;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 0 6px 0;
+    font-weight: bold;
+}
+#popup-1erdoc .modal-body h4 {
+    margin: 0 0 13px 0;
+    font-size: 14px;
+    line-height: 17px;
+    color: $black;
+}
+#popup-1erdoc .modal-body {
+    padding: 0 15px 15px;
+    text-align: center;
+}
+#popup-1erdoc .modal-dialog p {
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0 0 4px 0;
+    line-height: 19px;
+}
+#popup-1erdoc .popup {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background: $white;
+    width: 575px;
+    box-shadow: 6px 6px 12px $black;
+    top: 338px;
+    left: 50px;
+    position: absolute;
+    padding: 10px;
+    border: 3px solid $coral;
+}
+#popup-1erdoc .popup h4 {
+    font-weight: normal;
+}
+#popup-1erdoc .popup-1 {
+    top: 218px;
+}
+#popup-1erdoc .modal-header {
+    border-bottom: 0;
+}
+#popup-1erdoc .modal-header .fleche-verte-suivant {
+    border-bottom: 7px solid transparent;
+    border-left: 8px solid $storm;
+    border-top: 7px solid transparent;
+    float: left;
+    height: 0;
+    margin: 3px 3px 0 0;
+    width: 0;
+}

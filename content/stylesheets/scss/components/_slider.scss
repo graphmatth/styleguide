@@ -1,0 +1,52 @@
+/* Bloc-departement slider */
+
+.bloc-departement .carousel-departement a {
+    left: -34px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+   
+.bloc-departement .carousel-departement a + a {
+    left: auto;
+    right: -34px;
+    z-index: 100;
+}
+.bloc-departement .carousel-departement a i {
+    color: $grey-01;
+    font-size: 50px;
+}
+
+@media (max-width: 768px) {
+    .bloc-departement .carousel-departement a + a {
+        right: -30px;
+    }
+    
+    .bloc-departement .carousel-departement a {
+        right: -30px;
+    }
+}
+
+
+.tweet-section-container {
+    .tweet-container {
+        min-height: 224px;
+        height: 224px;
+        max-width: 464px;
+        border: 1px solid #CCCCCC;
+        border-radius: 5px;
+        margin: 0 auto;
+        @include flexbox;
+        @include align-items(center);
+        @media (max-width: 768px) {
+            margin: 15px auto;
+        }
+    }
+    .icon-twitter-container {
+        display: block;
+        text-align: center;
+        font-size: 45px;
+        color: $coral;
+    }
+}

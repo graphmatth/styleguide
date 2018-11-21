@@ -1,0 +1,561 @@
+///////////////////////////////////////////////////////////////////////////////
+/*  Menu latéral gauche page messagerie, parametre arbre, espace perso ...   */
+///////////////////////////////////////////////////////////////////////////////
+
+.menu-lateral-gauche{
+  .nav-tabs {
+      border-bottom: 0;
+
+      >li {
+          float: none;
+          padding: 6px 0;
+          margin: 2px 0 2px 0;
+
+          >a {
+              border: 0;
+              font-size: 18px;
+              padding: 0 0 8px 0;
+              display: inline-block;
+              background:none;
+              color:$link-text;
+          }
+      }
+  }
+}
+
+.menu-lateral-gauche{
+  .nav{
+      &.nav-tabs{
+          >li{
+              &.active, {
+                  > a, a:focus, a:hover {
+                      background: transparent;
+                      color: $link-text;
+                      font-weight: normal;
+                      cursor: pointer;
+                      border-width: 0;
+                      border-bottom: 3px solid $link-text;
+                      padding-bottom: 5px;
+                  }
+              }
+
+              > a:focus, a:hover{
+                  background: transparent;
+                  color:$link-text;
+                  font-weight: normal;
+                  cursor: pointer;
+                  border-width: 0;
+                  border-bottom: 3px solid $link-text;
+                  padding-bottom: 5px;
+              }
+          }
+      }
+  }
+}
+
+
+
+.menu-lateral-gauche .nav-tabs li.divider {
+  background-color: $grey-02;
+  height: 1px;
+  margin: 3px 0;
+  padding: 0;
+}
+
+
+/* ======================================================================================================== DEBUT Menu arbre */
+
+.menu-arbre {
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%
+}
+
+.nav-arbre {
+    background: $white none repeat scroll 0 0;
+    border-radius: 8px;
+    color: $storm;
+    filter: none;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.nav-arbre .nav {
+    display: table;
+    margin: 0;
+    width: 100%
+}
+
+.nav-arbre .nav li {
+    border-right: 1px solid $storm;
+    display: inline-block;
+    margin: 5px 0;
+    padding: 7px 14px 12px 14px;
+}
+
+.nav-arbre .nav li.fin-lien {
+    border-left: 1px solid $storm;
+    border-right: medium none;
+}
+
+.nav-arbre .nav li.recherche-arbre {
+    border: none;
+}
+
+.nav-arbre .nav>li>a {
+    padding: 0;
+}
+
+.menu-arbre .nav-arbre .nav li a {
+    color: $storm;
+    text-decoration: none;
+}
+
+.menu-arbre .nav-arbre .nav .open>a,
+.menu-arbre .nav-arbre .nav .open>a:hover,
+.menu-arbre .nav-arbre .nav .open>a:focus {
+    background: none;
+    color: $storm;
+    text-decoration: underline;
+}
+
+.menu-arbre .nav-arbre .nav>li>a:hover {
+    background: none;
+    color: $storm;
+    text-decoration: underline;
+}
+
+.nav-arbre .nav li fieldset {
+    margin: -5px 0 -22px;
+}
+
+.nav-arbre .nav li.recherche-arbre input {
+    display: inline;
+    float: left;
+    margin: 0 5px 0 0;
+    width: 268px;
+}
+
+.nav-arbre .nav li.recherche-arbre a {
+    display: inline;
+}
+
+.nav-arbre li.recherche-arbre a .icon-i-loupe-gauche {
+    font-size: 28px;
+    color: $coral;
+    vertical-align: top;
+}
+
+.nav-arbre li a .icon-i-dossier-trombonne {
+    font-size: 22px;
+    color: $coral;
+    margin: -5px 5px 0 0;
+    vertical-align: middle;
+}
+
+.nav-arbre .dropdown-menu>li {
+    border-right: none;
+    margin: 0;
+    padding: 0 14px;
+}
+
+.nav-arbre .dropdown-menu>li>a {
+    color: $storm;
+    line-height: 0.8;
+}
+
+.nav-arbre .dropdown-menu>li>a:hover {
+    text-decoration: underline;
+}
+
+.recherche-arbre span.twitter-typeahead {
+    width: 89%
+}
+
+.modal-body h5 {
+    color: $coral;
+    font-weight: bold;
+}
+
+.modal-body .liste-personne {
+    border: 1px solid $grey-02;
+    height: 172px;
+    margin-top: 5px;
+    overflow: auto;
+}
+
+.modal-body .liste-personne input {
+    margin: 3px 7px 0 4px;
+}
+
+.modal-body .input-modal-ligne {
+    margin: 0 0 8px;
+}
+
+.modal-body .cadre {
+    background: $white none repeat scroll 0 0;
+    border: 1px solid $coral;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 0 0 8px;
+}
+
+.modal-body .cadre .icon-i-avatar-femme:before,
+.modal-body .cadre .icon-i-avatar-homme:before {
+    color: $coral;
+    font-size: 20px;
+    margin: 0 6px 0 0;
+}
+
+.modal-body .cadre .icon-i-avatar-neutre:before {
+    color: $coral;
+    font-size: 15px;
+    margin: 0 6px 0 0;
+}
+
+.modal-body .input-modal-ligne a {
+    display: block;
+    margin: 0 0 5px;
+    color: $coral;
+    text-decoration: underline;
+}
+
+.modal-body .input-modal-ligne a:hover {
+    color: #d34243;
+}
+
+.bloc-import {
+    float: left;
+    width: 50%
+}
+
+.bloc-import .modal-footer,
+.bloc-export .modal-footer,
+.bloc-import .modal-header,
+.bloc-export .modal-header {
+    text-align: center;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.bloc-import .modal-header,
+.bloc-export .modal-header {
+    margin: 0 0 -20px 0;
+}
+
+.bloc-export a:hover {
+    color: #d34243;
+}
+
+.bloc-export a {
+    color: $coral;
+    text-decoration: underline;
+}
+
+.bloc-export .modal-header button,
+.bloc-import .modal-header button {
+    display: none;
+}
+
+.bloc-import input.input-parcourir {
+    cursor: pointer;
+    left: 52px;
+    margin: -27px 45px 0 !important;
+    opacity: 0;
+    position: absolute;
+    width: 19% !important;
+}
+
+.bloc-export {
+    border-left: 1px solid $grey-02;
+    float: left;
+    margin: 10px 0;
+    width: 49%
+}
+
+.bloc-export h4 {
+    margin: -10px 0 0 !important;
+}
+
+.modal-header h4 {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.progress.centre {
+    margin: 10px auto;
+}
+
+.progress {
+    width: 70%
+}
+
+#importexport-pop-up .modal-body h6 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#partage form .modal-footer {
+    border-top: 0;
+}
+
+#partage .modal-body textarea {
+    height: 278px;
+    width: 100%
+}
+
+#partage #inviteButton {
+    margin: 6px 0 0 0;
+}
+
+.modal-body table.liste-invite {
+    border: 1px solid $coral;
+}
+
+.forum table.content tr.post,
+.archive table.content tr.post,
+.table-dec table.content tr.post,
+.tab-neutre table.content tr.post {
+    background: $white none repeat scroll 0 0;
+}
+
+.archive table.content tr.post td,
+.archive table.content tr.post_alt td,
+.table-dec table.content tr.post td,
+.table-dec table.content tr.post_alt td,
+.tab-neutre table.content tr.post td,
+.tab-neutre table.content tr.post_alt td {
+    padding: 5px 5px 5px 10px;
+}
+
+.tab-neutre table.content tr td {
+    vertical-align: top;
+}
+
+.modal-body table.liste-invite input {
+    margin: 0 3px 0 5px;
+}
+
+.alphabet-indi ul.alphabet {
+    margin: 10px 0 0;
+}
+
+ul.alphabet {
+    border: 1px solid $coral;
+    border-radius: 4px;
+    margin: 5px 0 0;
+    padding: 5px 6px;
+}
+
+.alphabet li {
+    display: inline-block;
+}
+
+.alphabet li a {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 2px 5px 3px;
+    text-decoration: none;
+    color: $coral;
+}
+
+.alphabet li.active a,
+.alphabet li a:hover {
+    background: #d34243 none repeat scroll 0 0;
+    border-radius: 4px;
+    color: $white;
+    padding: 2px 5px 3px;
+}
+
+.alphabet li.nul a,
+.alphabet li.nul a:hover {
+    background: $white none repeat scroll 0 0;
+    border-radius: 4px;
+    color: $grey-01;
+    padding: 2px 5px 3px;
+}
+
+#placeNamesContenu .nav-list a {
+    color: $coral;
+    margin: -6px 0 0;
+    padding: 0 0 5px 9px;
+}
+
+.resultat-indi ul .puce-homme,
+.resultat-indi ul .puce-femme {
+    margin: 0 0 0 10px;
+}
+
+.icon-tete-femme:before,
+.icon-tete-homme:before,
+.icon-tete-neutre:before {
+    content: '-'
+}
+
+.icon-tete-femme,
+.icon-tete-homme,
+.icon-tete-neutre {
+    margin: 0 3px 0 0;
+}
+
+.input-convertisseur {
+    border-bottom: 1px solid $coral;
+    margin: 0 0 8px;
+    padding: 0 0 10px;
+}
+
+.modal-body .input-convertisseur input.ctr {
+    border: 1px solid $white;
+}
+
+.modal-body .input-convertisseur input[type="text"] {
+    float: left;
+    margin: 0 5px 3px 0;
+    width: 15%
+}
+
+.modal-body .input-convertisseur input.date[type="text"],
+.modal-body .input-convertisseur select.date {
+    width: 10%
+}
+
+.modal-body .input-convertisseur input[type="text"] {
+    float: left;
+    margin: 0 5px 3px 0;
+    width: 21%
+}
+
+.modal-body .input-convertisseur select {
+    float: left;
+    margin: 0 5px 3px 0;
+    width: 21%
+}
+
+.input-convertisseur span {
+    display: block;
+    float: left;
+    margin: 7px 4px 0 0;
+}
+
+#prochesContenu_a li a {
+    color: $coral;
+    margin: -6px 0 0;
+    padding: 0 0 5px 9px;
+}
+
+i.ajout-gris {
+    background-image: url("../../img/icones.png");
+    background-position: -546px -141px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 14px;
+    margin: 0 4px 0 0;
+    width: 14px;
+}
+
+.icon-arbre-voir {
+    background-image: url("../../img/icones.png?100215.png");
+    background-position: -493px -140px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 15px;
+    margin: 0 5px -3px 0;
+    width: 21px;
+}
+
+.icon-arbre-supprimer {
+    background-image: url("../../img/icones.png?100215.png");
+    background-position: -534px -144px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 11px;
+    margin: 0 5px -1px 0;
+    width: 11px;
+}
+
+i.icon-modifier {
+    background-image: url("../../img/icones.png?100215.png");
+    background-position: -474px -138px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 17px;
+    margin: 0 5px -3px 0;
+    width: 17px;
+}
+
+.icon-arbre-imprimer {
+    background-image: url("../../img/icones.png?100215.png");
+    background-position: -518px -139px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 16px;
+    margin: 0 5px -3px 0;
+    width: 14px;
+}
+
+.icon-biblio {
+    background-image: url("../../img/icones.png");
+    background-position: -455px -141px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 14px;
+    margin: 0 3px 0 0;
+    width: 18px;
+}
+
+.icon-note-aide {
+    background-image: url("../../img/icones.png");
+    background-position: -584px -139px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 17px;
+    margin: 0 7px 0 0;
+    width: 14px;
+}
+
+.icon-document-aide {
+    background-image: url("../../img/icones.png");
+    background-position: -563px -138px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 18px;
+    margin: 0 3px -5px 0;
+    width: 19px;
+}
+
+.modal-body .titre-note {
+    float: left;
+    margin: 0 10px 0 0;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 25%
+}
+
+.modal-body .titre-note li.actif {
+    color: $coral;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.modal-body .separation-note {
+    background: $grey-02 none repeat scroll 0 0;
+    float: left;
+    height: 200px;
+    margin: 0 10px 10px 0;
+    width: 1px;
+}
+
+.modal-body .texte-note {
+    float: left;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 70%
+}
+
+.modal-body .outil-note {
+    border-top: 1px solid $grey-02;
+    clear: left;
+    padding: 10px 0 0;
+}

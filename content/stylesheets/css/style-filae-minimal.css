@@ -206,6 +206,9 @@ p.sous-titre {
 h1, h2, h3, h4, h5, h6 {
   color: #303F4C; }
 
+.position-relative {
+  position: relative; }
+
 h4.titre-marge-top {
   margin: 40px 0 10px 0; }
 
@@ -289,8 +292,8 @@ p.petit-titre-14 {
 /* Icons section -->  Fontello */
 @font-face {
   font-family: 'icomoon';
-  src: url("../../../../../fonts/icomoon.eot");
-  src: url("../../../../../fonts/icomoon.eot") format("embedded-opentype"), url("../../../../fonts/icomoon.ttf") format("truetype"), url("../../../../../fonts/icomoon.woff?") format("woff"), url("../../../../../fonts/icomoon.svg") format("svg");
+  src: url("../../../fonts/icomoon.eot");
+  src: url("../../../fonts/icomoon.eot") format("embedded-opentype"), url("../../../fonts/icomoon.ttf") format("truetype"), url("../../../fonts/icomoon.woff?") format("woff"), url("../../../fonts/icomoon.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 [class^="icon-"], [class*=" icon-"] {
@@ -2604,43 +2607,8 @@ input.champ-dedicace + label {
   background-color: #303F4C;
   border-radius: 4px; }
 
-.gifts-members .paywall.paywall-offre {
-  background: #FFF; }
-
-.gifts-members h1,
-.gifts-members p,
-.gifts-members h2 {
-  text-align: center; }
-
-.gifts-members h1 {
-  font-size: 43px; }
-
-.gifts-members h2 {
-  font-size: 35px;
-  color: #FFF; }
-
-.gifts-members h2 + p {
-  font-size: 22px; }
-
-.gifts-members .paywall.paywall-offre .offre .bloc-offre,
-.gifts-members .paywall.paywall-offre .offre .bloc-offre:hover {
-  border: none;
-  padding: 43px 0 16.5px 0;
-  text-align: center; }
-
-.gifts-members .paywall.paywall-offre .offre .bloc-offre,
-.gifts-members .pack-computer .bloc-offre,
 .abonnement-7j .bloc-offre {
   background-color: #303f4c; }
-
-.gifts-members .pack-computer .bloc-offre {
-  width: 300px;
-  margin: 220px 0 0 405px;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  padding: 40px 0;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); }
 
 .abonnement-7j .bloc-offre {
   width: 350px;
@@ -2651,33 +2619,21 @@ input.champ-dedicace + label {
   padding: 20px 0;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); }
 
-.gifts-members .pack-computer .bloc-offre h3 {
-  color: #FFF; }
-
-.gifts-members .paywall.paywall-offre .offre .bloc-offre.argent,
-.gifts-members .pack-computer .bloc-offre.argent,
 .abonnement-7j .bloc-offre.argent {
   background-image: url("../../img/gifts-members/small-bandeau-argent.png");
   background-repeat: no-repeat;
   background-position: right top; }
 
-.gifts-members .paywall.paywall-offre .offre .bloc-offre.gold,
-.gifts-members .pack-computer .bloc-offre.gold,
 .abonnement-7j .bloc-offre.gold {
   background-image: url("../../img/gifts-members/small-bandeau-or.png");
   background-repeat: no-repeat;
   background-position: right top; }
 
-.gifts-members .paywall.paywall-offre .offre .bloc-offre span.btn {
-  margin: 0 auto; }
-
-.gifts-members .pack-computer .bloc-offre.argent i,
 .abonnement-7j .bloc-offre.argent i,
 .abonnement-7j .bloc-offre .nb-month.argent,
 .abonnement-7j .bloc-offre .offre-name.argent {
   color: #aeada9; }
 
-.gifts-members .pack-computer .bloc-offre.gold i,
 .abonnement-7j .bloc-offre.gold i,
 .abonnement-7j .bloc-offre .nb-month.gold,
 .abonnement-7j .bloc-offre .offre-name.gold {
@@ -2696,91 +2652,6 @@ input.champ-dedicace + label {
 
 .abonnement-7j .bloc-offre .offre-name {
   font-size: 18px; }
-
-.gifts-members .paywall.paywall-offre .offre .bloc-offre h3,
-.gifts-members .paywall.paywall-offre .offre .bloc-offre p {
-  color: #FFF; }
-
-.gifts-members .bando-gifts {
-  position: absolute;
-  top: 13px;
-  right: 15px; }
-
-.gifts-members .bloc-offre .bando-gifts2 {
-  position: absolute;
-  top: 13px;
-  right: 126px; }
-
-.gifts-members .paywall.paywall-offre .moyen-paiement.inscrit i + i {
-  font-size: 35px;
-  margin: 0; }
-
-.gifts-members .bloc-ordi {
-  position: relative; }
-
-.gifts-members .pack-computer {
-  position: absolute;
-  z-index: 300;
-  text-align: center;
-  width: 100%; }
-
-.gifts-members .computer {
-  position: relative;
-  background-image: url("http://new.filae.com/v4/genealogie/Content/img/home/portable-viewer-2016.png");
-  background-repeat: no-repeat;
-  background-size: auto 327px;
-  margin-top: 20px;
-  background-position: center center; }
-
-.gifts-members .bloc-offre.gold .btn-action:hover {
-  background-color: #c5b358 !important;
-  border: 1px solid #c5b358;
-  color: #FFF; }
-
-.gifts-members .bloc-offre.argent .btn-action:hover {
-  background-color: #aeada9 !important;
-  border: 1px solid #aeada9;
-  color: #FFF; }
-
-.gifts-members .pack-premium {
-  background-color: #FFF;
-  margin: 200px 0 30px;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  padding-top: 300px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
-
-.gifts-members .pack-premium h4 {
-  color: #FF5555;
-  font-size: 30px;
-  font-weight: bold;
-  padding-bottom: 40px; }
-
-.gifts-members .pack-premium h3 {
-  font-weight: bold;
-  color: #222255; }
-
-.gifts-members .pack-premium p {
-  color: #222255;
-  font-size: 25px;
-  padding-bottom: 40px; }
-
-.gifts-members .pack-premium .text-center p {
-  font-size: 20px;
-  color: #757585; }
-
-.gifts-members .pack-premium .text-center {
-  text-align: center; }
-
-.gifts-members .pack-premium .bold-premium {
-  font-weight: bold; }
-
-.gifts-members .paywall.paywall-temoignage {
-  background-image: linear-gradient(to bottom, #FF5555, #FF5555 26%, #FFF 15%, #FFF 85%, #FFF 85%); }
-
-.gifts-members .paywall-footer p {
-  color: #757585; }
 
 .gifts-cmd h1 {
   font-size: 3rem;
@@ -3669,28 +3540,6 @@ input.champ-dedicace + label {
 .gifts-cmd .gift-payment-verif:last-child img.gifts-cmd .gift-payment-verif:last-child img {
   height: 55px;
   width: auto; }
-
-.gifts-members .paywall.paywall-offre.confirmation-gift p {
-  font-size: 22px;
-  padding: 24px 0; }
-
-.gifts-members .paywall.paywall-offre.confirmation-gift h2 {
-  font-size: 26px;
-  color: #222255;
-  padding-top: 20px; }
-
-.gifts-members .paywall.paywall-offre.confirmation-gift p.what-now {
-  font-size: 18px; }
-
-.gifts-members .paywall.paywall-offre.confirmation-gift p.what-now a {
-  display: block;
-  margin: 5px auto; }
-
-.gifts-members .paywall.paywall-offre.confirmation-gift p.what-now + p.what-now {
-  padding: 0; }
-
-.gifts-members .paywall.paywall-offre.confirmation-gift .option-cmd {
-  color: #FF5555; }
 
 .break-word {
   word-wrap: break-word;
@@ -8815,6 +8664,9 @@ i.material-icons.fichier {
 
 .liste-individus .table-individus thead th {
   text-align: left; }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .liste-individus .table-individus thead th.profil-individu {
+      padding: 10px 0 10px 18px; } }
 
 .liste-lieu .table-individus thead th {
   text-align: center; }
@@ -13112,9 +12964,6 @@ input.champ-dedicace:focus {
 
   /*---------------------------------------------- FIN page beaucarnot ---------------------------------------------------*/
   /*-------------------- DEBUT gifts members ----------------------------*/
-  .gifts-members .pack-computer .bloc-offre {
-    margin: 220px 0 0 307px; }
-
   .gifts-cmd .paywall-left {
     padding-left: 30px !important; }
 
@@ -13508,9 +13357,6 @@ input.champ-dedicace:focus {
 
   /*---------------------------------------------- FIN page beaucarnot ---------------------------------------------------*/
   /*-------------------- DEBUT gifts members ----------------------------*/
-  .gifts-members .pack-computer .bloc-offre {
-    margin: 220px 0 0 197px; }
-
   .gifts-cmd .paywall-left {
     padding-left: 20px !important; }
 
@@ -14467,25 +14313,11 @@ body {
 
   /*---------------------------------------------- FIN page beaucarnot ---------------------------------------------------*/
   /*-------------------- DEBUT bon cadeau ----------------------------*/
-  .gifts-members .pack-computer .bloc-offre {
-    margin: 220px 0 0 10px;
-    width: 100%; }
-
-  .gifts-members {
-    display: block; }
-
   .gifts-cmd .right-off {
     display: none; }
 
   .gifts-cmd .bloc-cmd-right {
     padding: 20px 20px 20px 35px; }
-
-  .gifts-members .paywall.paywall-offre.confirmation-gift img {
-    width: 100%;
-    height: auto; }
-
-  .gifts-members .paywall.paywall-offre.confirmation-gift .text-center {
-    text-align: center; }
 
   .txt-register {
     margin-top: 30px; }
@@ -15718,21 +15550,6 @@ body {
 
   /*---------------------------------------------- FIN page beaucarnot ---------------------------------------------------*/
   /*----------------------------- DEBUT bon cadeau -----------------------------*/
-  .gifts-members .pack-premium .bon-cadeau {
-    display: none; }
-
-  .gifts-members .computer {
-    background-image: none; }
-
-  .gifts-members .pack-computer .bloc-offre {
-    width: 100%;
-    margin: 40px 0 0 10px; }
-
-  .gifts-members .pack-premium {
-    margin: 100px 0 30px;
-    padding-top: 200px;
-    text-align: center; }
-
   .gifts-cmd .right-off {
     display: none; }
 

@@ -1,0 +1,211 @@
+.recensement-container.SeoSem {
+    .recherche {
+        height: auto !important;
+    }
+    .exclusive-badge-container {
+        position: absolute;
+        right: 0;
+        height: 100px;
+        width: 100px;
+        border-radius: 100%;
+        font-size: 15px;
+        @include flexbox; 
+        @include align-items(center);
+        @include justify-content(center);
+        top: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        .exclusive-badge {
+                width: 100%;
+                height: 100%;
+                margin: 0 !important;
+            }
+            @media screen and (max-width: $break-medium-large) {
+            position: relative;
+            margin: 0 auto;
+        }
+    }
+
+    .archives {
+        .img-archives-tools {
+            width:50%;
+            height:650px;
+            float:right;
+            margin-top:80px;
+            background-position: center; 
+            background-size: 870px 650px;
+            background-image:url('../../img/genealogie-recherche-archives.jpg');
+            @media screen and (max-width: $break-medium) {
+                width: 100%;
+            }
+        }
+    }
+
+    .BlocJLB {
+      margin: 35px 0;   
+      .quote {
+        color: $coral;
+        font-style: italic;
+        font-size: 30px;
+      }
+      .quote-author {
+        color:dimgrey;
+        font-size:14px;
+      }
+    }
+
+
+
+    .video-container {
+        margin: 35px 0;
+    }
+
+    .app-screen {
+        width: 100%;
+        border: 2px solid $grey-02;
+    }
+
+    .subtitle-recensement {
+        font-size: 20px;
+        margin-bottom: 30px;
+        &-2 {
+            padding: 10px 30px;
+        }
+    }
+    .presentation-app {
+        h1 {
+            margin-top: 75px;
+        }
+
+        .explanation-subtitle {
+            margin: 25px 0;
+        }
+
+        .explanation-text {
+            margin-bottom: $spacing-large;
+        }
+        .txt-recensement {
+            text-align: left;
+            .explanation-subtitle {
+                text-align: left;
+                font-size: 23px;
+                color: $black-02;
+            }
+    
+            .explanation-text {
+                font-size: 16px;
+                color: $black-02;
+                text-align: left;
+            }
+        }
+    }
+
+    .map-section {
+        @include flexbox;
+        @include flex(0,1,auto); 
+        margin-top: 30px;
+        &-02 {
+            margin-top: 110px;
+        }
+        @media screen and (max-width: $break-medium) {
+            position: relative;
+            margin: 0 auto;
+            width: 100%;
+            display: block;
+        }
+        .bloc-stat-container {
+            @include flexbox; 
+            @include flex-direction(column);
+            @include justify-content(space-between);
+            text-align: center;
+            width: 33%;
+            .stat-container {
+                font-size: 20px;
+                .stat-bloc {
+                    text-align: center;
+                    font-weight: bold;
+                    .number-recensement {
+                        color: $coral;
+                        text-align: center;
+                    }
+                    .legend-number {
+                    color: $storm;
+                    }
+                }
+
+                .separator-bloc {
+                    border-top: 2px solid $storm;
+                    width: 50px;
+                    margin: 20px auto;
+                    display: block;
+                }
+            }
+
+            .year {
+                color: $coral;
+                font-size: 70px;
+
+            }
+
+            .legend-map {
+                @include flexbox;
+                @include align-items(center);
+                @include justify-content(flex-start);
+
+                @media screen and (max-width: $break-medium) {
+                    padding: 30px;
+                }
+                .color-legend {
+                    width: 25px;
+                    height: 25px;
+                    display: inline-block;
+                    background-color: $storm;
+                    border: 2px solid $storm-light; 
+                    margin-right: $spacing;
+
+                    &.year-02 {
+                        margin-left: $spacing;
+                        background-color: $grey-04;
+                    }
+                    &.year-03 {
+                        margin-left: $spacing;
+                        background-color: $grey-05;
+                    }
+                }
+            }
+            @media screen and (max-width: $break-medium) {
+                position: relative;
+                margin: 0 auto;
+                width: 100%;
+                display: block;
+            }
+
+        }
+        .map-container {
+            width: 67%;
+            .map {
+                display: block;
+                margin: 0 auto;
+                width: 90%;
+                @media screen and (max-width: $break-medium) {
+                    width: 75%;
+                }                
+            }
+            @media screen and (max-width: $break-medium) {
+                position: relative;
+                width: 100%;
+                display: block;
+            }
+
+        }
+    }
+
+    .media {
+        .media-title {
+            margin-top:30px;
+            margin-bottom: 30px;
+            color:dimgrey;
+            font-size:20px;   
+        }
+    }
+}

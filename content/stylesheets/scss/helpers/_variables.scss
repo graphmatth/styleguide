@@ -1,0 +1,138 @@
+// NEW VAR /////////////////////////////
+
+// Primary background color
+$coral: #FF5555;
+
+// For text links on white background only
+$dark-coral: #E02;
+
+$coral-light: #fadcdc;
+$storm: #222255;
+$storm-light: #768190;
+
+$lagoon: #00A3B7;
+$tropic: #FFBB00;
+$yellow: #FFCC33;
+$mint: #11A88B;
+$fresh-mint:#5DB;
+$gold: #C5B358;
+$silver: #AEADA9;
+
+$grey-01: #757585;
+$grey-02: #D5D8DA;
+$grey-03: #FBFBFA;
+$grey-04: #6a7787;
+$grey-05: #a2a9b4;
+$grey-06: #999999;
+$grey-banner: #C2C5D0;
+
+$indigo: #445599;
+
+// For text links or icons only
+$light-indigo:#3344bb;
+
+$dark-indigo: #333366;
+$light-lavande:#b4bbd6;
+$white: #FFF;
+$white-dark10 :darken( $white, 10% );
+$black: #333333;
+$black-02: #303f4c;
+$link-text: $light-indigo;
+
+$women-color:#ff9999;
+$women-color-dark:#ec7b7b;
+$men-color:#99cccc;
+$men-color-dark:#72a6a6;
+// Media queries
+$break-small: 320px;
+$break-medium: 767px;
+$break-medium-large: 992px;
+$spacing-medium-large: 15px;
+$break-large: 1200px;
+
+//spacing
+$spacing-small: 5px;
+$spacing: 10px; 
+$spacing-medium: 15px;
+$spacing-large: 20px;
+
+//text weight
+$regular: 400;
+$bold: 700;
+
+
+// OLD VAR
+	$bleu-clair:#7190ae;
+	$bleu:#337ab7;
+	$bleu-fonce:#285c89;
+	$bleu-tres-fonce:#0c2941;
+	
+	
+	/*Corail*/
+	$color-principale:#FF5555;
+	$color-principale-light:#fdc6c7;
+	$color-principale-dark:#d34243;
+	$color-principale-dark-dark:#a42e2f;
+
+	/*Bleu orage*/
+	$color-secondaire-light-light:#f3f3f3;
+	$color-secondaire-light:#d5d8da;
+	$color-secondaire-light-contour:#d5d8da;
+	$color-secondaire: $grey-01;
+	$color-secondaire-hover: $grey-01;
+	$color-secondaire-dark:$storm;
+	$color-secondaire-dark-dark:$black-02;
+	
+	$gris-bootstrap-contour:#cccccc;
+	
+	/*Vert => couleur complementaire corail*/
+	$color-complementaire:#5cb85c;
+	$color-complementaire-dark:#55a655;
+	
+	$blanc-casse:#fbfbfa;
+	$blanc:#ffffff;
+	$noir: #333333;
+	$noir-dark:#000000;
+	$gris-dark:#666666;
+	
+	/*btn */
+	$bkgd-btn-action:#FF5555;
+	$bkgd-btn-action-hover:#f35a5b;
+
+	$bkgd-btn-default:transparent;
+	$bkgd-btn-default-hover:transparent;
+
+	$bkgd-btn-action-bkgd-color:#ffffff;
+	$bkgd-btn-action-bkgd-color-hover:rgba(#ffffff, 0.9);
+
+	$bkgd-btn-default-bkgd-color:transparent;
+	$bkgd-btn-default-bkgd-color-hover:#ffffff;
+
+	$border-radius-btn-1ligne:22px;
+	$btn-padding:10px 16px;
+		
+	$border-radius-btn-large-1ligne:40px;
+	$btn-large-padding:10px 19px;
+		
+	$border-radius-btn-small-1ligne:22px;
+	$btn-small-padding:6px 11px;
+	
+	/* Liens */
+	$lien-general:#445599;
+	$lien-general-hover:#2a4a77;
+	$lien-color-principale:#f35a5b;
+	$lien-color-principale-hover:#c74242;
+	$lien-dark:#2d3a4c;
+	$lien-blanc:#ffffff;
+
+
+
+	$success:#5cb85c;
+	$warning:#f0ad4e;
+	$danger:#d9534f;
+	$color-new-btn:#0066FF;
+	
+	/* Typo */
+	$typo-texte:'Lato', sans-serif;
+	$typo-titre:'Lato', sans-serif;
+	$typo-icone:'icomoon';

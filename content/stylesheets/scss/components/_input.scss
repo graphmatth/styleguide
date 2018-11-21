@@ -1,0 +1,1448 @@
+
+/* supprime le style par défaut des navigateurs lors d'une invalidation d'un formulaire => coutour rouge d'un input sous IE par exemple */
+:invalid {
+    box-shadow: none;
+    outline: 0;
+}
+
+/*  input avec btn intégré : ex de recherche */
+.input-group-btn:first-child>.btn-group:not(:first-child)>.btn, .input-group-btn:first-child>.btn:not(:first-child), .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group>.btn, .input-group-btn:last-child>.dropdown-toggle {
+    padding: 11px 11px 5px 0;
+    border: 1px solid #ccc;
+    border-left: 1px solid $white;
+    background: $white;
+    -webkit-border-top-right-radius: 6px;
+    -webkit-border-bottom-right-radius: 6px;
+    -moz-border-radius-topright: 6px;
+    -moz-border-radius-bottomright: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    height: 46px;
+}
+
+.input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child>.btn, .input-group-btn:first-child>.btn-group>.btn, .input-group-btn:first-child>.dropdown-toggle, .input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child>.btn-group:not(:last-child)>.btn {
+    border-right: 1 px solid $white;
+}
+.input-group-btn.texte:first-child>.btn-group:not(:first-child)>.btn, .input-group-btn.texte:first-child>.btn:not(:first-child), .input-group-btn.texte:last-child>.btn, .input-group-btn.texte:last-child>.btn-group>.btn, .input-group-btn.texte:last-child>.dropdown-toggle {
+    padding: 12px 11px 12px 0;
+}
+.input-group-btn .btn-default:hover, .input-group-btn .btn-default:focus {
+    background-color: $white;
+    border-left: 1px solid $white;
+    box-shadow: none;
+}
+.input-group-btn .btn-default i:hover {
+    color: $grey-01;
+}
+.btn-in.form-control:focus+.input-group-btn .btn-default {
+    border-color: #66afe9;
+    box-shadow: none;
+    border-left: 1px solid $white;
+    z-index: 1000;
+}
+.btn-in.form-control:focus {
+    box-shadow: none;
+}
+
+/* -- input avec btn intégré : ex de recherche => Input simple (une bordure en bottom) - */
+.input-simple input+label+.input-group-btn:first-child>.btn-group:not(:first-child)>.btn, .input-simple input+label+.input-group-btn:first-child>.btn:not(:first-child), .input-simple input+label+.input-group-btn:last-child>.btn, .input-simple input+label+.input-group-btn:last-child>.btn-group>.btn, .input-simple input+label+.input-group-btn:last-child>.dropdown-toggle {
+    border-bottom: 1px solid $grey-02;
+    border-right: 0;
+    border-top: 0;
+    padding: 14px 11px 4px 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.input-simple .btn-in.form-control:focus+.input-group-btn .btn-default {
+    border-color: $grey-02;
+}
+.input-group.input-simple {
+    margin-left: 15px;
+}
+.input-group.input-simple .form-control {
+    position: static;
+}
+.modal-body .input-modal textarea {
+    min-height: 110px;
+}
+ 
+/* les boutons select => modification de la fleche */
+/* GRAND FORMAT */
+.styled-select select {
+    background: transparent none repeat scroll 0 0;
+    padding-right: 37px;
+    width: 115%;
+    line-height: 2.3;
+}
+
+@media screen and (min-width: 0\0) {
+     /* IE9 et IE10*/
+    .styled-select {
+        background: none;
+        border: 0;
+        border-radius: 0;
+    }
+    .styled-select select {
+        background: $white;
+        border: 1px solid $grey-02;
+        padding-right: 16px;
+        width: inherit;
+    }
+}
+
+@supports (-ms-ime-align: auto) {
+    /* Edge */
+    .styled-select  {
+        background: none;
+        border: 0;
+        border-radius: 0;
+    }
+    .styled-select select {
+        background: $white;
+        border: 1px solid $grey-02;
+        padding-right: 16px;
+        width: inherit;
+    }
+}
+
+/* FORMAT MOYEN */
+.styled-select-moyen {
+    background: $white url("../../img/btn-select-bleu-moyen.png") no-repeat scroll right center;
+    border-right: 1px solid $grey-02;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 100%}
+.styled-select-moyen select {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    padding-right: 37px;
+    width: 115%;
+    line-height: 2.3;
+}
+
+@media screen and (min-width: 0\0) {
+    /* IE9 et IE10*/
+    .styled-select-moyen {
+        background: none;
+        border: 0;
+        border-radius: 0;
+    }
+    .styled-select-moyen select {
+        background: $white;
+        border: 1px solid $grey-02;
+        padding-right: 16px;
+        width: inherit;
+    }
+}
+
+@supports (-ms-accelerator: true) {
+    .styled-select-moyen  {
+        background: none;
+        border: 0;
+        border-radius: 0;
+    }
+
+    .styled-select-moyen select {
+        background: $white;
+        border: 1px solid $grey-02;
+        padding-right: 16px;
+        width: inherit;
+    }
+}
+
+/* les boutons select => modification de la fleche */
+/* FORMAT LONG col-lg-12 */
+.styled-select-moyen select.lg {
+    width: 103%;
+}
+
+
+@media screen and (min-width: 0\0) {
+    /* IE9 et IE10*/
+    .styled-select-moyen select.lg {
+        width: inherit;
+    }
+}
+
+
+@supports (-ms-accelerator: true) {
+    .styled-select-moyen select.lg  {
+        width: inherit;
+    }
+}
+
+/* FORMAT MOYEN col-lg-7 */
+.styled-select-moyen select.my7 {
+    width: 106% ;
+}
+
+@media screen and (min-width: 0\0) {
+    /* IE9 et IE10*/
+    .styled-select-moyen select.my7 {
+    width: inherit;
+    }
+}
+
+@supports (-ms-accelerator: true) {
+    .styled-select-moyen select.my7  {
+        width: inherit;
+    }
+}
+
+/* FORMAT SPECIAL CHAMPS ENTRE => fiche individuelle -> popup avec champs entre */
+.styled-select-moyen.special-entre {
+    background: $white url("../../img/btn-select-bleu-moyen.png") no-repeat scroll right center;
+    border: 1px solid $grey-02;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 31%;
+}
+
+.styled-select-moyen.special-entre select {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    padding-right: 29px;
+    padding-left: 7px;
+    width: 121%;
+    line-height: 2.3;
+}
+
+@media screen and (min-width: 0\0) {
+    .styled-select-moyen.special-entre {
+        background: none;
+        border: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+    }
+
+    .styled-select-moyen.special-entre select {
+        background: $white;
+        border: 1px solid $grey-02;
+        padding-right: 16px;
+        width: 100%;
+    }
+}
+
+@supports (-ms-ime-align: auto) {
+    .styled-select-moyen.special-entre  {
+        background: none;
+        border: 1px solid $grey-02;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+    }
+    .styled-select-moyen select {
+        background: $white;
+        border: 1px solid $grey-02;
+        padding-right: 16px;
+        width: inherit;
+    }
+}
+
+
+
+label, select, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] {
+    cursor: pointer;
+}
+
+
+.form-group {
+    &.input-simple{
+        .form-control {
+            padding: 19px 34px 0 0;
+        }
+
+        &.no-floatlabel{
+            .form-control {
+                padding: 0 34px 0 0;
+                height: 34px;
+            }
+        }
+    }
+}
+
+ /* Champ principal */
+ .mainField {
+    font-weight: bold;
+    border-color: $indigo;
+}
+
+/* croix placée dans les champs pour supprimer la saisie */
+.form-control-feedback {
+    background: $white;
+    @include border-radii(0, 5px, 5px, 0);
+    height: 32px;
+    line-height: 32px;
+    right: 16px;
+    top: 1px;
+    width: 32px;
+    color: $storm;
+    pointer-events: inherit;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.input-lg+.form-control-feedback, span+.form-control-feedback {
+    height: 44px;
+    width: 32px;
+    line-height: 44px;
+}
+/* ========================================================================================= DEBUT Page Formulaire Inscription/Connection */
+
+.inscr-conn .form-inscr-conn p {
+    margin-bottom: 0px;
+}
+.inscr-conn .form-inscr-conn p.marge-top10px {
+    margin-top: 0px !important;
+}
+.inscr-conn .form-inscr-conn .tab-content {
+    margin: 15px 0 0 0;
+}
+.inscr-conn .form-inscr-conn .tab-content>div>.row:last-child, .inscr-conn .form-inscr-conn .row:last-child {
+    text-align: center;
+    padding: 0;
+}
+.inscr-conn .form-inscr-conn .inscription.row-inscr div.row {
+    margin-bottom: 10px;
+}
+.inscr-conn .action-profil {
+    margin-bottom: 40px;
+}
+.form-inscr-conn .modifier-champs .show-password {
+    color: white;
+    background: transparent !important;
+}
+.form-inscr-conn .modifier-champs input {
+    color: white;
+    background: transparent !important;
+}
+.form-inscr-conn .modifier-champs input:focus {
+    border-bottom: 3px solid white;
+}
+.form-inscr-conn .modifier-champs.input-simple i {
+    color: #eee !important;
+}
+.form-inscr-conn .modifier-champs input::-moz-placeholder, .form-inscr-conn .modifier-champs label {
+    color: white !important;
+}
+.form-inscr-conn .modifier-champs input::-webkit-input-placeholder, .form-inscr-conn .modifier-champs label {
+    color: white !important;
+}
+.form-inscr-conn .modifier-champs input:-ms-input-placeholder, .form-inscr-conn .modifier-champs label {
+    color: white !important;
+}
+.form-inscr-conn a.link-in-layer {
+    color: white;
+}
+.newsletter-insc .checkbox.checkbox-primary input[type="checkbox"]:checked+.checkbox-material .check, .newsletter-insc .checkbox.checkbox-primary input[type="checkbox"]:checked+input+.checkbox-material .check {
+    border-color: $coral;
+    color: $coral;
+}
+.newsletter-insc .checkbox.checkbox-primary input[type="checkbox"]:checked+.checkbox-material .check:before, .newsletter-insc .checkbox.checkbox-primary input[type="checkbox"]:checked+input+.checkbox-material .check:before {
+    color: $coral;
+    border-color: $coral;
+}
+.newsletter-insc .checkbox .checkbox-material .check {
+    border-color: $coral;
+}
+.newsletter-insc label.checkbox {
+    color: white !important;
+}
+.form-inscr-conn #alert-wrong-password p, .form-inscr-conn #alert-wrong-email-registration p, .form-inscr-conn #alert-wrong-email p, .form-inscr-conn #alert-wrong-email-reset p {
+    color: #f0ad50;
+    font-weight: bold;
+}
+.form-inscr-conn .modifier-champs input:-webkit-autofill, .form-inscr-conn .modifier-champs input:-webkit-autofill:hover, .form-inscr-conn .modifier-champs input:-webkit-autofill:focus, .form-inscr-conn .modifier-champs input:-webkit-autofill:active {
+    @include box-shadow( 0 0 0 1000px #556375 inset !important);
+    -webkit-text-fill-color: #fafbfb !important;
+    color: #fafbfb !important;
+}
+.error-message-block-in-layer > * {
+    vertical-align: middle;
+}
+.error-message-block-in-layer > i {
+    color: #f0ad50;
+    margin-bottom: 4px;
+    margin-right: 5px;
+}
+
+
+
+/* ========================================================================================= FIN Page Formulaire Inscription/Connection */
+
+
+
+
+/* Float Label dans les Champs */
+/* Basic Style */
+.form-group {
+    position: relative;
+}
+.form-group [data-toggle="floatLabel"] {
+    color: $black;
+    height: 49px;
+    padding: 6px 16px 5px 16px;
+    background: $white !important;
+}
+.form-group [data-toggle="floatLabel"]+label, .label-place {
+    font-size: 11px;
+    left: 12px;
+    opacity: 1;
+    position: absolute;
+    top: 6px;
+    @include transition(all 0.3s ease-in-out);
+}
+
+.form-group [data-toggle="floatLabel"]:required+label, .form-group [data-toggle="floatLabel"]+label, .label-place {
+    color: $grey-01;
+}
+
+/* Positioning */
+.form-group [data-toggle="floatLabel"][data-value=""] {
+    padding-top: 6px;
+}
+.form-group [data-toggle="floatLabel"][data-value=""]+label {
+    opacity: 0;
+    top: 18px;
+}
+.form-group .twitter-typeahead+label {
+    opacity: 0;
+    top: 18px;
+    font-size: 11px;
+    left: 12px;
+    position: absolute;
+    top: 18px;
+    transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+}
+.form-group .twitter-typeahead+label.affiche {
+    opacity: 1;
+    top: 6px;
+    color: #999999;
+    display: block;
+}
+.form-group .twitter-typeahead input.tt-hint {
+    display: none;
+}
+
+
+
+/* --  Input simple (une bordure en bottom) et Select simple -- */
+.input-simple input {
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    box-shadow: none;
+    border-radius: 0;
+    font-size: 16px;
+}
+
+.input-simple .form-control:focus, .input-simple .form-control.active {
+    box-shadow: none;
+    border-bottom: 1px solid #337ab7;
+}
+
+.bg-essai-7j .input-simple .form-control:focus {
+    box-shadow: none; 
+    border-bottom: 1px solid $coral; 
+}
+
+.input-simple textarea, .input-simple textarea:focus {
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    box-shadow: none;
+    border-radius: 0;
+}
+.input-simple input {
+    height: 63px;
+    padding: 20px 0 0 0;
+}
+.input-simple.simple {
+    margin: 0 0 16px 0;
+}
+.input-simple.simple input {
+    height: 40px;
+    padding: 0;
+}
+.input-simple input.small {
+    height: 36px;
+    padding: 0 !important;
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+    @include box-shadow(0 0 0 1000px $white inset !important);
+}
+.form-group p.label-faux-input {
+    margin: 7px 0 6px;
+    padding: 1px 0 0 0;
+}
+.multiple-input .faux-input, .multiple-input .input-simple {
+    display: inline-block;
+    margin: -29px 0 0;
+}
+.multiple-input .bootstrap-select {
+    margin: 20px 0 0 0;
+}
+.form-group.input-simple select.form-control {
+    padding: 0;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    box-shadow: none;
+    border-radius: 0;
+    height: 37px;
+}
+
+/* avec float label */
+.form-group.input-simple [data-toggle="floatLabel"] {
+    height: 63px;
+    padding-top: 17px;
+}
+.form-group.input-simple [data-toggle="floatLabel"]+label {
+    left: 15px;
+}
+
+.form-group.input-simple select.form-control.civility { 
+    margin-top: 19px;
+    padding: 0;
+    height: 44px;
+    background: $white url('https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-128.png') no-repeat;
+    background-size: 20px;
+    background-position:  right 10px center;
+    font-family: 'Arial';
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+    
+.form-group.input-simple select.form-control.civility:focus {
+    background: $white url("../../img/ic_keyboard_arrow_down_48px_saumon-128.png") no-repeat;
+    background-size: 20px;
+    background-position:  right 10px center;
+}
+
+.faux-input.register .fake-input {
+    font-size: 11px;
+    left: 0px;
+    opacity: 1;
+    position: absolute;
+    top: -13px;
+    z-index: 10;
+    color: $grey-01;
+}
+
+.fake-input-line-2 {
+    color: $grey-01;
+    opacity: 1;
+    position: absolute;
+    top: 6px;
+    z-index: 10;
+    margin: 0 !important;
+}
+
+#popup-1erdoc .modal-dialog p.fake-input-line-2 {
+    font-size: 11px !important;
+    font-weight: 700;
+    top: 0;
+}
+
+
+
+
+
+.faux-input.birth {
+    padding: 19px 0px 0 0;
+    height: 63px;
+}
+
+
+.form-group.input-simple select.form-control.civility label {
+opacity: 1;
+}
+
+
+.form-group.input-simple textarea[data-toggle="floatLabel"]+label {
+    left: 15px;
+    background: $white;
+    margin-top: -7px;
+    height: 33px;
+    vertical-align: middle;
+    padding: 12px 0 15px 0;
+    width: 94%}
+
+#labelPlace {
+opacity: 1;
+top: 8px;
+left: 15px;
+}
+#formPrivateData .form-group.input-simple #userPostalCode.form-control {
+    padding: 19px 20px 0 0;
+}
+.form-group.input-simple textarea.form-control {
+    padding: 7px 12px 0 12px;
+    height: auto;
+    max-width: 100%;
+    min-width: 100%;
+    margin: 32px 0 0 0;
+    background: #f3f3f3 !important;
+}
+
+/*=> sur fond foncé */
+.form-group.input-simple.inverse [data-toggle="floatLabel"] {
+    background: transparent !important;
+    color: $white;
+}
+.form-group.input-simple.inverse .form-control::-moz-placeholder {
+    color: #ccc;
+}
+.form-group.input-simple.inverse .form-control:focus, .form-group.input-simple.inverse .form-control:active {
+    border-bottom: 1px solid $white;
+}
+.form-group.input-simple.inverse [data-toggle="floatLabel"]:required+label, .form-group.input-simple.inverse [data-toggle="floatLabel"]+label {
+    color: $white;
+}
+.form-group.input-simple .show-password {
+    top: 34px;
+}
+
+.show-password {
+    cursor: pointer;
+    font-size: 12px;
+    position: absolute;
+    right: 17px;
+    text-transform: uppercase;
+    top: 16px;
+    color: $link-text;
+}
+
+.modifier-champs.input-simple i {
+    visibility: hidden;
+    position: absolute;
+    right: 35px;
+    top: 33px;
+    color:$link-text;
+}
+.parametres-client .modifier-champs.input-simple span i {
+    visibility: hidden;
+    position: absolute;
+    right: 35px;
+    top: 33px;
+    color: #337ab7;
+}
+.delete-parametres-client, .delete-parametres-client:hover {
+    color: $coral;
+    padding-top: 37px;
+    display: block;
+}
+.material-icons.no-wait {
+    color: $coral;
+    font-size: 73px;
+}
+.modifier-champs.input-simple span:hover i, .modifier-champs.input-simple span:active i {
+    visibility: visible;
+}
+.input-simple+div a i {
+    margin: 27px 0 0 -15px;
+    font-size: 28px;
+}
+.modifier-champs.input-simple:hover i, .modifier-champs.input-simple:active i {
+    visibility: visible;
+}
+/* bouton ou mise en page comme l'input simple */
+.faux-input {
+    border-bottom: 1px solid #ccc;
+    padding: 0 0 10px;
+    height: 63px;
+    margin: 0 0 15px 0;
+    display: inherit;
+    vertical-align: top;
+}
+
+.faux-input a, a.faux-input {
+    text-decoration: none;
+}
+
+.faux-input p {
+    color: $black;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 0 0 9px;
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.faux-input p.label-faux-input, p.label-faux-input {
+    font-size: 11px;
+    left: 12px;
+    color: $grey-01;
+    font-weight: 700;
+    display: block;
+    margin: 0;
+    padding: 5px 0 5px 0;
+}
+.faux-input p.label-champs {
+    font-size: 15px;
+    color: $grey-01;
+    font-weight: 700;
+    margin: 28px 0 4px 0;
+}
+.faux-input p.label-champs+i {
+    float: right;
+    margin: 28px 0 0 0;
+    visibility: hidden;
+}
+.faux-input:hover p.label-champs+i, .faux-input:focus p.label-champs+i {
+    visibility: visible;
+    color: #337ab7;
+}
+.faux-input p+i {
+    float: right;
+    margin: 9px 0 0;
+    visibility: hidden;
+}
+.faux-input:hover p+i, .faux-input:focus p+i {
+    visibility: visible;
+    color: #337ab7;
+}
+.faux-input .profil {
+    height: 32px;
+    width: 32px;
+}
+.faux-input .profil.image img {
+    height: 32px;
+    width: 32px;
+    border: 0;
+}
+.faux-input .profil .initiale {
+    color: $white;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 7px 0 0;
+    text-align: center;
+    display: inherit;
+}
+
+.faux-input + a {
+    position: absolute;
+    right: 13px;
+    top: 29px;
+}
+
+
+
+
+///////////////////////////////////////////////
+/* Habillage des boutons radios et checkbox  */
+///////////////////////////////////////////////
+
+.radio {
+    margin: 5px 0 5px 0;
+    label {
+        color: $black;
+        font-weight: normal !important;
+        font-size: 13px;
+        padding-left: 20px;
+    }
+    &+ .radio{
+        margin: 0 0 5px 0;
+    }
+}
+.radio-inline {
+    margin: 10px 0 10px 0;
+    padding-left: 0;
+
+    &+.radio-inline{
+        margin: 10px 0 10px 10px;
+    }
+}
+label{
+    &.radio {
+        margin: 5px 0 5px 0;
+        color: $black;
+        font-weight: normal !important;
+        font-size: 13px;
+        padding-left: 20px;
+    }
+    &+ label{
+        &.radio{
+            margin: 0 0 5px 0;
+        }
+    }
+    &.radio-inline{
+        margin: 10px 10px 10px 0;
+        
+        &+ label{
+            &.radio-inline{
+                margin: 10px 0 10px 10px;
+            }
+        } 
+        
+    }
+    &.checkbox {
+        color: $black;
+        font-weight: normal !important;
+        font-size: 13px;
+        padding-left: 0;
+        margin: 5px 0 5px 0;
+    }
+    &+ label{
+        &.checkbox{
+            margin: 0 0 5px 0;
+        }
+    }
+    &.checkbox-inline{
+        margin: 10px 0 10px 0;
+
+        &+ label{
+            &.checkbox-inline{
+                margin: 10px 0 10px 10px;
+            }
+        } 
+        input[type="checkbox"]{
+            height: 0;
+            left: 0;
+            margin: 0;
+            opacity: 0;
+            overflow: hidden;
+            pointer-events: none;
+            position: absolute;
+            width: 0;
+            z-index: -1;
+        }
+        .checkbox-material {
+            position: relative;
+            top: 3px;
+            vertical-align: middle;
+        }
+    }
+
+}
+.checkbox {
+    margin: 5px 0 5px 0;
+    label {
+        color: $black;
+        font-weight: normal !important;
+        font-size: 13px;
+        padding-left: 0;
+
+        div {
+            display: inline-block;
+            width: 90%;
+            vertical-align: top;
+        }
+    }
+    &+ .checkbox{
+        margin: 0 0 5px 0;
+    }
+
+    input[type="checkbox"]{
+        height: 0;
+        left: 0;
+        margin: 0;
+        opacity: 0;
+        overflow: hidden;
+        pointer-events: none;
+        position: absolute;
+        width: 0;
+        z-index: -1;
+    }
+    .checkbox-material{
+        position: relative;
+        top: 3px;
+        vertical-align: middle;
+    }
+}
+.checkbox-inline{
+    margin: 10px 0 10px 0;
+    padding-left: 0;
+
+    &+.checkbox-inline{
+        margin: 10px 0 10px 10px;
+    }
+}
+
+.checkbox .checkbox-material:before, label.checkbox-inline .checkbox-material:before {
+    background-color: transparent;
+    border-radius: 100%;
+    content: "";
+    display: block;
+    height: 18px;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    top: -5px;
+    transform: scale3d(2.3,  2.3,  1);
+    width: 18px;
+    z-index: 1;
+}
+.checkbox .checkbox-material .check, label.checkbox-inline .checkbox-material .check {
+    border: 2px solid $indigo;
+    border-radius: 2px;
+    display: inline-block;
+    height: 18px;
+    overflow: hidden;
+    position: relative;
+    width: 18px;
+    z-index: 1;
+    margin-right: 4px;
+}
+.checkbox .checkbox-material .check.coral, label.checkbox-inline .checkbox-material .check.coral {
+    border-color: $coral;
+}
+.essai-7j .bloc-essai-sept .bg-essai-phone .checkbox .checkbox-material .check, .essai-7j .bloc-essai-sept .bg-essai-phone label.checkbox-inline .checkbox-material .check, .bg-essai-phone .checkbox .checkbox-material .check {
+    border: 2px solid $white;
+}
+.bg-essai-phone .checkbox input[type="checkbox"]:checked+.checkbox-material .check {
+    background-color: transparent;
+}
+.checkbox.checkbox-blanc .checkbox-material .check {
+    border: 2px solid $white;
+}
+.checkbox.checkbox-blanc.blanc .checkbox-material .check {
+    border: 2px solid $white;
+}
+.checkbox .checkbox-material .check:before, label.checkbox-inline .checkbox-material .check:before {
+    box-shadow: 0;
+    content: "";
+    display: block;
+    height: 0;
+    margin-left: 5px;
+    margin-top: -5px;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 0;
+}
+.checkbox .checkbox-material .check:after, label.checkbox-inline .checkbox-material .check:after {
+    box-shadow: 0;
+    content: "";
+    display: block;
+    height: 0;
+    margin-left: 5px;
+    margin-top: -5px;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 0;
+}
+.checkbox input[type="checkbox"]:focus+.checkbox-material .check:after, label.checkbox-inline input[type="checkbox"]:focus+.checkbox-material .check:after, .checkbox input[type="checkbox"]:focus+input+.checkbox-material .check:after, label.checkbox-inline input[type="checkbox"]:focus+input+.checkbox-material .check:after {
+    opacity: 0.2;
+}
+.checkbox input[type="checkbox"]:focus:checked+.checkbox-material:before, label.checkbox-inline input[type="checkbox"]:focus:checked+.checkbox-material:before, .checkbox input[type="checkbox"]:focus:checked+input+.checkbox-material:before, label.checkbox-inline input[type="checkbox"]:focus:checked+input+.checkbox-material:before {
+    animation: 500ms ease 0s normal none 1 running rippleOn;
+}
+.checkbox input[type="checkbox"]:focus:checked+.checkbox-material .check:before, label.checkbox-inline input[type="checkbox"]:focus:checked+.checkbox-material .check:before, .checkbox input[type="checkbox"]:focus:checked+input+.checkbox-material .check:before, label.checkbox-inline input[type="checkbox"]:focus:checked+input+.checkbox-material .check:before {
+    animation: 0.3s ease 0s normal forwards 1 running checkbox-on;
+}
+.checkbox input[type="checkbox"]:focus:checked+.checkbox-material .check:after, label.checkbox-inline input[type="checkbox"]:focus:checked+.checkbox-material .check:after, .checkbox input[type="checkbox"]:focus:checked+input+.checkbox-material .check:after, label.checkbox-inline input[type="checkbox"]:focus:checked+input+.checkbox-material .check:after {
+    animation: 500ms ease 0s normal forwards 1 running rippleOn;
+}
+.checkbox input[type="checkbox"]:focus:not(:checked)+.checkbox-material:before, label.checkbox-inline input[type="checkbox"]:focus:not(:checked)+.checkbox-material:before, .checkbox input[type="checkbox"]:focus:not(:checked)+input+.checkbox-material:before, label.checkbox-inline input[type="checkbox"]:focus:not(:checked)+input+.checkbox-material:before {
+    animation: 500ms ease 0s normal none 1 running rippleOff;
+}
+.checkbox input[type="checkbox"]:focus:not(:checked)+.checkbox-material .check:before, label.checkbox-inline input[type="checkbox"]:focus:not(:checked)+.checkbox-material .check:before, .checkbox input[type="checkbox"]:focus:not(:checked)+input+.checkbox-material .check:before, label.checkbox-inline input[type="checkbox"]:focus:not(:checked)+input+.checkbox-material .check:before {
+    animation: 0.3s ease 0s normal forwards 1 running checkbox-off;
+}
+.checkbox input[type="checkbox"]:focus:not(:checked)+.checkbox-material .check:after, label.checkbox-inline input[type="checkbox"]:focus:not(:checked)+.checkbox-material .check:after, .checkbox input[type="checkbox"]:focus:not(:checked)+input+.checkbox-material .check:after, label.checkbox-inline input[type="checkbox"]:focus:not(:checked)+input+.checkbox-material .check:after {
+    animation: 500ms ease 0s normal forwards 1 running rippleOff;
+}
+.checkbox input[type="checkbox"]:checked+.checkbox-material .check, .checkbox input[type="checkbox"]:checked+input+.checkbox-material .check {
+    border-color: $grey-02;
+    color: $grey-02;
+}
+.checkbox.checkbox-primary input[type="checkbox"]:checked+.checkbox-material .check.coral, 
+.checkbox.checkbox-primary input[type="checkbox"]:checked+input+.checkbox-material .check.coral {
+    border-color: $coral;
+    color: $coral;
+    background: $white;
+}
+.checkbox.checkbox-primary input[type="checkbox"]:checked+.checkbox-material .check, 
+.checkbox.checkbox-primary input[type="checkbox"]:checked+input+.checkbox-material .check {
+    border-color: $indigo;
+    color: $indigo;
+}
+.checkbox.checkbox-blanc input[type="checkbox"]:checked+.checkbox-material .check, .checkbox.checkbox-blanc input[type="checkbox"]:checked+input+.checkbox-material .check {
+    border-color: $white;
+    color: $white;
+}
+.checkbox.checkbox-blanc.blanc input[type="checkbox"]:checked+.checkbox-material .check, .checkbox.checkbox-blanc.blanc input[type="checkbox"]:checked+input+.checkbox-material .check {
+    border-color: $white;
+    color: $white;
+    background: transparent;
+}
+.checkbox input[type="checkbox"]:checked+.checkbox-material .check:before, label.checkbox-inline input[type="checkbox"]:checked+.checkbox-material .check:before, .checkbox input[type="checkbox"]:checked+input+.checkbox-material .check:before, label.checkbox-inline input[type="checkbox"]:checked+input+.checkbox-material .check:before {
+    box-shadow: 0 0 0 10px,  10px -9px 0 10px,  32px 0 0 20px,  0 32px 0 20px,  -4px 5px 0 10px,  20px -12px 0 11px;
+}
+.checkbox.checkbox-primary input[type="checkbox"]:checked+.checkbox-material .check:before, 
+.checkbox.checkbox-primary input[type="checkbox"]:checked+input+.checkbox-material .check:before {
+    color: $indigo;
+}
+.checkbox.checkbox-primary input[type="checkbox"]:checked+.checkbox-material .check.coral:before, 
+.checkbox.checkbox-primary input[type="checkbox"]:checked+input+.checkbox-material .check.coral:before {
+    color: $coral;
+}
+.checkbox.checkbox-blanc input[type="checkbox"]:checked+.checkbox-material .check:before, .checkbox.checkbox-blanc input[type="checkbox"]:checked+input+.checkbox-material .check:before {
+    color: $white;
+}
+.checkbox input[type="checkbox"][disabled]+.checkbox-material .check:after, label.checkbox-inline input[type="checkbox"][disabled]+.checkbox-material .check:after, .checkbox input[type="checkbox"][disabled]+input+.checkbox-material .check:after, label.checkbox-inline input[type="checkbox"][disabled]+input+.checkbox-material .check:after {
+    background-color: rgba(0,  0,  0,  0.87);
+    transform: rotate(-45deg);
+}
+
+@keyframes checkbox-on {
+    0% {
+    box-shadow: 0 0 0 10px,  10px -10px 0 10px,  32px 0 0 20px,  0 32px 0 20px,  -5px 5px 0 10px,  15px 2px 0 11px;
+}
+50% {
+    box-shadow: 0 0 0 10px,  10px -10px 0 10px,  32px 0 0 20px,  0 32px 0 20px,  -5px 5px 0 10px,  20px 2px 0 11px;
+}
+100% {
+    box-shadow: 0 0 0 10px,  10px -10px 0 10px,  32px 0 0 20px,  0 32px 0 20px,  -5px 5px 0 10px,  20px -12px 0 11px;
+}
+}
+.radio span {
+    display: block;
+    left: 0px;
+    position: absolute;
+    top: 2px;
+    transition-duration: 0.2s;
+}
+.radio .circle, label.radio-inline .circle {
+    border: 2px solid $indigo;
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+}
+.radio.radio-blanc .circle, label.radio-inline.radio-blanc .circle {
+    border: 2px solid $white;
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+}
+.radio .check {
+    background-color: $grey-02;
+    border-radius: 100%;
+    height: 15px;
+    transform: scale3d(0,  0,  0);
+    width: 15px;
+}
+.radio.radio-primary .check {
+    background-color: $indigo;
+}
+.radio input[type="radio"]:focus:not(:checked) ~ .check:after, label.radio-inline input[type="radio"]:focus:not(:checked) ~ .check:after {
+    animation: 500ms ease 0s normal none 1 running rippleOff;
+}
+.radio input[type="radio"]:focus:checked ~ .check:after, label.radio-inline input[type="radio"]:focus:checked ~ .check:after {
+    animation: 500ms ease 0s normal none 1 running rippleOn;
+}
+.radio input[type="radio"], label.radio-inline input[type="radio"] {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    width: 0;
+}
+.radio input[type="radio"]:checked ~ .check, label.radio-inline input[type="radio"]:checked ~ .check, .radio input[type="radio"]:checked ~ .circle, label.radio-inline input[type="radio"]:checked ~ .circle {
+    opacity: 1;
+}
+.radio input[type="radio"]:checked ~ .check, label.radio-inline input[type="radio"]:checked ~ .check {
+    background-color: $grey-02;
+}
+.radio.radio-primary input[type="radio"]:checked ~ .check, label.radio-inline input[type="radio"]:checked ~ .check {
+    background-color: $indigo;
+}
+.radio.radio-blanc input[type="radio"]:checked ~ .check, label.radio-inline input[type="radio"]:checked ~ .check {
+    background-color: $white;
+}
+.radio input[type="radio"]:checked ~ .circle, label.radio-inline input[type="radio"]:checked ~ .circle {
+    border-color: $grey-02;
+}
+.radio.radio-primary input[type="radio"]:checked ~ .circle, label.radio-inline input[type="radio"]:checked ~ .circle {
+    border-color: $indigo;
+}
+.radio.radio-blanc input[type="radio"]:checked ~ .circle, label.radio-inline input[type="radio"]:checked ~ .circle {
+    border-color: $white;
+}
+.radio input[type="radio"]:checked ~ .check, label.radio-inline input[type="radio"]:checked ~ .check {
+    transform: scale3d(0.55,  0.55,  1);
+}
+.radio input[type="radio"][disabled] ~ .check, label.radio-inline input[type="radio"][disabled] ~ .check, .radio input[type="radio"][disabled] ~ .circle, label.radio-inline input[type="radio"][disabled] ~ .circle {
+    opacity: 0.26;
+}
+.radio input[type="radio"][disabled] ~ .check, label.radio-inline input[type="radio"][disabled] ~ .check {
+    background-color: #000;
+}
+.radio input[type="radio"][disabled] ~ .circle, label.radio-inline input[type="radio"][disabled] ~ .circle {
+    border-color: #000;
+}
+
+@keyframes rippleOn {
+    0% {
+    opacity: 0;
+    }
+    50% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes rippleOff {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.bootstrap-switch {
+    @include border-radius(34px !important);
+}
+.bootstrap-switch .bootstrap-switch-label:before {
+    background-color: $indigo;
+    bottom: 3px;
+    content: "";
+    height: 26px;
+    right: 39px;
+    position: absolute;
+    width: 26px;
+    @include border-radius(15px);
+}
+.bootstrap-switch.bootstrap-switch-wrapper.bootstrap-switch-off.bootstrap-switch-mini.bootstrap-switch-animate .bootstrap-switch-label:before {
+    background-color: $grey-01 !important;
+}
+.bootstrap-switch.bootstrap-switch-on .bootstrap-switch-label, .bootstrap-switch.bootstrap-switch-inverse.bootstrap-switch-off .bootstrap-switch-label, .bootstrap-switch.bootstrap-switch-animate .bootstrap-switch-container, .bootstrap-switch.bootstrap-switch-off .bootstrap-switch-label, .bootstrap-switch.bootstrap-switch-inverse.bootstrap-switch-on .bootstrap-switch-label, .bootstrap-switch.bootstrap-switch-wrapper.bootstrap-switch-mini.bootstrap-switch-off.bootstrap-switch-focused, .bootstrap-switch.bootstrap-switch-wrapper.bootstrap-switch-mini.bootstrap-switch-on.bootstrap-switch-focused {
+    background: $grey-02 !important;
+}
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary, .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary {
+    background: $grey-02 !important;
+    color: $white;
+}
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-default, .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-default {
+    background: $grey-02 !important;
+    color: $white !important;
+}
+.bootstrap-switch-handle-off.bootstrap-switch-default i {
+    margin: 0 0 3px;
+    vertical-align: bottom;
+}
+.bootstrap-switch-handle-on.bootstrap-switch-primary i {
+    margin: 1px 0 4px 0;
+    vertical-align: bottom;
+}
+
+/* ------- Input avec drapeau => recherche commune ou département -------*/
+.tt-dropdown-menu{
+    width: 100%;
+    .tt-dataset-lieu{
+       div{
+            span{
+                cursor: pointer;
+                display: table;
+                padding: 0 10px 0 10px;
+
+                p{
+                    color: $color-secondaire-dark-dark;
+                    font-size: 16px;
+                    margin: 0;
+                    padding: 3px 8px;
+                }
+                img{
+                    display: table-cell;
+                    margin-top: 8px !important;
+                    margin-right: 6px;
+                    vertical-align: top;
+                    min-width: 23px;
+                    max-width: 23px;
+                    height: 13px !important;
+                    margin-left:0;
+                }
+
+                &:hover{
+                    background: rgba($color-secondaire, 0.2) !important;
+                    p{
+                        background: none;
+                        color: $color-secondaire-dark-dark !important;
+                    }
+                }
+            } 
+        }
+
+        .tt-suggestion{
+
+            &.tt-cursor{
+                span{
+                    background-color: $indigo;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+/* -- Select (transformation dropdown + personnalisation fleche) -- */
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 100% !important;
+}
+.bootstrap-select.input-lg {
+    padding: 0 !important;
+}
+.bootstrap-select>.dropdown-toggle {
+    height: 46px;
+}
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+    color: $grey-01;
+}
+.bootstrap-select.btn-group .dropdown-toggle .caret {
+    border-left: 0 solid transparent;
+    border-right: 0 solid transparent;
+    border-top: 0 dashed;
+}
+.bootstrap-select.btn-group .dropdown-toggle .caret:before {
+    content: "\e915";
+    font-family: "icomoon";
+    font-size: 28px;
+}
+.bootstrap-select.btn-group .dropdown-toggle .caret {
+    margin: -37px 0 0 2px !important; 
+    position: relative !important;
+}
+
+.home-owl-stage .bootstrap-select.btn-group .dropdown-toggle .caret {
+    margin: -83px 0 0 2px !important;
+    position: relative !important;
+}
+ 
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    .bootstrap-select.btn-group .dropdown-toggle .caret {
+        margin: -37px 0 0 2px !important;
+    }
+
+    .home-owl-stage .bootstrap-select.btn-group .dropdown-toggle .caret {
+        margin: -41px 0 0 2px !important;
+    }
+}
+
+@media screen and (min-width: 0\0) {
+    .container-fusion .btn-group.bootstrap-select .dropdown-toggle .caret {
+        top: 0 !important;
+    }
+}
+
+@supports (-ms-ime-align: auto) {
+    .bootstrap-select.btn-group .dropdown-toggle .caret  {
+        margin: -37px 0 0 2px !important;
+    }
+}
+
+.bootstrap-select .btn-default:hover, .bootstrap-select.btn-group .dropdown-toggle:active, .bootstrap-select.btn-group.open .dropdown-toggle {
+    box-shadow: inherit;
+}
+.bootstrap-select .dropdown-menu>li>a {
+    padding: 3px 6px;
+}
+.bootstrap-select .filter-option {
+    font-size: 16px;
+}
+.bootstrap-select .filter-option i {
+    font-size: 24px;
+    margin: -1px 3px 0 0;
+    vertical-align: top;
+}
+.bootstrap-select .dropdown-menu.open i {
+    font-size: 24px;
+    margin: -1px 4px 0 0;
+    vertical-align: top;
+}
+.bootstrap-select .dropdown-menu.open a {
+    font-size: 17px;
+}
+.bootstrap-select .dropdown-menu>li>a:hover, .dropdown-menu>li>a:active, .dropdown-menu>li.selected>a, .bootstrap-select .dropdown-menu>li>a:focus {
+    color: $black;
+    font-weight: bold;
+}
+.bootstrap-select .dropdown-toggle.btn {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 3px 25px 3px 17px;
+    height: 34px;
+    background-color: $white;
+}
+.bootstrap-select .dropdown-toggle.btn-default:hover, .bootstrap-select .dropdown-toggle.btn-default:active {
+    background-color: $white !important;
+}
+.select.input-lg {
+    padding: 0;
+}
+.select.input-lg .bootstrap-select .dropdown-toggle.btn {
+    height: 46px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+.select.input-lg.owl-stage {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%}
+.select.input-lg.home-owl-stage {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%}
+.select.input-lg.select-inline {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%}
+.home-connectee .clonedInput .select.input-lg.select-inline {
+    width: 100%}
+.home .recherche .bloc-recherche .input-annee .form-group {
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+    .input-lg {
+        font-size: 15px;
+    } 
+}
+.home .recherche .bloc-recherche .input-annee .form-group .form-control {
+    padding-left: 16px;
+}
+.home .recherche .bloc-recherche .select.input-lg .bootstrap-select .dropdown-toggle.btn {
+    height: 49px;
+    border-radius: 4px;
+    padding-left: 8px;
+}
+.home .recherche .bloc-recherche .input-annee .form-group.simple {
+    width: 100%}
+.home .recherche .bloc-recherche .select.input-lg .bootstrap-select .dropdown-toggle.btn span {
+    font-size: 14px;
+    display: inline-block;
+    position: relative;
+}
+.home .recherche .bloc-recherche .input-annee #divToYear {
+    margin-right: 0;
+}
+.home .recherche .bloc-recherche .home-periode {
+    width: 25%}
+.col-lg-3 .select.input-lg.owl-stage {
+    width: 100%}
+
+
+///////////////////////////////////////////////////////////////////////////////////
+/* -- select input simple (transformation dropdown + personnalisation fleche) -- */
+////////////////////////////////////////////////////////////////////////////////////
+
+.faux-input .bootstrap-select>.dropdown-toggle {
+    border: 0;
+}
+.faux-input .bootstrap-select>.dropdown-toggle {
+    height: auto;
+}
+.faux-input .btn-group.bootstrap-select .dropdown-toggle {
+    padding: 10px 0 0 0;
+}
+.faux-input.sans-label .btn-group.bootstrap-select .dropdown-toggle {
+    padding: 31px 0 0 0;
+}
+.faux-input.sans-label-marge {
+    height: 40px;
+}
+.faux-input.sans-label-marge .btn-group.bootstrap-select .dropdown-toggle {
+    padding: 8px 0 0;
+}
+.faux-input .bootstrap-select.btn-group .dropdown-toggle .caret {
+    margin: -37px 0 0 -21px !important;
+}
+.faux-input .bootstrap-select.btn-group .dropdown-toggle .filter-option {
+    color: $black;
+}
+
+//////////////////////////////////////////////////////////////////
+/* Input simple avec fond (champ avec fond legerement coloré)  */
+///////////////////////////////////////////////////////////////
+
+.input-simple.fond input {
+    height: 44px;
+}
+.input-simple.fond .bootstrap-tagsinput input {
+    background: #f3f3f3;
+    border-bottom: 0 none;
+}
+.input-simple.fond .bootstrap-tagsinput input {
+    padding: 7px 0 6px 43px !important;
+    margin: 12px 0 0 0;
+}
+.input-simple.fond .bootstrap-tagsinput input:focus {
+    border-bottom: 0;
+}
+.input-simple.fond .bootstrap-tagsinput+input+i {
+    left: 32px;
+}
+.input-simple.fond .bootstrap-tagsinput+input+i+i {
+    right: 29px;
+}
+
+.bootstrap-tag-container {
+    .input-simple {
+        i:hover {
+            cursor: pointer;
+        }
+        &:hover {
+            .material-icons {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .home .recherche .bloc-recherche .input-annee .form-group {
+        width: 46%;
+    }
+}
+
+@media (max-width: 767px) {
+    .home .recherche .bloc-recherche .home-periode, .home .recherche .bloc-recherche .input-annee {
+        width: 100%;
+    }
+    .home .recherche .bloc-recherche .input-annee {
+        margin-top: 15px;
+    }
+    .home .recherche .bloc-recherche .input-annee .form-group {
+        width: 49%;
+    }
+}
+
+@media (max-width: 480px) {
+    .champs-periode div.marge-top10px-768:first-child {
+        width: 98%;
+    }
+    
+    .select.input-lg.select-inline {
+        width: 100%;
+    }
+
+    .home .recherche .bloc-recherche .input-annee .form-group {
+        width: 48%;
+    }
+}
+
+.bs-caret {
+    position: relative;
+    display: inline-block;
+} 

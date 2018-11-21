@@ -1,0 +1,54 @@
+#newlayouttree.ascendantThree {
+    @media (max-width: 992px) {
+        overflow: scroll;
+        position: relative;
+    }
+    #overscroll {
+        padding: 0;
+        margin: 0;
+        overflow: scroll;
+    }
+
+    .container.arbre-ascendant {
+    
+        #ascendingTree {
+            min-width: 993px;
+        }
+    }    
+}
+
+
+/// OLD STYLES
+@media (max-width: 992px) {
+
+.arbre-ascendant .generation-active-famille .union ul li a {
+    max-width: 78%}
+
+.arbre-ascendant .bloc-membre i {
+    position: absolute;
+    top: 5px;
+}
+.arbre-ascendant .bloc-membre-couple li p {
+    max-width: 57%}
+.arbre-ascendant .lien-generation .lien-vertical-gene1, .arbre-ascendant .lien-generation.gene-deux .lien-vertical, .arbre-ascendant .lien-generation.gene-trois .lien-vertical, .arbre-ascendant .lien-generation.gene-quatre .lien-vertical {
+    margin-left: 9px;
+}
+.arbre-ascendant .lien-generation i.lien-horizontal-2perso:before, .arbre-ascendant .lien-generation i.lien-horizontal-2perso:after {
+    width: 5px;
+}
+.arbre-ascendant .lien-generation i.lien-horizontal-1perso:before {
+    width: 1;
+}
+
+.arbre-ascendant .colonne-generation
+.arbre-ascendant .bloc-membre .ajout {
+    margin: 1 0 19px;
+}
+
+
+.arbre-ascendant .lien-generation .parent-1 {
+    margin: 0 0 4;
+}
+.arbre-ascendant .colonne-generation {
+    width: 12.5%}
+}

@@ -1,0 +1,218 @@
+.filae-guide-container {
+    .subtitle-section {
+        margin-bottom: 70px;
+    }
+
+    .guide {
+        counter-reset: counter-guide;
+        &:first-child {
+            .guide-img {
+                width: auto;
+            }
+
+        }
+        .guide-item-container {
+            padding-right: 0 !important;
+            @media (max-width: 768px) {
+                padding-right: 15px !important;
+                margin-bottom: 30px;
+            }
+     
+            
+        }
+        .guide-item:before {
+            counter-increment: counter-guide;
+            content: counter(counter-guide) "."; 
+            color: $indigo;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .guide-img {
+            color: $black;
+            height: 145px;
+            @include flexbox;
+            @include align-items(center);
+            @media (max-width: 768px) {
+                height: auto;
+                width: 50%;
+                margin: 0 auto;
+                display: block;
+                padding-top: 20px;
+            }
+
+
+        }
+
+        .guide-content {
+            padding-left: 27px;
+            margin-top: -27px;
+            @media (max-width: 768px) {
+                text-align: center;
+            }
+            
+            p {
+                margin: 0;
+                line-height: 24px;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .filae-guide-cta {
+        margin: 55px auto;
+    }
+}
+
+.advantages-container {
+    background-color: rgba(54, 62, 99, 0.0784313725490196);
+    text-align: center;
+
+    .subtitle-section {
+        font-size: 40px;
+        margin: 55px auto;
+    }
+
+    .bloc-advantage {
+        margin-bottom: 50px;
+        h3 {
+            font-size: 20px;
+            line-height: 28px;
+            font-weight: 700;
+            color: $storm;
+            margin-bottom: 5px;
+        }
+
+        .text {
+            font-size: 16px;
+            line-height: 24px;
+            color: #465569f4;
+        }
+
+    }
+
+    .img-advantage-container {
+        height: 144px;
+        position: relative;
+        display: table;
+        width: 100%;
+
+        .img-advantage {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+
+            &.small {
+                img {
+                    max-width: 165px;  
+                }
+            }
+
+            .map {
+                height: 88px;
+                width: 88px;
+            }
+
+            img {
+                display: block;
+                width: 80%;
+                margin: 0 auto;
+                max-width: 180px;
+            }
+        }
+        
+        .label-guide {
+            display: table;
+            width: 168px;
+            height: 48px;
+            margin: 0 auto;
+            font-weight: 700;
+            background-color: $white;
+            padding: 0 15px;
+            font-size: 18px;
+            border-radius: 4px;
+            border: 1px solid $coral;
+            
+            i, .label-name {
+                display: table-cell;
+                vertical-align: middle
+            }
+        }
+        i { 
+
+            color: $coral;
+            font-size: 32px;
+        }
+
+        &.card { 
+
+            img {
+                display: block;
+                width: 56px;
+                height: 56px;
+                border: 3px solid $men-color;
+                border-radius: 50%;
+                margin: 0 auto;
+                display: block;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+        }
+
+        .card-container {
+            position: relative;
+            border: 1px solid #dad9d4; 
+            background-color: $white;
+            border-radius: 4px;
+            width: 80px;
+            height: 128px;
+            display: block;
+            margin: 0 auto;
+
+            i {
+                font-size: 28px;
+                position: absolute;
+                left: -14px;
+                top: -10px;
+            }
+
+            p {
+                font-size: 10px;
+                line-height: 13px;
+                color: $black-02;
+                text-align: center;
+            }
+        }
+
+        .icon-hint{
+            i{
+                font-size:80px; 
+            }  
+        }
+    }
+
+
+    .advantages-picto {
+        height: 72px;
+        width: 72px;
+        display: block;
+        margin: 0 auto;
+
+        &.doc {
+            width: 64px;
+            height: 64px;;
+        }
+
+        &.tree {
+            height: 69px; 
+            width: auto;
+        }
+    }
+
+    .jam {
+        color: $coral;
+        font-size: 60px;
+        position: relative;
+    }
+}

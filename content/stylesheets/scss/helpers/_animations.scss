@@ -1,0 +1,31 @@
+
+@include keyframes(entered) {
+    0% { 
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+// Assign animation to a class name to start in a js condition
+.entered {
+    @include animation(entered 0.5s forwards 1);
+}
+
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+
+.loop {
+    &.loading {
+        -webkit-animation: rotation 2s infinite linear;
+        animation: rotation 2s infinite linear;
+    }
+}

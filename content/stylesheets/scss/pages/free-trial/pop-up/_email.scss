@@ -1,0 +1,42 @@
+@import '../../../helpers/variables';
+@import '../../../helpers/mixin/_mixin';
+#popup-1erdoc {
+    .modal-header {
+        .close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            margin-top: 0;
+            color: $grey-02;
+            opacity: 1;
+        }
+    }
+
+    #freeoffer-popup-container {
+        .freetrial-title {
+            text-align: center;
+            margin-bottom: $spacing-large;
+        }
+    
+        .explanation {
+            text-align: center;
+            line-height: 24px !important;
+            margin-bottom: $spacing-medium;
+        }
+        
+        .error-message {
+            margin: 0 auto;
+            max-width: 300px;
+            font-size: 11px !important;
+            text-align: left;
+        }
+
+        .btn-free-container {
+            margin: $spacing-medium auto $spacing-large auto;
+            .btn {
+                padding: 8px 16px;
+                font-weight: $bold;
+            }
+        }
+    }
+}

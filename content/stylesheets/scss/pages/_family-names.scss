@@ -1,0 +1,352 @@
+/* FAMILY NAMES CSS */
+
+#family-name-container {
+  .home {
+    .storm-subtitle {
+      color: $storm;
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    .popularity-title {
+      margin-bottom: 25px;
+    }
+
+    .etimology {
+      margin: 45px -15px 45px -15px;
+      .etimology-text {
+        color: #000000;
+        font-size: 16px;
+      }
+      .rang-container {
+        font-size: 16px;
+        color: $black-02;
+        .rang {
+          color: $coral;
+        }
+      }
+
+    }
+
+    .fil-family-name {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      font-size: 16px;
+      
+
+      .last-name {
+        color: $grey-01;
+      }
+      .slash {
+        margin: 0 5px;
+      }
+    }
+
+    .number-family-names-title {
+      margin-bottom: 20px;
+      .number-family-names {
+        color: $coral;
+      }
+    }
+
+    .title-family-name {
+      margin-top: 0;
+      font-size: 32px;
+    }
+
+    .progress-family-name {
+      border-radius: 100px;
+      height: 8px;
+      width: 100%;
+      margin-bottom: 6px;
+      .progress-bar-family-name {
+        background-color: $coral;
+      }
+    }
+
+    .row.is-flex:before, .row.is-flex:after {display: none;}
+
+    .row.is-flex {
+      @include flexbox; 
+      @include flex-wrap(wrap); 
+    }
+
+    .row.is-flex > [class*='col-'] {
+        @include flexbox; 
+        @include flex-direction(column);
+    }
+    #map-canvas {
+      margin-top: 0;
+      height: 500px !important;
+    }
+
+
+    .family-button-search {
+      width: 47px;
+      height: 47px;
+      background-color: $coral;
+      border-radius: 100px;
+      position: relative;
+      .search-icon-container {
+        width: 50%;
+        height: 50%;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        i {
+          color: $white;
+        }
+      }
+    }
+
+    #map-div {
+      width: 100%;
+      height: 450px;
+      background-color: grey;
+    }
+
+    #sidebar-search-family {
+      padding-top: 15px;
+      @include justify-content(space-between); 
+      .search-name-title {
+        margin-bottom: 15px;
+      }
+
+      .btn-caret-container {
+        .btn-caret {
+          width: 100%;
+          margin-top: 10px;
+          span {
+            margin-left: inherit;
+          }
+          i {
+            margin-left: inherit;
+          }
+        }
+        
+        &:hover{
+          text-decoration: none !important;
+        }
+      }
+
+      .look-for-ancestor-container {
+        .look-for-ancestor-title {
+          color: $coral;
+          font-size: 20px;
+          font-weight: 700;
+          margin-bottom: 10px;
+        }
+
+        .look-for-ancestor-text {
+          color: #000000;
+          font-weight: 700;
+          font-size: 16px;
+          margin-bottom: 15px;
+        } 
+      }
+      .play-video .beaucarnot-family-img {
+        width: 100%;
+      }
+      .cta-container .btn {
+        margin: 15px 0 0px 0;
+        width: 100%;
+        .btn-content {
+          @include flexbox; 
+          @include justify-content(center);
+        }
+      }
+    }
+    .btn-text-center {
+      @include flexbox;
+      @include align-items(flex-end);
+      @include justify-content(center);
+      margin-top: 20px;
+      .btn-action{
+        @include flexbox; 
+        @include justify-content(center);
+        @include align-items(flex-end);
+
+      }
+    }
+
+    .recherche {
+      img {
+        margin-top: 38px !important;
+
+      }
+
+      button#validate {
+        margin-top: 25px;
+      }
+
+    }
+
+    .engagement-precision {
+      text-align: center;
+      color: $storm;
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 0;
+      margin-top: 10px;
+    }
+    .subtitle-family-name {
+      text-align: center;
+      padding: 15px 0;
+      h3 {
+        font-size: 20px;
+      }
+    }
+    .civil-recensement {
+      text-transform: uppercase;
+      color: $coral;
+    }
+    .civil-recensement-name {
+      font-weight: bold;
+      font-size: 25px;
+    }
+    hr.coral {
+      color: $coral;
+      border-top: 1px solid $coral;
+      margin-top: 0px;
+    }
+    .stat-family-container {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 30px;
+      .number-stat {
+        color: $coral;
+        font-size: 40px;
+      }
+      .act {
+        a {
+          color: $black;
+        }
+      }
+    }
+
+    .sources {
+      h4 {
+        color: $coral;
+        font-weight: 700;
+        font-size: 16px;
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+
+      h4 + p {
+        font-size: 14px !important;
+      }
+    }
+
+    .source-title {
+      line-height: 1.4;
+      color: $black-02;
+    }
+    .bloc-source-explanation {
+      font-size: 20px;
+      text-align: center;
+      color: $storm;
+      line-height: 28px;
+      margin-top: 10px;
+      margin-bottom: 35px;
+     }
+    .source-text {
+      width: 75%;
+      margin-bottom: 0;
+    }
+    .bloc-source-container {
+      margin: 0px -15px 0px -15px;
+      .bloc-source {
+        margin: 0 0 15px 0;
+      }
+    }
+    .box-stat-title {
+      color: $storm;
+      font-size: 20px;
+    }
+    .box-stat-container {
+      margin-top: 30px;
+      .name-container {
+        font-weight: 500;
+      }
+      .box-stat-title {
+        &.ortho-title {
+          margin-top: 35px;
+        }
+      }
+      .born-number-container {
+        background-color: #f0f1f3;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        .born-number {
+          color: $coral;
+          font-size: 30px;
+        }
+        .born-text {
+          color: $storm;
+          font-size: 16px;
+        }
+        .period {
+          color: #1e1e1e;
+        }
+        .born-img {
+          display: block;
+          margin: 0 auto;
+          width: 100%;
+        }
+        .born-legend {
+          font-weight: lighter;
+          margin-bottom: 15px;
+          font-size: 12px;
+        }
+        .lastnameDetailsFlash {
+          object {
+            width: 100%;
+          }
+        }
+      }
+
+      .line-rank {
+        @include flexbox; 
+        a {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        div {
+          white-space: nowrap;
+        }
+      }
+    }
+    .first-name {
+      margin-top: 35px;
+      margin-bottom: 45px;
+      color: black;
+    }
+  }
+}
+
+.family-name-container {
+  h1, h2, h3, h4 {
+    margin: 0 0 15px 0;
+  }
+}
+@media (max-width: 768px){
+  .bloc-stat-family {
+    margin-top: 25px;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .bloc-source-explanation {
+    br {
+      display: none;
+    }
+  }
+
+}

@@ -1,0 +1,14 @@
+/* DESCENDING TREE */
+
+#descendingTree {
+	.remonter-generation {
+		&.hint--top {
+			width: 33px;
+			display: inline-block;
+			text-align: center;
+			i {
+				margin: 8px auto;
+			}
+		}
+	}
+}

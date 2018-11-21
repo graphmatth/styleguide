@@ -1,0 +1,27 @@
+// CAPATCHA STYLE INLINE
+
+#recaptcha {
+    padding:10px;
+}
+
+#recaptchaMessage {
+    display:none;
+    padding:10px;
+    color:red;
+    font-weight:bold;
+}
+
+.text-captcha {
+    width:100%;
+}
+
+
+#PartialPrint {
+    height:16px;
+    width:16px;
+    float:none;    
+}
+
+#capchaDivGoToPrint {
+    display:none;
+}

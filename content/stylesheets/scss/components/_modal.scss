@@ -1,0 +1,263 @@
+// LOGIN MODAL 
+
+#animatedModal {
+    .inscr-conn {
+        margin-bottom: 30px;
+        margin-top: 50px;
+        height: auto;
+        min-height: auto;
+        .form-inscr-conn {
+            a {
+                color:$white;
+                text-decoration:underline;
+            }
+        }
+    }
+}
+
+/* MODAL SUBCRIPTION CSS */
+#modalSubscription {
+    margin-left: 0px;
+}
+/* Full screen modal */
+#fullScreenModal, .fullscreen-video, #fullScreenModal1, #fullScreenModal2, #fullScreenModal3, #fullScreenModal4 {
+    .modal-header {
+        border-bottom: 0;
+        @include border-radii(6px, 6px, 0, 0);
+        background: #000;
+        height: 50px;
+
+        .close {
+            color: $white;
+            opacity: 1;
+        }
+    }
+    .modal-body {
+        @include border-radii(0px, 0px, 6px, 6px); 
+        background: #000;
+        padding-bottom: 70px;
+    }
+
+
+    .modal-dialog {
+        width: 90%;
+    }
+
+    .modal-content {
+        border: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    #fullScreenModal, .fullscreen-video, #fullScreenModal1, #fullScreenModal2, #fullScreenModal3, #fullScreenModal4 {
+        .modal-dialog {
+            width: 99%;
+        }
+    }
+} 
+
+
+
+/****************** MODAL THREE PRINT ******************/
+
+.print-tree-modal-container {
+
+	a.link-pop-up {
+		font-size: 11px;
+		color: $indigo;
+	}
+	.complete-three-print {
+		text-align: center;
+		.three-input {
+			margin: $spacing-large 0;
+			width: 100%;
+			font-size: 16px;
+			&.active {
+			border: 3px solid $coral;
+				&:focus {
+					border: 3px solid $coral;
+					outline-width: 0;
+				}	
+			}
+	
+			&:focus {
+				border: 3px solid $coral;
+				outline-width: 0;
+			}
+		}
+	
+		.print-three-item {
+			text-align: center;
+			.print-three-title {
+				font-size: 16px;
+				font-weight: bold;
+				margin: 0 0 $spacing-small 0;
+			}
+			.print-three-text {
+				font-size: 13px;
+			}
+		}
+	}
+
+	.footer-modal-print {
+		text-align: left;
+		border-top: 0px;
+	}
+
+	// OVERIDE OLD CSS 
+    .radio + .radio, label.radio + label.radio, .radio, label.radio {
+		margin: $spacing-medium-large 0 0 0;
+	}
+	label.radio .row {
+		margin: $spacing-medium-large 0 0 0;
+	}
+
+	.print-tree-modal-container label.radio {
+	font-size: 16px;
+	}
+	.modal-legend {
+		font-size: 15px;
+	}
+}
+
+
+/****************** END MODAL THREE PRINT ******************/
+
+
+.print-tree-modal-container label.radio {
+    margin: 15px 0 0 0; 
+}
+  
+.print-tree-modal-container label.radio:last-child {
+    margin-bottom: 26px !important; 
+}
+  
+.print-tree-modal-container .footer-modal-print {
+    text-align: left;
+    border-top: 0px; 
+}
+  /****************** LOADER DWLD PRINT ******************/
+  #print-loader-download {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    height: 100%;
+    /*safari fallback vh */
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+    opacity: 1;
+    overflow: inherit;
+    animation-duration: 0.5s;
+    color: white !important;
+    font-size: 1.8rem;
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-items(center);
+
+    .loader-text {
+        margin-top: 20px;
+    }
+
+    .loader {
+        border: 6px solid #8e9296;
+        border-radius: 50%;
+        border-top: 6px solid $coral;
+        width: 80px;
+        height: 80px;
+        @include animation(spin 1.5s linear infinite);
+    }
+
+}
+
+@include keyframes(spin) {
+    0% {
+        @include rotate(0);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg); } }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg); }
+    100% {
+      transform: rotate(360deg); } }
+  /****************** END DWLD PRINT ******************/
+
+
+  /****************** POPOVER ******************/
+
+.popover{
+
+    &.popover_light{
+        @include box-shadow(none);    
+
+        .popover-content{
+            padding: 5px 14px;
+            color: $coral;
+            font-weight: 600;
+        }
+    }
+
+}
+
+  /****************** END POPOVER ******************/
+
+.ajout-personne-existante {
+    &.chose-person {
+        margin-bottom: 0;
+        li {
+            &:first-child {
+                margin: 0;
+                border-bottom: 1px solid #dad9d4;
+                font-style: normal;
+            }
+            &:hover {
+                background-color: #F4F4F4;
+                font-weight: $bold;
+            }
+            .name {
+                padding: $spacing-small $spacing;
+            }
+
+            a {
+                @include calc(width, '100% - 16px');
+            }
+        }
+    }
+}
+
+#chose-person {
+    .close {
+        font-size: 25px;
+    }
+
+    .liste-personne {
+        margin-bottom: 0;
+    }
+
+    .mCSB_scrollTools {
+        overflow: hidden;
+        border-radius: 6px;
+    }
+
+    .mCSB_inside > .mCSB_container {
+        margin-right: 5px;
+    }
+
+    .mCSB_draggerRail {
+        width: 0px;
+    }
+    
+    .mCSB_draggerContainer {
+        border-left: 1px solid #dad9d4;
+        background-color: $white;
+    }
+
+    .mCSB_dragger_bar {
+        background-color: #7B7B7B;
+        width: 9px;
+    }
+}

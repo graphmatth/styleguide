@@ -1,0 +1,292 @@
+@import '../helpers/variables';
+@import '../helpers/mixin/_mixin';
+
+// Card offer offer block base css
+.card-offer {
+    display: inline-block;
+    background-color: $black-02;
+    border-radius: 5px;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: right top;
+    color: $white;
+    &:hover {
+        text-decoration: none;
+        * {
+            color: $white;
+        }
+    }
+    &__container {
+        @include flexbox;
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-items(center);
+        width: 100%;
+        height: 100%;
+    }
+    &__title {
+        color: $white;
+    }
+    &__cta {
+        margin: 0 auto;
+    }
+    // Variation
+    &--gold {
+        background-image: url("../../../img/gifts-members/small-bandeau-or.png");
+        &:hover {
+            .btn-action {
+                background-color: $gold !important;
+                border: 1px solid $gold;
+                color: $white;
+            }
+        }
+    }
+    &--silver {
+        background-image: url("../../../img/gifts-members/small-bandeau-argent.png");
+        &:hover {
+            .btn-action {
+                background-color: $silver !important;
+                border: 1px solid $silver;
+                color: $white;
+            }
+        }
+    }
+    &--gold-shadow {
+        background-image: url("../../../img/gifts-members/small-bandeau-or.png");
+    }
+}
+
+// Custom style
+.gifts-members {
+    h1, h2, p {
+        text-align: center;
+    }
+    header+.container {
+        margin-top: 30px;
+    }
+    h1 {
+        font-size: 48px;
+        margin-top: 0;
+        margin-bottom: $spacing-medium;
+        +p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    }
+    h2 {
+        font-size: 42px;
+        color: $white;
+        +p {
+            font-size: 21px;
+        }
+    }
+    .paywall {
+        &.paywall-offre {
+            .card-offer {
+                @include calc(width,'50% - 80px');
+                max-width: 400px;
+                height: 240px;
+                &__title {
+                    font-size: 28px;
+                }
+                &__price {
+                    font-size: 25px;
+                }
+                // Variation
+                &--gold {
+                    margin: $spacing-large 40px 0 0;
+                }
+                &--silver {
+                    margin: $spacing-large 0px 0 40px;
+                }
+            }
+            .moyen-paiement.inscrit {
+                margin: 45px 0 10px 0;
+                i+i {
+                    font-size: 35px;
+                    margin: 0;
+                }
+            }
+        }
+        &.paywall-temoignage {
+            background-image: linear-gradient(to bottom, $coral, $coral 26%, $white 15%, $white 85%, $white 85%);
+            background-color: $white;
+        }
+        &.confirmation-gift {
+            p {
+                font-size: 22px;
+                padding: 24px 0;
+            }
+            h2 {
+                font-size: 26px;
+                color: $storm;
+                padding-top: 20px;
+            }
+            p.what-now {
+                font-size: 18px;
+                +p.what-now {
+                    padding: 0;
+                }
+                a {
+                    display: block;
+                    margin: 5px auto;
+                }
+            }
+            .option-cmd {
+                color: $coral;
+            }
+        }
+        &.paywall-footer {
+            p {
+                margin: 0 auto;
+                max-width: 800px;
+                margin-top: 5px;
+                margin-bottom: 60px;
+                color: $grey-01;
+                text-align: left;
+                font-size: 13px;
+            }
+        }
+    }
+    .pack-premium {
+        position: relative;
+        background-color: $white;
+        @include border-radius(4px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        max-width: 800px;
+        margin: 210px auto 0 auto;
+        .computer {
+            width: 100%;
+            float: left;
+            z-index: 10;
+            text-align: center;
+            z-index: 1;
+            position: absolute;
+            left: 50%;
+            @include transform(translateY(-45%) translateX(-50%));
+            img {
+                max-width: 600px;
+                width: 75%;
+            }
+        }
+        .pack-premium-content {
+            padding-top: 60px;
+            // footer img
+            img {
+                max-width: 480px;
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+        h4 {
+            color: $coral;
+            font-size: 30px;
+            font-weight: bold;
+            padding-bottom: 40px;
+        }
+        h3 {
+            font-weight: bold;
+            color: $storm;
+        }
+        p {
+            color: $storm;
+            font-size: 25px;
+            padding-bottom: 40px;
+        }
+        .bold-premium {
+            font-weight: bold;
+        }
+        .card-offer--gold-shadow {
+            position: relative;
+            z-index: 20;
+            margin: 50px auto 0 auto;
+            @include border-radius(8px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+            height: 210px;
+            width: 325px;
+            h3 {
+                color: $white;
+                font-weight: $regular;
+            }
+            i {
+                color: $gold;
+            }
+        }
+    }
+    .bloc-offre {
+        p {
+            font-size: 18px;
+            color: $grey-01;
+            margin-top: $spacing;
+            padding-bottom: $spacing-large;
+        }
+        .btn {
+            margin: 0 auto;
+            padding: 7px 27px;
+        }
+    }
+}
+
+////////////////
+// Responsive //
+///////////////
+
+@media (max-width: 992px) {
+    .gifts-members {
+        .paywall {
+            &.paywall-offre {
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .gifts-members {
+        display: block;
+        .pack-premium {
+            .computer {
+                img {
+                    width: 95%;
+                }
+            }
+        }
+        .paywall {
+            &.paywall-offre {
+                padding: 0;
+                .card-offer {
+                    display: block;
+                    margin: $spacing-large auto;
+                    width: 80%;
+                }
+
+                &.confirmation-gift {
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .gifts-members {
+        .pack-premium {
+            margin: 150px auto 0 auto;
+            .computer {
+                img {
+                    width: 95%;
+                }
+            }
+            .card-offer--gold-shadow {
+                height: 140px;
+                width: 200px;
+            }
+        }
+    }
+    .gifts-members .bloc-offre {
+        width: 100%;
+    }
+}

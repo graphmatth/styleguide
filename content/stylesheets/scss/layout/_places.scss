@@ -1,0 +1,213 @@
+/* -------------- Style  for search engine map tab*/
+
+#newlayouttree {
+
+    &.layout-places {
+    
+        min-height: calc(100vh - 50px);
+    }
+
+    .map-correct-place-container {
+        position: absolute;
+        width: 100%;
+        /* 
+            Full page height 100% less : 
+                - The header's height : 50px
+                - The nav's height : 80px
+                - The footer's height : 53px;
+                = 183px
+
+            And adapt it on each height in the different screen size
+        */
+        $header-height: 50;
+        $nav-height: 0;
+        $footer-height: 53;
+
+        height: calc(100% - #{$header-height + $nav-height + $footer-height}px);
+
+        @media (max-width: 992px) {
+            //$nav-height: 120;
+            height: calc(100% - #{$header-height + $nav-height + $footer-height}px);
+        }
+
+        @media (max-width: 485px) {
+            //$nav-height: 168;
+            height: calc(100% - #{$header-height + $nav-height + $footer-height}px);
+        }
+    
+        #map-canvas {
+            height: 100%;
+            position: relative;
+        }
+
+        .leaflet-top{
+            top:130px;
+            position:fixed;
+            @media (max-width: 992px) {
+                top:160px;
+            }
+            @media (max-width: 485px) {
+                top:210px;
+            }
+        }
+        &.banner{
+            .leaflet-top{
+                top:240px;
+                @media (max-width: 992px) {
+                    top:270px;
+                }
+                @media (max-width: 767px) {
+                    top:160px;
+                }
+                @media (max-width: 485px) {
+                    top:210px;
+                }
+            }
+        }
+
+        .leaflet-control{
+            clear: inherit;
+
+            &.leaflet-control-zoom{
+
+                @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { // IE10 IE11
+                    &.leaflet-bar{
+                        border-width :0;
+                        a, a:hover{
+                            width: 26px !important;
+                            height: 26px !important;
+                            line-height: 26px !important;
+                        }
+                    }
+                }
+            }
+
+            .dropdown-toggle{
+
+                &:focus{
+                    background: $white !important;
+                }
+
+                &.btn{
+                    height: 54px;
+                    @include box-shadow(0 0.5px 0.8px 0 rgba(0,0,0, 0.8));
+                    margin: -1px 0 0 3px;
+                    padding: 3px 34px 3px 17px;
+                    width: 242px;
+                }
+
+                .filter-option{
+                    color:$light-indigo;
+                }
+
+                .caret{
+                    margin: -39px 0 0 2px !important;
+
+                    @supports (-ms-ime-align: auto) { // edge
+                        margin: -80px 0 0 2px !important;
+                    }
+                    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { //IE 10 IE 11
+                        margin: -80px 0 0 2px !important;
+                    }
+                    @-moz-document url-prefix() { // Firefox
+                        margin: -80px 0 0 2px !important;
+                    }
+
+                }
+            }
+
+            .dropdown-menu{
+                margin: -1px 0 0 2px;
+
+                > li{
+                    > a{
+                        padding: 3px 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    // Yellow help bar
+    .help-correctplace-notification {
+        @include flexbox;
+        @include align-items(center); 
+        padding: 10px;
+        background-color: $tropic;
+        color: white;
+        font-weight: 600;
+        font-size: 1.5rem;
+        min-height: 40px;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: 1005;
+        p {
+            margin: 0;
+        }
+    }
+}
+
+.leaflet-bottom.leaflet-right {
+    z-index: 1007;
+}
+
+.leaflet-control-attribution.leaflet-control {
+    display: none !important;
+}
+
+.info.legend.leaflet-control {
+    margin-bottom: 80px !important;
+}
+
+#cookiebanner {
+    z-index: 1010;
+}
+
+.help-correctplace-notification a {
+    color: $storm;
+}
+.params {
+    width: 90%;
+    margin-top: 50px;
+    padding: 10px;
+}
+.legend {
+    line-height: 18px;
+    color: #555;
+    text-align: left;
+}
+
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+.info {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: right;
+    padding: 6px 8px;
+    background: white;
+    background: rgba(255,  255,  255,  0.8);
+    box-shadow: 0 0 15px rgba(0,  0,  0,  0.2);
+    border-radius: 5px;
+    position: relative;
+    z-index: 7;
+    display: block;
+    pointer-events: auto;
+}
+
+.leaflet-popup-content {
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    .help-correctplace-notification {
+        height: auto;
+    }
+}

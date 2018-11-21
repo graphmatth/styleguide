@@ -1,0 +1,2032 @@
+@import '_classic-tree';
+@import '_descending-tree';
+@import '_ascending-tree';
+@import '_individual-sheet';
+@import '_places';
+
+
+/* ======================================================================================================== DEBUT Arbre en ligne -- */
+/*---------------------------------- Navigation dans les arbre */
+
+/*.navbar-arbre.menu-familial{
+    &>.row {
+        background-color: rgba(255,  255,  255,  0.9);
+        //height: 75px;
+        position: absolute;
+        width: 100%;
+        z-index: 1000;
+        padding: 15px 0 5px 0;
+        @media (max-width: 992px) {
+            height: auto;
+            padding: 6px 0 0 0;
+        }
+    }
+}*/
+#overscroll {
+    width: 100% !important;
+}
+
+.arbre-classique, 
+.arbre-descendant, 
+.individual-sheet-container, 
+.arbre-familial, 
+.parentalLink, 
+.arbre-ascendant, 
+.parentalLink__noresult{
+    &.fixed{
+        margin-top: 80px;
+
+        @media (max-width: 992px) { 
+            margin-top: 113px;
+        }
+        @media (max-width: 485px) {
+            margin-top: 161px;
+        }
+
+        &.banner{
+            margin-top: 190px;
+
+            @media (max-width: 992px) { 
+                margin-top: 222px;
+            }
+            @media (max-width: 767px) {
+                margin-top: 113px;
+            }
+            @media (max-width: 485px) { 
+                    margin-top: 161px;
+            }
+        }
+    }
+}
+
+
+.navbar-arbre {
+
+    &.fixed{
+        position: fixed;
+        width: 100%;
+        background-color: rgba(255,  255,  255,  0.9);
+        z-index: 1002;
+
+        &.banner{
+            margin-top: 109px;
+
+            @media (max-width: 767px) {
+                margin-top:0;
+           }
+        }
+    }
+
+    .vue-arbre {
+        ul {
+            display: inline-block;
+            height: 40px;
+            padding: 6px 0 0 0;
+
+            li{
+                display: inline-block;
+                margin: 0 10px 10px 10px;
+
+                a {
+                    i{
+                        font-size: 25px;
+                        color: $storm;
+                        &.place{
+                            vertical-align: top;
+                            margin-top: -6px;
+                        }
+                    }
+    
+                    &#treeplaceid:hover{
+                        i{
+                            margin: -19px -13px;
+                        }
+                    }
+                }
+            }
+
+            &#ListTreeView {
+                display: block;
+                height: 40px;
+                margin: 0px;
+                padding: 6px 0 0 0;
+                text-align: left;
+                max-width: 410px;
+            
+                li {
+                    display: inline-block;
+                    margin: 0;
+                    width: 12.2%;
+                }
+            }
+        }
+    }
+    .reglage-arbre {
+        li {
+            display: inline-block;
+            margin: 0 10px 10px 10px;
+
+            &:first-child {
+                margin: 0 10px 10px 20px;
+            }
+
+            a {
+                i{
+                    font-size: 25px;
+                    color: $storm;
+                    &.place{
+                        vertical-align: top;
+                        margin-top: -6px;
+                    }
+                }
+
+                &#treeplaceid:hover{
+                    i{
+                        margin: -19px -13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.navbar-arbre .vue-arbre li a:hover i, .navbar-arbre .reglage-arbre li a:hover i {
+    background: $grey-02;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    padding: 13px;
+    margin: -13px;
+}
+.navbar-arbre .vue-arbre li a.active:hover i, .navbar-arbre .reglage-arbre li a.active:hover i {
+    background: transparent;
+}
+.navbar-arbre .vue-arbre li a:focus i, .navbar-arbre .vue-arbre li a.active i, .navbar-arbre .reglage-arbre li a:focus i, .navbar-arbre .reglage-arbre li a.active i {
+    color: $coral;
+}
+.navbar-arbre .reglage-arbre ul {
+    float: right;
+    height: 40px;
+    padding: 6px 0 0 0;
+}
+.navbar-arbre .reglage-arbre ul li.dropdown {
+    position: auto;
+}
+.navbar-arbre .reglage-arbre ul li.dropdown ul.dropdown-menu {
+    right: 0;
+    left: auto;
+    padding: 0;
+    margin: 0;
+    border: 1px solid $grey-02;
+    height: auto;
+    box-shadow: none;
+}
+.navbar-arbre .reglage-arbre ul li.dropdown ul.dropdown-menu li {
+    display: block;
+    margin: 0;
+    padding: 3px 5px 3px 5px;
+    width: 180px;
+}
+.navbar-arbre .reglage-arbre ul li.dropdown ul.dropdown-menu li.divider {
+    margin: 4px 0;
+    padding: 0 5px;
+    background: $grey-02;
+}
+.navbar-arbre .reglage-arbre ul li.dropdown ul.dropdown-menu li:first-child {
+    padding: 9px 5px 3px 5px;
+}
+.navbar-arbre .reglage-arbre ul li.dropdown ul.dropdown-menu li:last-child {
+    padding: 3px 5px 9px 5px;
+}
+.navbar-arbre .reglage-arbre ul li.dropdown ul.dropdown-menu li a:hover,  .navbar-arbre .reglage-arbre ul li.dropdown ul.dropdown-menu li:hover {
+    color: $coral;
+}
+.navbar-arbre .reglage-arbre ul.dropdown-menu li:first-child {
+    margin: 0;
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.navbar-arbre .reglage-arbre ul.dropdown-menu li:last-child {
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.navbar-arbre h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: $storm;
+    font-family: "Lato",  sans-serif;
+    padding: 6px 0 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 auto;
+}
+
+
+.reglage-arbre-lateral {
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 170px;
+    z-index: 100;
+}
+.bandeau-gratuite + #newlayouttree .reglage-arbre-lateral {
+    top: 293px;
+}
+.reglage-arbre-lateral li a i {
+    background: $storm;
+    color: $white;
+    margin: 0 16px 12px 0;
+    padding: 8px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 25px;
+}
+.reglage-arbre-lateral li a:hover i {
+    background: $coral;
+}
+
+.arbre-descendant .generation-active {
+    width: 225px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: $storm;
+    padding: 4px 5px 0 5px;
+    min-height: 58px;
+}
+.arbre-descendant .generation-active:hover {
+    opacity: 0.9;
+}
+.arbre-descendant .generation-active .numero {
+    background: $grey-01;
+    font-size: 22px;
+    color: $white;
+    float: left;
+    margin: -4px 0 0 -5px;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 13px 10px;
+}
+.arbre-descendant .generation-active .numero.femme {
+    background: #f99;
+    min-height: 58px;
+}
+.arbre-descendant .generation-active .numero.homme {
+    background: #9cc;
+    min-height: 58px;
+}
+.arbre-descendant .generation-active .profil {
+    float: left;
+    height: 40px;
+    margin: auto;
+    width: 40px;
+    margin: 4px 0 0 8px;
+}
+.arbre-descendant .generation-active .profil .initiale {
+    color: $white;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 9px 0 0;
+    text-align: center;
+}
+.arbre-descendant .generation-active .profil.image img {
+    border-width: 2px;
+    height: 40px;
+    width: 40px;
+}
+.arbre-descendant .generation-active .info-perso {
+    display: inline-block;
+    height: 48px;
+    margin: 0 0 0 6px;
+    position: relative;
+    width: 50%}
+.arbre-descendant .generation-active .info-perso div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%}
+.arbre-descendant .generation-active .info-perso p {
+    font-size: 11px;
+    margin: 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: $white;
+    line-height: 12px;
+}
+.arbre-descendant .generation-active .info-perso div p+p+p {
+    font-style: italic;
+}
+.arbre-descendant .generation-active .info-perso div p:last-child {
+    font-style: normal;
+}
+.arbre-descendant .generation-active .info-perso p:nth-child(2) {
+    font-weight: bold;
+}
+.arbre-descendant .generation-active i {
+    float: right;
+    font-size: 15px;
+    color: $white;
+}
+.arbre-descendant ul.branche-arbre-descendant {
+    border-left: 1px solid $grey-01;
+    display: inline-block;
+    margin-left: 33px;
+    padding: 0 0 6px 14px;
+}
+.arbre-descendant ul.branche-arbre-descendant.femme {
+    border-color: #f99;
+}
+.arbre-descendant ul.branche-arbre-descendant.homme {
+    border-color: #9cc;
+}
+.arbre-descendant ul.branche-arbre-descendant.homme {
+    border-color: #9cc;
+}
+.arbre-descendant ul.branche-arbre-descendant .tab-content>.active {
+    display: inline-block;
+}
+.arbre-descendant ul.branche-arbre-descendant .tab-content:first-child {
+    margin: 17px 0 0 0;
+}
+.arbre-descendant ul.branche-arbre-descendant .conjoint a {
+    float: left;
+    margin: 0 5px 0 0;
+}
+.arbre-descendant ul.branche-arbre-descendant .conjoint a i {
+    font-size: 17px;
+    color: $black;
+    margin: 3px 9px 0 0;
+}
+.arbre-descendant ul.branche-arbre-descendant .conjoint a i.icon-i-fleche-bas {
+    font-size: 10px;
+    margin: 0 0 0 0;
+}
+.arbre-descendant ul.branche-arbre-descendant .conjoint p {
+    float: left;
+    font-size: 15px;
+    margin: 0 0 3px 0;
+}
+.arbre-descendant ul.branche-arbre-descendant .conjoint p span {
+    font-weight: bold;
+    margin: 0 2px 0 0;
+}
+.arbre-descendant ul.branche-arbre-descendant .conjoint p a span {
+    font-size: 13px;
+    margin: 0 0 0 3px;
+}
+.arbre-descendant ul.branche-arbre-descendant .conjoint p i {
+    font-size: 10px;
+    color: $grey-01;
+    margin: 0 3px 0 0;
+}
+.arbre-descendant ul.branche-arbre-descendant .conjoint.femme p i, .arbre-descendant ul.branche-arbre-descendant .conjoint+ul a.femme i {
+    color: #f99;
+}
+.arbre-descendant ul.branche-arbre-descendant .conjoint.homme p i, .arbre-descendant ul.branche-arbre-descendant .conjoint+ul a.homme i {
+    color: #9cc;
+}
+.arbre-descendant ul.branche-arbre-descendant .conjoint p a {
+    float: none;
+    font-weight: bold;
+    color: $black;
+}
+.arbre-descendant ul.branche-arbre-descendant .conjoint p a i {
+    color: #333 !important;
+    font-size: 15px;
+}
+.arbre-descendant ul.branche-arbre-descendant .conjoint+ul {
+    clear: left;
+}
+.arbre-descendant ul.branche-arbre-descendant .conjoint+ul {
+    clear: left;
+    margin: 0 0 0 22px;
+}
+.arbre-descendant ul.branche-arbre-descendant .conjoint+ul a {
+    color: $black;
+    font-size: 13px;
+}
+.arbre-descendant ul.branche-arbre-descendant .conjoint+ul a p {
+    margin: 0 0 3px 0;
+}
+.arbre-descendant ul.branche-arbre-descendant .conjoint+ul a p span+i+span, .arbre-descendant ul.branche-arbre-descendant .conjoint+ul a p i+span {
+    font-size: 12px;
+    margin: 0 0 0 4px;
+}
+.arbre-descendant ul.branche-arbre-descendant .conjoint+ul a p span+i+span+i, .arbre-descendant ul.branche-arbre-descendant .conjoint+ul a p i+span+i {
+    color: $grey-01 !important;
+    font-size: 15px;
+    margin: 0 0 0 5px;
+}
+.arbre-descendant ul.branche-arbre-descendant .conjoint+ul a p span+i+i {
+    font-size: 13px;
+    color: #333 !important;
+}
+.arbre-descendant ul.branche-arbre-descendant .conjoint+ul a p i {
+    color: $black;
+    font-size: 10px;
+    margin: 0 1px 0 1px;
+    color: $grey-01;
+}
+.arbre-descendant .remonter-generation i {
+    background: $grey-02 none repeat scroll 0 0;
+    border-radius: 50%;
+    color: $storm;
+    font-size: 23px;
+    margin: 0 0 8px 0;
+}
+.arbre-descendant .remonter-generation i:hover {
+    background: rgba(129,  138,  145,  0.7);
+}
+
+.container.arbre-ascendant {
+    @media  (max-width: 1200px) and (min-width: 768px) {
+        width: inherit; 
+        .colonne-generation.gene-six {
+            width: 14%;
+            max-width: 139px;
+
+            .bloc-membre-couple {
+                ul {
+                    max-width: 139px;  
+                    li i + span + p {
+                        width: 55%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*---------------------------------- FIN Navigation descendante */
+/*---------------------------------- DEBUT Navigation ascendante */
+
+.arbre-ascendant .colonne-generation {
+    width: 14%;
+    height: 5px;
+    display: inline-table;
+    margin: 0 -2px;
+    vertical-align: top;
+}
+.arbre-ascendant .bloc-membre {
+    background: $white;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 4px 5px 0;
+    border: 1px solid $grey-02;
+    height: 58px;
+}
+.arbre-ascendant .bloc-membre.inconnu {
+    background: $white;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 2px 5px 0;
+    border: 2px dashed $grey-02;
+}
+.arbre-ascendant .bloc-membre.inconnu-consult {
+    opacity: 0.4;
+    pointer-events: none;
+}
+.arbre-ascendant .bloc-membre.inconnu-consult .ajout {
+    font-size: 31px;
+}
+.arbre-ascendant .bloc-membre:hover {
+    background: rgba(213,  216,  218,  0.4);
+}
+.arbre-ascendant .bloc-membre.active {
+    background: $storm;
+}
+.arbre-ascendant .bloc-membre.active:hover {
+    background: $black;
+}
+.arbre-ascendant .colonne-generation.gene-cinq .bloc-membre {
+    margin: 0 0 6px 0;
+}
+.arbre-ascendant .colonne-generation.gene-quatre .bloc-membre {
+    margin: 0 0 70px 0;
+}
+.arbre-ascendant .colonne-generation.gene-trois .bloc-membre {
+    margin: 0 0 198px 0;
+}
+.arbre-ascendant .colonne-generation.gene-deux .bloc-membre {
+    margin: 0 0 455px 0;
+}
+.arbre-ascendant .colonne-generation.gene-six .bloc-membre-couple, .arbre-ascendant .lien-generation.gene-six {
+    margin: 0 0 6px 0;
+}
+.arbre-ascendant .bloc-membre .profil {
+    float: left;
+    height: 40px;
+    width: 40px;
+    margin: 5px 0 0 0;
+}
+.arbre-ascendant .bloc-membre.femme .profil {
+    background: #f99;
+}
+.arbre-ascendant .bloc-membre.homme .profil {
+    background: #9cc;
+}
+.arbre-ascendant .bloc-membre .profil .initiale {
+    color: $white;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 9px 0 0;
+    text-align: center;
+}
+.arbre-ascendant .bloc-membre .profil.image img {
+    border-width: 2px;
+    height: 40px;
+    width: 40px;
+}
+.arbre-ascendant .bloc-membre.femme .profil.image img {
+    border: 2px solid #f99;
+}
+.arbre-ascendant .bloc-membre.homme .profil.image img {
+    border: 2px solid #9cc;
+}
+.arbre-ascendant .bloc-membre .info-perso {
+    display: inline-block;
+    height: 48px;
+    margin: 0 0 0 6px;
+    position: relative;
+    width: 50%}
+.arbre-ascendant .colonne-generation .bloc-membre:nth-child(2n) .info-perso {
+    height: 49px;
+}
+.arbre-ascendant .bloc-membre .info-perso div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 112%}
+.arbre-ascendant .bloc-membre .info-perso p {
+    color: $black;
+    font-size: 11px;
+    line-height: 12px;
+    margin: 0;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.arbre-ascendant .bloc-membre .info-perso div p+p+p {
+    font-style: italic;
+}
+.arbre-ascendant .bloc-membre .info-perso div p:last-child {
+    font-style: normal;
+}
+.arbre-ascendant .bloc-membre .info-perso p:nth-child(2) {
+    font-weight: bold;
+}
+.arbre-ascendant .bloc-membre.active .info-perso p {
+    color: $white;
+}
+.arbre-ascendant .bloc-membre.active .info-perso p+p+p {
+    font-style: italic;
+}
+.arbre-ascendant .bloc-membre.active .info-perso p:last-child {
+    font-style: normal;
+}
+.arbre-ascendant .bloc-membre i {
+    color: $storm;
+    float: right;
+    font-size: 15px;
+}
+.arbre-ascendant .bloc-membre.active i {
+    color: $white;
+}
+.arbre-ascendant .bloc-membre .ajout {
+    font-size: 50px;
+    line-height: 58px;
+    text-align: center;
+    margin: -4px 0 -1px 0;
+}
+.arbre-ascendant .bloc-membre.femme .ajout {
+    color: #f99;
+}
+.arbre-ascendant .bloc-membre.homme .ajout {
+    color: #9cc;
+}
+.arbre-ascendant .generation-active-famille {
+    background: $white;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid $grey-02;
+    margin: 8px 0 0 0;
+    max-width: 157px;
+}
+.arbre-ascendant .generation-active-famille p {
+    font-size: 11px;
+    padding: 4px 5px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.arbre-ascendant .generation-active-famille .union {
+    padding: 4px 5px;
+    border-top: 1px solid $grey-02;
+}
+.arbre-ascendant .generation-active-famille .union:last-child {
+    border-bottom: 0;
+}
+.arbre-ascendant .generation-active-famille .union span {
+    display: inline-block;
+    float: right;
+    font-size: 10px;
+    margin: 0 0 -9px;
+    color: $grey-01;
+}
+.arbre-ascendant .generation-active-famille .union ul {
+    margin: 0;
+    clear: right;
+}
+.arbre-ascendant .generation-active-famille .union ul li {
+    font-size: 11px;
+    margin: 0 0 0 10px;
+    line-height: 13px;
+}
+.arbre-ascendant .generation-active-famille .union ul li:first-child {
+    margin: 0;
+}
+.arbre-ascendant .generation-active-famille .union ul li a {
+    font-size: 11px;
+    margin: 0 0 0 0;
+    color: $black;
+    max-width: 83%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+}
+.arbre-ascendant .generation-active-famille .union ul li:first-child a {
+    margin: 0;
+    max-width: 84%}
+.arbre-ascendant .generation-active-famille .union ul li a p {
+    font-size: 11px;
+    margin: 0 10px 0 0;
+    color: $black;
+}
+.arbre-ascendant .generation-active-famille .union ul li a i {
+    color: $grey-01;
+    font-size: 8px;
+    margin: 0 2px 0 0;
+}
+.arbre-ascendant .generation-active-famille .union ul li.femme a i {
+    color: #f99;
+}
+.arbre-ascendant .generation-active-famille .union ul li.homme a i {
+    color: #9cc;
+}
+.arbre-ascendant .generation-active-famille .union ul li a span {
+    float: inherit;
+    font-size: 11px;
+    font-weight: bold;
+    color: $black;
+    display: inline;
+    text-transform: uppercase;
+}
+.arbre-ascendant .generation-active-famille .union ul li a+i {
+    color: $black;
+    margin: 0 0 0 5px;
+    font-size: 10px;
+    margin: 3px 0 0 6px;
+    vertical-align: top;
+}
+.arbre-ascendant .bloc-membre-couple:last-child {
+    margin: 0;
+}
+.arbre-ascendant .bloc-membre-couple ul {
+    margin: 0;
+    height: 58px;
+}
+.arbre-ascendant .bloc-membre-couple li {
+    border-top: 1px solid $grey-02;
+    border-left: 1px solid $grey-02;
+    border-right: 1px solid $grey-02;
+    border-bottom: 0;
+    background: $white;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    height: 29px;
+}
+.arbre-ascendant .bloc-membre-couple li+li {
+    border-top: 1px solid $grey-02;
+    border-left: 1px solid $grey-02;
+    border-right: 1px solid $grey-02;
+    border-bottom: 1px solid $grey-02;
+    -webkit-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-topright: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    height: 29px;
+}
+.arbre-ascendant .bloc-membre-couple li.inconnu-consult {
+    opacity: 0.4;
+    pointer-events: none;
+}
+.arbre-ascendant .bloc-membre-couple li+li.inconnu {
+    border-top: 2px dashed $grey-02;
+    border-bottom: 2px dashed $grey-02;
+    height: 29px;
+}
+.arbre-ascendant .bloc-membre-couple li.inconnu {
+    border-top: 2px dashed $grey-02;
+    border-left: 2px dashed $grey-02;
+    border-right: 2px dashed $grey-02;
+    border-bottom: 0;
+    background: $white;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    height: 30px;
+}
+.arbre-ascendant .bloc-membre-couple li.inconnu+li.inconnu {
+    border-top: 2px dashed $grey-02;
+    border-left: 2px dashed $grey-02;
+    border-right: 2px dashed $grey-02;
+    border-bottom: 2px dashed $grey-02;
+    -webkit-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-topright: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    height: 29px;
+}
+
+/* Select last li to make border bottom, number 2 cause of script tag at the of the ul */
+.arbre-ascendant .bloc-membre-couple ul li:nth-last-child(2) {
+    border-bottom: 1px solid $grey-02;
+}
+
+/* Overide dashed version */
+.arbre-ascendant .bloc-membre-couple ul .inconnu:nth-last-child(2) {
+    border-bottom: 2px dashed $grey-02;
+}
+.arbre-ascendant .bloc-membre-couple li.inconnu+li {
+    border-top: 2px dashed $grey-02;
+}
+.arbre-ascendant .bloc-membre-couple li:hover {
+    background: rgba(213,  216,  218,  0.4);
+}
+.arbre-ascendant .bloc-membre-couple li a, .arbre-ascendant .bloc-membre a {
+    color: $black;
+    text-decoration: none;
+}
+.arbre-ascendant .bloc-membre-couple li a {
+    display: block;
+    margin: 4px 4px 0;
+    position: relative;
+}
+.arbre-ascendant .bloc-membre-couple li:first-child a {
+    margin: 6px 4px 0;
+}
+.arbre-ascendant .bloc-membre-couple li.inconnu+li a {
+    margin: 3px 4px 0;
+}
+.arbre-ascendant .bloc-membre-couple li.inconnu+li.inconnu a {
+    margin: 0;
+}
+.arbre-ascendant .bloc-membre-couple li.inconnu a {
+    margin: 0;
+}
+.arbre-ascendant .bloc-membre-couple li span.cercle {
+    border: 2px solid $grey-01;
+    border-radius: 50%;
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    margin: 0 4px 1px 5px;
+}
+.arbre-ascendant .bloc-membre-couple li span.cercle.homme {
+    border: 2px solid #9cc;
+}
+.arbre-ascendant .bloc-membre-couple li span.cercle.femme {
+    border: 2px solid #f99;
+}
+
+.arbre-ascendant .bloc-membre-couple li p {
+    display: inline-block;
+    font-size: 12px;
+    margin: 0;
+    max-width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.arbre-ascendant .bloc-membre-couple li p span {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.arbre-ascendant .bloc-membre-couple li i {
+    color: $storm;
+    float: right;
+    font-size: 15px;
+    margin: 1px 0 0;
+}
+.arbre-ascendant .bloc-membre-couple li .ajout {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 22px;
+    max-width: inherit;
+    text-align: center;
+}
+.arbre-ascendant .bloc-membre-couple li:first-child .ajout {
+    line-height: 27px;
+}
+.arbre-ascendant .bloc-membre-couple li .ajout.homme {
+    color: #9cc;
+}
+.arbre-ascendant .bloc-membre-couple li .ajout.femme {
+    color: #f99;
+}
+
+/*----------- Liens et espace --*/
+.arbre-ascendant .lien-generation {
+    width: 2.5%;
+    height: 5px;
+    display: inline-table;
+    margin: 0 -2px;
+    vertical-align: top;
+    position: relative;
+    z-index: 1;
+}
+.arbre-ascendant .lien-generation i.lien-horizontal-2perso {
+    font-size: 6px;
+    color: $storm;
+    text-align: center;
+    width: 100%;
+    margin: 26px 0 0 0;
+    height: 8px;
+}
+.arbre-ascendant .lien-generation i.lien-horizontal-2perso:before {
+    border-bottom: 1px solid $grey-01;
+    content: "";
+    left: 1px;
+    margin: 2px 0 0;
+    position: absolute;
+    transform: rotate(0deg);
+    width: 8px;
+}
+.arbre-ascendant .lien-generation i.lien-horizontal-2perso:after {
+    border-bottom: 1px solid $grey-01;
+    content: "";
+    right: 0;
+    margin: 2px 0 0;
+    position: absolute;
+    transform: rotate(0deg);
+    width: 8px;
+}
+.arbre-ascendant .lien-generation .lien-vertical-gene1 {
+    width: 50%;
+    border-left: 1px solid $grey-01;
+    border-bottom: 1px solid $grey-01;
+    height: 507px;
+    margin: -3px 0 0 14px;
+    width: 50%}
+.arbre-ascendant .lien-generation.gene-deux .lien-vertical {
+    width: 50%;
+    border-left: 1px solid $grey-01;
+    border-bottom: 1px solid $grey-01;
+    height: 251px;
+    margin: -3px 0 228px 14px;
+    width: 50%}
+.arbre-ascendant .lien-generation.gene-trois .lien-vertical {
+    width: 50%;
+    border-left: 1px solid $grey-01;
+    border-bottom: 1px solid $grey-01;
+    height: 125px;
+    margin: -4px 0 98px 14px;
+    width: 50%}
+.arbre-ascendant .lien-generation.gene-quatre .lien-vertical {
+    width: 50%;
+    border-left: 1px solid $grey-01;
+    border-bottom: 1px solid $grey-01;
+    height: 59px;
+    margin: -4px 0 36px 14px;
+    width: 50%}
+.arbre-ascendant .lien-generation i.lien-horizontal-1perso {
+    font-size: 6px;
+    color: $storm;
+    text-align: right;
+    width: 100%;
+    margin: 26px 0 30px 2px;
+    height: 8px;
+}
+.arbre-ascendant .lien-generation i.lien-horizontal-1perso:before {
+    border-bottom: 1px solid $grey-01;
+    content: "";
+    left: 0;
+    margin: 2px 0 0;
+    position: absolute;
+    transform: rotate(0deg);
+    width: 24px;
+}
+.arbre-ascendant .lien-generation .parent-1 {
+    margin: 0 0 6px 0;
+    height: 58px;
+}
+.arbre-ascendant .lien-generation .parent-1:last-child {
+    margin: 0;
+}
+.arbre-ascendant .lien-generation .parent-1 a {
+    display: block;
+}
+.arbre-ascendant .lien-generation .parent-1 a i {
+    background: $grey-02 none repeat scroll 0 0;
+    border-radius: 50%;
+    color: $storm;
+    font-size: 19px;
+    margin: 5px 0 0 6px;
+}
+.arbre-ascendant .lien-generation .parent-1 a:hover i {
+    background: rgba(213,  216,  218,  0.7);
+}
+
+/*---------------------------------- FIN Navigation ascendante */
+/*---------------------------------- DEBUT Navigation Familiale */
+.arbre-familial .remonter, .arbre-familial .descendre {
+    height: 39px;
+    text-align: center;
+    margin: 10px 0;
+}
+.arbre-familial .remonter i, .arbre-familial .descendre i {
+    background: $grey-02;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    font-size: 24px;
+    color: $storm;
+    padding: 7px;
+}
+.arbre-familial .remonter a:hover i, .arbre-familial .descendre a:hover i {
+    background: rgba(129,  138,  145,  0.7);
+}
+.arbre-familial a.top-generation {
+    position: absolute;
+    top: -25px;
+    left: 27px;
+}
+.arbre-familial a.top-generation i {
+    color: $storm;
+}
+.arbre-familial a.top-generation:hover i {
+    color: rgba(70,  85,  105,  0.6);
+}
+.arbre-familial a.bottom-generation {
+    position: absolute;
+    bottom: -25px;
+    left: 27px;
+}
+
+.arbre-familial a.bottom-generation i {
+    color: $storm;
+}
+
+.arbre-familial a.bottom-generation:hover i {
+    color: rgba(70, 85, 105, 0.6);
+}
+.arbre-familial .person .face i {
+    background: $white none repeat scroll 0 0;
+    border-radius: 50%;
+    color: $grey-01;
+    float: right;
+    font-size: 12px;
+    margin: -17px 0 0;
+    padding: 3px;
+    position: relative;
+}
+.arbre-familial .person .ajout {
+    font-size: 38px;
+    line-height: 116px;
+}
+.arbre-familial .person.f .ajout {
+    color: #f99;
+}
+.arbre-familial .person.m .ajout {
+    color: #9cc;
+}
+.arbre-familial .person.inconnu {
+    background: $white;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 2px 5px 0;
+    border: 2px dashed $grey-02;
+}
+.arbre-familial .person.inconnu:hover {
+    background: rgba(213,  216,  218,  0.4);
+}
+.arbre-familial .person.inconnu a:hover {
+    text-decoration: none;
+}
+
+.liste-arbre .info-arbre .titre-arbre a+i+span {
+    margin-left: 10px;
+    padding: 5px 7px;
+    height: 22px;
+    margin-top: -5px;
+}
+
+.arbre-familial a.top-hints,
+.arbre-classique div.top-hints,
+.arbre-classique .generation-0-individu div.top-hints,
+.arbre-ascendant div.top-hints {
+    position: absolute;
+}
+
+.arbre-ascendant div.top-hints {
+    padding: 29px 0 0 41px;
+}
+
+.arbre-familial a.top-hints {
+    top: -27px;
+    left: -34px;
+}
+
+.arbre-classique div.top-hints {
+    top: -6px;
+    /* Overide border row */
+    left: -1px;
+    width: 16px;
+    height: 16px;
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+}
+
+.arbre-classique div.top-hints.partners-top-hints {
+    top: 0;
+    left: -1px;
+}
+
+.arbre-classique div.top-hints.partners-top-hints .top-hints-icon-container .icon-genea {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+}
+
+.arbre-classique div.top-hints.partners-top-hints .top-hints-icon-container .icon-i-plus {
+    left: 5px;
+    top: 1px;
+}
+
+.arbre-classique .generation-0-individu div.top-hints {
+    top: -6px;
+    /* Overide border row */
+    left: -1px;
+}
+
+.arbre-classique .generation-0-individu div.top-hints i {
+    float: left;
+    top: 0;
+}
+
+.arbre-ascendant .bloc-membre i.icon-i-plus,
+.arbre-ascendant .bloc-membre i.icon-i-hints-01,
+.arbre-familial a.top-hints i.icon-i-plus,
+.arbre-familial a.top-hints i.icon-i-hints-01 {
+    float: none;
+    position: relative;
+    width: 0%
+}
+
+.arbre-ascendant .bloc-membre i.icon-i-plus,
+.arbre-familial a.top-hints i.icon-i-plus,
+.arbre-classique div.top-hints i.icon-i-plus {
+    font-size: 9px;
+    color: $white !important;
+    z-index: 1;
+}
+
+.arbre-ascendant .bloc-membre i.icon-i-plus {
+    top: -44px;
+    left: -44px;
+}
+
+.arbre-familial a.top-hints i.icon-i-plus {
+    left: 19px;
+    top: 15px;
+}
+
+.arbre-classique div.top-hints i.icon-i-plus {
+    left: 0;
+    top: 0;
+}
+
+.arbre-classique div.top-hints i.icon-i-hints-01 {
+    position: absolute;
+    /* Icon hints round on the left */
+    left: -6px;
+    top: 0;
+}
+
+.arbre-ascendant .bloc-membre i.icon-i-hints-01 {
+    top: -36px;
+    left: -56px;
+}
+
+.arbre-familial a.top-hints i.icon-i-hints-01 {
+    top: 23px;
+    left: 10px;
+}
+
+.arbre-ascendant .bloc-membre-couple li i.icon-i-hints-01,
+.arbre-classique li i.icon-i-hints-01 {
+    top: 0px;
+    left: 0px;
+    float: none;
+    position: relative;
+    color: $coral;
+}
+
+.arbre-ascendant .bloc-membre-couple li i.icon-i-hints-01 {
+    position: absolute;
+    left: -11px;
+    top: -7px;
+}
+
+.arbre-classique .branche-arbre-classique .generation-3 li i.icon-i-hints-01 {
+    float: none;
+    color: $coral;
+    position: absolute;
+    left: -0px;
+    top: -0px;
+}
+
+.arbre-classique .generation-2 div.top-hints {
+    top: -6px;
+    /* overide border */
+    left: -1px;
+    width: 16px;
+    height: 16px;
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+}
+
+.arbre-familial a.top-hints i,
+.arbre-ascendant .bloc-membre i.icon-i-hints-01,
+.arbre-classique div.top-hints i.icon-i-hints-01,
+.arbre-familial a.top-hints i.icon-i-hints-01 {
+    color: $coral !important;
+    font-size: 22px;
+}
+
+/* Nav tree */
+#treeMainMenu {
+	/*  nav settings on top right */
+	.reglage-arbre {
+		/*  print item */
+		.dropdown-print-item {
+			.dropdown-submenu {
+				/*  parent container in relative to position submenu child */
+				position: relative;
+				.submenu-print {
+					/* Position submenu on left  */
+					right: auto;
+					left: -100%;
+					position: absolute;
+					top: 0px;
+
+					li {
+						&:hover {
+							a.submenuprint-link-2 {
+								color: $coral;
+							}
+						}
+					}
+				}
+
+				&:hover {
+					a.submenuprint-link-2 {
+						color: $black;
+					}
+				}
+				
+				.submenuprint-link {
+					/* use flexbox */
+					@include flexbox;
+					/* Make item left & right */
+					@include justify-content(space-between);
+					/* vertical centering  */
+					@include align-items(center);
+					/* Overide old style hover arrow */
+					&:hover {
+						i {
+							background: none;
+							color: $coral;
+						}
+					}
+
+					i {
+						/* fallback if flex doesn't works properly */
+						float: right;
+
+						&:hover {
+							background: none;
+							color: $coral;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media (max-width: 485px) {
+		.vue-arbre {
+			width: 100%;
+		}
+
+		.reglage-arbre {
+			width: 100%;
+			li:first-child {
+				margin: 0 10px 10px 0px;
+		}
+		}
+	}
+}
+
+
+/*---------------------------------- DEBUT calcul lien de parenté */
+
+.parentalLink.container {
+    height:auto;
+}
+
+
+.no-line {
+	&:after {
+		opacity: 0 !important;
+	}
+
+	&::before {
+		opacity: 0 !important;
+	}
+}
+
+
+.parentalLink__scroll {
+    @media (max-width: 746px) {
+        overflow: scroll;
+    }
+}
+
+
+.parentalLink__text {
+	color: $color-secondaire-dark;
+	margin-bottom: 90px;
+
+    h3 {
+        font-size:23px;
+        font-weight:bold;
+	}
+	
+    p { 
+        font-size:15px;
+        margin-bottom: 2px;
+    }
+}
+
+.parentalLink__calc {
+    text-align:center;
+    margin-bottom: 30px;
+    min-width:746px;
+
+    .parentalLink__calcBlock {
+        width:230px;
+        display:inline-block;
+        text-align:left;
+        vertical-align: top;
+
+        &:after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+
+        &.parent-alone{
+            .blockText {
+                &:after{
+                    bottom: -47px;
+                }
+                a{
+                    padding-top: 18px;
+                }
+            }
+        }
+    }
+    .blockProfil {
+        background: $storm;
+        color:#ffffff;
+        @include border-radius(3px);
+        margin-bottom: -5px;
+        position:relative;
+        margin-top:31px;
+
+        .numero {
+            float: left;
+            @include border-radii(3px, 0, 0, 3px);
+            min-width: 32px;
+            min-height: 50px;
+            text-align: center;
+            font-size: 22px;
+            padding: 8px 2px 0 2px;
+            color:#ffffff;
+        }
+
+        &.femme {
+            .numero {
+                background: $women-color;
+            }
+
+            .profil {
+                background: $women-color;
+
+                &.image {
+                    img {
+                        border-color: $women-color;
+                    }
+                }
+            }
+        }
+        &.homme {
+            .numero {
+                background: $men-color;
+            }
+            .profil {
+                background: $men-color;
+
+                &.image {
+                    img {
+                        border-color: $men-color;
+                    }
+                }
+            }
+        }
+
+        &.neutre {
+            .numero {
+                background: $grey-01;
+            }
+            .profil{
+                background: $grey-01;
+
+                &.image {
+                    img {
+                        border-color: $grey-01;
+                    }
+                }
+            }
+        }
+
+        .profil {
+            height: 40px;
+            width: 40px;
+            margin:4px 9px;
+
+            &.image {
+                img{
+                    border-width: 3px;
+                    height: 41px; 
+                    width: 41px;
+                }
+            }
+            .initiale {
+                font-size: 17px;
+                font-weight: 400;
+                text-align: center;
+                margin:9px 0 0 0;
+            }
+        }
+
+        .info-perso {
+            display: inline-block;
+            height: 45px;
+            position: relative;
+            width: 49%;
+
+            div {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 100%;
+            }
+            p {
+                font-size: 11px;
+                margin: 0;
+                max-width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                color: #fff;
+                line-height: 12px;
+            }
+		}
+		
+        i {
+            font-size: 13px;
+            background: darken( $grey-04, 20% ) ;
+            @include border-radius(50px);
+            padding: 1px;
+            color:#ffffff;
+            position: absolute;
+            top: 3px;
+            right: 3px;
+        }
+
+        &:after {
+            height: 26px;
+            width: 1px;
+            content: '';
+            display: block;
+            background: $grey-04;
+            position: absolute;
+            bottom: -26px;
+            left: 50%;
+        }
+
+        &+ .blockProfil {
+    
+            &:after{
+                height: 0;
+                position:relative;
+            }
+        }
+
+        &.light{
+            display:inline-block;
+            margin-top: 30px;
+            width: 192px;
+            background: $white;
+            border:1px solid $grey-04;
+            @media (max-width: 992px) {
+                width:158px;
+            }
+
+            .info-perso{
+                p {
+                    color: $grey-04;
+                }
+            }
+        }
+    }
+
+    .blockText {
+        text-align: center;
+        position: relative;
+        margin: 35px 0 10px 0;
+
+        &:after{
+            height: 24px;
+            width: 1px;
+            content: '';
+            display: block;
+            background: $black;
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+        }
+
+        i {
+            vertical-align: top;
+            margin: 4px 2px 0 0;
+            font-size: 10px;
+            color:$grey-01;
+        }
+
+        .homme {
+            i{
+                color:$men-color;
+            }
+        }
+        .femme {
+            i {
+                color:$women-color; 
+            }
+        }
+        a {
+            font-size:12px;
+            display: block;
+            height: 18px;
+            transform: translateX(-19%);
+            width: 160%;
+
+            i{
+                &+ span{
+                    max-width: 44%;
+                }
+            }
+
+            span {
+                max-width: 47%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                display:inline-block;
+                line-height: 15px;
+                text-align:left;
+                
+                &+ span {
+                    margin-left: 3px;
+                    font-style: italic;
+                    color: $grey-04;
+    
+                    i {
+                        font-size: 13px !important;
+                        color:$grey-04 !important;
+                        margin: 2px 0 0 2px !important;
+                    }
+                }
+            }
+
+            .and {
+                cursor: auto;
+                color: $black;
+                font-weight: bold;
+                font-size: 13px;
+                margin-right: 2px;
+                font-style: inherit;
+            }
+
+            &:hover {
+                line-height: 15px;
+                text-decoration:none;
+
+                span{
+                    border-bottom: 1px solid $link-text;
+                    
+                    &+ span {
+                        text-decoration: none;
+                        border-bottom: 0;
+                        line-height: 16px;
+                    }
+                }
+
+                .and {
+                    border-bottom-color:transparent;
+                }
+            }
+        }
+
+        &+ .blockProfil {
+            margin-top: 30px;
+
+            &:after{
+                height: 0;
+                position:relative;
+            }
+        }
+    }
+
+    &.multi-branch {
+
+        .parentalLink__calcBlock {
+            margin-top: 61px;
+
+            .blockText {
+                &:before {
+                    height: 24px;
+                    width: 1px;
+                    content: '';
+                    display: block;
+                    background: $grey-04;
+                    position: absolute;
+                    top: -30px;
+                    left: 50%;
+                }
+            }
+
+            &+ .parentalLink__calcBlock {
+                margin-top: 0;
+
+                .blockText{
+                    border-bottom-color: $grey-04;
+                    margin-top: 0;
+
+                    &:before{
+                        height:1px;
+                        width:466px;
+                        top:65px;
+                        left:50%;
+                        transform: translateX(-50%);
+                    }
+                }
+
+                &+ .parentalLink__calcBlock {
+                    margin-top: 61px;
+                    
+                    .blockText{ 
+                        margin: 35px 0 10px 0;
+
+                        &:first-child{
+
+                            &:before {
+                                height: 24px;
+                                width: 1px !important;
+                                content: '';
+                                display: block;
+                                background:$grey-04;
+                                position: absolute;
+                                top: -30px;
+                                left: 50%;
+                            }
+                        }
+
+                        &+ .blockText{
+
+                            &:before {
+                                width:0; 
+                            }
+                        }
+                    }
+                }
+            }
+
+            &> .blockProfil{
+
+                &:after{
+                    height:0;
+                    position: relative;
+                }
+                &:before{
+                    height: 26px;
+                    width: 1px;
+                    content: '';
+                    display: block;
+                    background: $grey-04;
+                    position: absolute;
+                    top: -26px;
+                    left: 50%;
+                }
+            }
+        }  
+
+        &.four-branch {
+
+            .blockText {
+                a {
+                    span {
+                        @media (max-width: 992px) {
+                            max-width: 35%;
+                        }
+
+                        &+ span {
+                            @media (max-width: 992px) {
+                                max-width: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .parentalLink__calcBlock {
+
+                @media (max-width: 992px) {
+                    width:178px;
+                }
+
+                &:last-child {
+                    width:446px;
+                    @media (max-width: 992px) {
+                        width:354px;
+                    }
+
+                    .blockText {
+                        width:230px;
+                        @media (max-width: 992px) {
+                            width:178px;
+                        }
+
+                        &+ .blockProfil{
+                            margin-top: 20px;
+
+                            &:before{
+                                height: 0;
+                                position:relative;
+                            }
+
+                            &+ .blockProfil{
+                                margin-top: 20px;
+                            }
+                        }
+                    }
+
+                    .blockProfil {
+                        display:inline-block;
+                        margin-top: 30px;
+                        width: 192px;
+                        background: transparent;
+                        border:1px solid $grey-04;
+                        @media (max-width: 992px) {
+                            width:158px;
+                        }
+
+                        .info-perso {
+                            p {
+                                color: $black;
+                            }
+                        }
+
+                        &:last-child {
+                            width: 230px;
+                            float:right;
+                            background: $storm;
+                            border:0;
+                            @media (max-width: 992px) {
+                                width:178px;
+                            }
+
+                            .info-perso {
+                                p {
+                                    color: #ffffff;
+                                }
+                            }
+
+                            .numero {
+                                float:right;
+                                @include border-radii(0, 3px, 3px, 0);
+
+                                + .profil + .info-perso + i{
+                                    right: 38px;
+                                }
+                            }
+
+                            &:before {
+                                height: 1px;
+                                width: 24px;
+                                content: '';
+                                display: block;
+                                background: $grey-04;
+                                position: absolute;
+                                top: 50%;
+                                left: -24px;
+                                @media (max-width: 992px) {
+                                    width: 19px;
+                                    left: -19px;
+                                }
+                            }
+                        }
+
+                        &:before{
+                            left: 59.8%;
+                        }
+                    }
+                }
+
+                &+ .parentalLink__calcBlock {
+                    .blockText {
+                        &:before{
+                            @media (max-width: 992px) {
+                                width:362px;
+                            }
+                        }
+                    }
+                    &+ .parentalLink__calcBlock {
+                        .blockText { 
+                            &:before {
+                                width: 0;
+                            }
+                        }
+                    } 
+                }
+            }
+        }
+        &.five-branch{
+            .parentalLink__calcBlock{
+                width: 230px;
+                margin-top: 0 !important;
+
+                @media (max-width: 992px) {
+                    width: 178px;
+                }
+
+                .blockProfil{
+                    width:100%;
+
+                    &.light{
+                        i{
+                            background: none;
+                            color:#3d454e;
+                        }
+                    }
+                }
+
+                &:nth-child(2n+0){
+                    margin-top: 76px !important;
+                    width:180px;
+
+                    @media (max-width: 1200px) {
+                        width:119px;
+                    }
+                    @media (max-width: 992px) {
+                        width:98px;
+                    }
+
+                    .blockProfil{
+                        transform: translateX(-25px);
+                        width: 230px;
+
+                        @media (max-width: 1200px) {
+                            transform: translateX(-56px);
+                        }
+
+                        @media (max-width: 992px) {
+                            width: 178px;
+                            transform: translateX(-40px);
+                        }
+
+                        &:before{
+                            height: 51px;
+                            top: -51px;
+                        }
+                    }
+
+                    .blockText{
+                        a{
+                            @media (max-width: 1200px) {
+                                width:224%;
+                                transform: translateX(-30%);
+                            }
+                            @media (max-width: 992px) {
+                                width:246%;
+                            }
+                        }
+
+                        &+  .blockProfil{
+                            
+                            &:before{
+                                height: 26px;
+                                top: -26px;
+                            }
+                        }
+                    }
+                }
+
+                &+ .parentalLink__calcBlock{
+
+                    .blockText{
+                        margin:35px 0 10px 0;
+
+                        &:before{
+                           height:0;
+                           width:1px; 
+                        }
+                        &:first-child{
+
+                            &:before{
+                                height:47px;
+                                top: -55px;
+                            }
+                        }
+                    }
+                }
+
+                &:first-child, &:nth-child(3){
+                    
+                    &> .blockProfil{
+
+                        &:before{
+                            height: 1px;
+                            width: 231px;
+                            top: 50%;
+                            right: -231px;
+                            left:inherit;
+                        }
+                    }
+                }
+                &:last-child{
+                    
+                    &> .blockProfil{
+
+                        &:before{
+                            height:0;
+                        }
+
+                        .numero{
+                            float:right;
+                            @include border-radii(0, 3px, 3px, 0);
+
+                            + .profil + .info-perso + i{
+                                right: 38px;
+                            }
+                        }
+                    }
+                }
+                &:nth-child(4){ 
+                    
+                    &> .blockProfil{
+
+                        .numero{
+                            float:right;
+                            @include border-radii(0, 3px, 3px, 0);
+
+                            + .profil + .info-perso + i{
+                                right: 38px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+
+.parentalLink__noresult {
+    text-align: center;
+    color:$grey-04;
+
+    i {
+        font-size:89px;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: 24px;
+        margin-bottom:26px;
+    }
+    p {
+        font-size:15px;
+        margin-bottom:30px;
+        color:$black;
+    }
+}
+
+/*---------------------------------- FIN calcul lien de parenté */
+
+// Import gedcom
+.info-public-tree {
+    text-align: left;
+    .info-public-tree-text {
+        color: $grey-01;
+    }
+    a.information[data-toggle="collapse"] + div.collapse {
+        font-size: 13px;
+    }
+}
+
+.gedcom-subtitle {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.page-import-gedcom {
+    .checkbox {
+        .label-text {
+            font-size: 15px;
+            font-weight: 700;
+            margin-left: 5px;
+        }
+    }
+
+    .import-gedcom-cta {
+        margin-top: 30px;
+        .btn {
+            font-size: 17px;
+            padding: 10px 20px;
+            font-weight: 700;
+        }
+    }
+}

@@ -1,0 +1,484 @@
+@import '../helpers/variables';
+@import '../helpers/mixin/_mixin';
+
+#containAll {
+    table-layout: fixed;
+}
+
+.home-full { 
+    @media (min-width: 768px) and (max-width: 992px) {
+        .container {
+            width: auto;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+
+    .subtitle-section {
+        font-size: 40px;
+        color: $storm; 
+        text-align: center;
+    }
+
+    .free-trial {
+        padding: 8px 19px;
+        height: 48px;
+        font-size: 20px;
+        display: table;
+        margin-bottom: 15px;
+        border-radius: 24px;
+        span, i {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+
+    .quote-author {
+        color: $grey-01;
+        font-size: 14px;
+    }
+    
+    .anim-computer {
+        overflow: hidden;
+    }
+
+    .home-intro {
+        background-color: $storm;
+        color: $white;
+        padding: 60px 0px 40px 0;
+
+        &.b-version {
+            padding-bottom: $spacing-small; 
+            .home-title {
+                max-width: 460px;
+            }
+
+            .home-subtitle {
+                display: block;
+                margin: $spacing-large auto $spacing-large auto;
+                max-width: 470px;
+                text-align: center;
+            }
+
+            .search-api-tips {
+                margin: $spacing-large 0;
+                display: block;
+                font-size: 16px;
+            }
+
+            .btn-action.free-trial {
+                margin: 10px auto 0 auto;
+
+            }
+
+            .subtitle-cta {
+                margin-top: $spacing;
+                margin-bottom: $spacing-medium;
+                font-size: 16px;
+            }
+
+        }
+
+        @media (min-width: 1200px) {
+            .computer-margin-left {
+                left: 2.33333%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            text-align: center;
+            &.b-version {
+                margin: 0 auto;
+            }
+            .btn.free-trial {
+                margin: 0 auto;
+            }
+        }
+
+        .home-title {
+            color: $white;
+            font-size: 48px;
+            margin-top: -15px;
+        }
+
+        .home-subtitle {
+            font-size: 20px;
+            line-height: 28px;
+            margin: 28px 0 48px 0;
+        }
+
+        .no-cb {
+            margin-left: 5px;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 50px;
+        }
+
+        #computer-container-2 {
+            transform: translateX(100%);
+            text-align: center;
+        }
+
+        #computer-container-1 {
+            position: relative;
+            max-width: 520px;
+            margin: 0 auto;
+            display: inline-block;
+
+
+            @media (max-width: 1200px) {
+                .computer {
+                  width: 480px;
+                  height: 278px;
+  
+                }
+            }
+              
+            @media (max-width: 992px) {
+              .computer {
+                width: 345px;
+                height: 200px;
+
+              }
+
+            }
+            @media (max-width: 375px) {
+                .computer {
+                    width: 315px;
+                    height: 182px;
+                }
+            } 
+        }
+        .computer {
+            width: 520px;
+            height: 300px;
+
+        }
+    }
+
+
+    .bloc-departement { 
+        .carousel-departement {
+            position: relative;
+
+            .owl-departement {
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+
+            a {
+                &:first-child {
+                    right: auto;
+                }
+
+            }
+        }
+        .partner-text {
+            font-size: 16px;
+            color: $grey-01;
+            margin: 20px 0 20px 0;
+            margin-top: 35px;
+        }
+
+        .filae-possibility {
+            font-size: 24px;
+            text-align: center;
+            color: $storm;
+            margin: 20px auto 20px auto;
+        }
+        .btn-action {
+            margin: 30px auto 15px auto;
+        }
+
+        .no-cb {
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .computer-2 {
+            margin: 60px 0 100px;
+            img {
+                max-height: 360px;
+                display: block;
+                margin: 0 auto;
+                width: auto;
+                height: auto;
+
+                @media screen and (max-width: 768px) {
+                    max-width: 100%;
+                    max-height: 100%;
+                    
+                }
+            }
+        }
+    }
+
+    .banner-box {
+        background-color: $storm;
+        color: $white;
+
+        margin-bottom: 20px;
+
+        .banner-row {
+            min-height: 160px;
+            padding: 30px 0;
+            @media (max-width: 992px) {
+               text-align: center;
+            }
+        }
+
+        .title-banner { 
+            font-size: 40px;
+        }
+
+        .text-banner {
+            font-size: 20px;
+            margin: 10px 0 25px;
+        }
+
+        .offer-yellow-bg {
+            @media (max-width: 992px) {
+                max-width: 452px;
+                margin: 0 auto;
+                float: inherit;
+            }
+        }
+
+        .banner-img-container {
+            margin: 15px auto;
+            display: inline-block;
+            position: relative;
+
+            .first-step {
+                position: absolute;
+                z-index: 1;
+                border: 2px solid white;
+                width: 89px;
+                height: 89px;
+                right: -35px;
+                top: 12px;
+
+                &.promo {
+                    background-color: $yellow;
+                    color: $storm;
+                    border: 0;
+                    z-index: 15;
+
+                    .first-step-text-container {
+                        font-size: 38px;
+                        font-weight: $bold;
+                    }
+
+
+                }
+                
+                border-radius: 50%;
+
+                @media (max-width: 350px) {
+                    right: -15px;
+                }
+            }
+
+            .first-step-text-container {
+                position: absolute;
+                width: 85px;
+                height: 85px;
+                @include flexbox;
+                @include align-items(center);
+                font-size: 13px;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 700;
+                -webkit-transform: rotate(-12deg);
+                -moz-transform: rotate(-12deg);
+                -ms-transform: rotate(-12deg);
+                transform: rotate(-12deg);
+
+                .first-step-text {
+                    width: 85px;
+                    .percentage {
+                        font-size: 25px;
+                    }  
+                }
+            }
+        }
+
+        img {
+            max-height: 240px;
+            width: auto;
+            display: block;
+            position: relative;
+            z-index: 10;
+        }
+
+
+        .btn {
+            white-space: nowrap;
+            font-size: 16px;
+            padding: 8px 12px;
+        }
+    }
+    .quote-container {
+        margin: 0;
+    }
+    .quote {
+        margin-bottom: 0px;
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .quote-author {
+        color: $grey-01;
+        font-size: 14px;
+        font-style: normal;
+    }
+
+    .tweet-section-container {
+        margin: 60px auto;
+    }
+    .banner-free-trial {
+        background-color: $indigo;
+        color: $white;
+        padding: 30px 0;
+
+        @media (max-width: 992px) {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 980px;
+        }
+
+        .free-trial-title {
+            font-size: 28px;
+            line-height: 36px;
+            color: $white;
+            display: inline-block;
+            max-width: 456px;
+        }
+
+        .free-trial-right {
+            @include flexbox;
+            @include align-items(center);
+            @include justify-content(space-around);
+            min-height: 112px;
+            .btn {
+                margin-bottom: 0;
+            }
+            @media (max-width: 768px) {
+                text-align: center;
+                .btn.free-trial {
+                    margin: 0 auto;
+                }
+            }
+    
+        }
+
+    }
+}
+
+
+
+// Slideshow home
+.slideshow {
+    width: 416px;
+    height: 260px;
+    overflow: hidden;
+    position: absolute;
+    left: 51px;
+    top: 10.5px;
+    // Container img
+    ul {
+        width: 2080px;
+        height: 260px;
+        padding:0; margin:0;
+        list-style: none;
+     }
+
+     // Size img
+     li {
+        float: left;
+        img {
+            width: 416px;
+            height: 260px;
+        }
+    }
+
+    
+    @media (max-width: 1200px) {
+        width: 381px;
+        height: auto;
+        left: 49px;
+        top: 8.5px;
+        ul {
+            width: 1905px;
+            height: auto;
+        }
+
+        li {
+            img {
+                width: 381px;
+                height: auto;
+            }
+        }   
+    }
+    
+    @media (max-width: 992px) and (min-width: 385px) {
+        width: 274px;
+        height: 177px;
+        left: 35px;
+        top: 4.5px;
+        ul {
+            width: 1370px;
+            height: 177px;
+        }
+
+        li {
+            img {
+                width: 274px;
+                height: 177px;
+            }
+        }
+    }
+
+    @media (max-width: 385px) and (min-width: 200px) {
+        width: 246px;
+        height: 159px;
+        left: 34px;
+        top: 4.5px;
+        ul {
+            width: 1230px;
+            height: 162px;
+        }
+        
+        li {
+            img {
+                width: 246px;
+                height: 159px;
+            }
+        }
+    }
+ }
+ 
+// Add all style-filae.css to make the search on the home page work corectly 
+// @import '../style-filae'; 
+ 
+.btn-default:hover, .btn-default:focus { 
+    background-color: $white !important;
+}
+
+// Custom style dor search A/B testing 
+@media (max-width: 992px) {
+    .form-group {
+        margin-bottom: $spacing;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .anim-computer {
+        margin-top: $spacing-large;
+    }
+}

@@ -1,0 +1,269 @@
+ 
+///////////////////
+/* Class utiles */
+///////////////////
+
+/* Bootstrap overide bug firefox */
+.container-fluid > .row {clear:both !important;}
+
+.no-padding {
+ padding: 0 !important;
+}
+
+.no-padding-left {
+ padding-left: 0;
+}
+
+.no-padding-right {
+ padding-right: 0;
+}
+
+.marge0 {
+ margin: 0 !important;
+}
+.marge-topbot-5px {
+ margin: 5px 0 5px 0;
+ display: inline-block;
+}
+.marge-top5px {
+ margin-top: 5px !important;
+}
+.marge-top10px {
+ margin-top: 10px !important;
+}
+.marge-top15px {
+ margin-top: 15px !important;
+}
+.marge-top20px {
+ margin-top: 20px !important;
+}
+.marge-left0 {
+ margin-left: 0;
+}
+.marge-left10px {
+ margin-left: 10px;
+} 
+.marge-right0 {
+ margin-right: 0;
+}
+.marge-bottom10px {
+ margin-bottom: 10px; 
+}
+.marge-topbot20px, .marge-bot20px {
+ margin: 20px 0;
+}
+.marge-bottom0 {
+ margin-bottom: 0;
+}
+.marge-right10px {
+ margin-right: 10px;
+}
+.marge-top-10px-row {
+ margin-bottom: -10px;
+}
+.padding0 {
+ padding: 0;
+}
+.page-contenu {
+ margin-top: 72px;
+}
+
+/* Positions générales */
+
+.clear {
+ clear: left;
+}
+
+.clear-r {
+ clear: right;
+}
+
+ul, ol {
+ list-style: none;
+ padding-left: 0;
+}
+
+/* Textes / Liens / Boutons */
+
+a {
+ cursor: pointer;
+ color: $link-text;
+
+    &:hover{
+        text-decoration: underline;
+        color: $link-text;
+    }
+    &:focus{
+        color: $link-text;
+    }
+}
+
+.no-deco-a {
+ text-decoration: none;
+}
+.deco-a {
+ text-decoration: underline;
+}
+a.disabled {
+ pointer-events: none;
+ color: $grey-01;
+}
+.bold {
+ font-weight: bold !important;
+}
+.center {
+ text-align: center;
+}
+.text-left {
+ text-align: left;
+}
+.nowrap {
+ white-space: nowrap;
+}
+.italic {
+ font-style: italic;
+}
+.highlight-blue {
+    color: $light-indigo;
+    font-weight: bold;
+}
+
+/* White */
+
+.text-white {
+ color: $white !important;
+}
+.text-red {
+ color: $coral !important;
+ margin-top: 25px;
+}
+h1.text-white {
+ margin-bottom: 26px;
+}
+
+.submit-btn-action {
+ margin-top: 50px;
+}
+
+/* VERT */
+
+.vert {
+ color: $grey-01 !important;
+}
+a.vert:hover {
+ color: $storm !important;
+}
+.btn-vert {
+ background-color: $grey-01 !important;
+ border: 0;
+}
+
+.btn-vert:hover {
+ background-color: $storm !important;
+}
+
+.btn-default.danger:hover, .btn-default.danger:focus {
+ background-color: #d9534f !important;
+ border-color: #d9534f;
+ color: $white;
+}
+
+
+.white {
+    color: $white;
+}
+
+/* ORANGE */
+.orange {
+ color: $coral !important;
+}
+a.orange:hover {
+ color: #f35a5b !important;
+}
+.fond-neutre {
+ background-color: $grey-03;
+}
+p.sous-titre {
+ font-size: 14px;
+ font-weight: bold;
+}
+h1, h2, h3, h4, h5, h6 {
+ color: #303F4C;
+}
+
+.position-relative {
+    position: relative;
+}
+
+h4.titre-marge-top {
+ margin: 40px 0 10px 0;
+}
+h5.sous-titre {
+ font-size: 19px;
+ margin: 0 0 20px 0;
+}
+h5.sous-titre-marge-top {
+ font-size: 19px;
+ margin: 40px 0 20px 0;
+}
+.label-texte {
+ color: $storm;
+ font-size: 12px;
+}
+p.petit-titre-14 {
+ color: $grey-01;
+ font-size: 14px;
+ font-weight: bold;
+ text-transform: uppercase;
+}
+
+/* -- Supprimer l’action « effacer => X » de IE */
+::-ms-clear {
+ display: none;
+}
+.visibility-hidden {
+ visibility: hidden;
+}
+.gris {
+ color: $grey-01;
+}
+.noir {
+ color: $black;
+}
+.font14px {
+ font-size: 14px !important;
+}
+.font16px {
+ font-size: 16px !important;
+}
+
+.field-uppercase {
+    text-transform: uppercase;
+}
+.field-uppercase::-webkit-input-placeholder {
+    text-transform: none;
+}
+.field-uppercase:-moz-placeholder {
+    text-transform: none;
+}
+.field-uppercase::-moz-placeholder {
+    text-transform: none;
+}
+.field-uppercase:-ms-input-placeholder {
+    text-transform: none;
+}
+
+.row-is-flex {
+    @include flexbox;
+
+    &.align-center {
+        @include align-items(center);
+    }
+}
+
+.row.is-flex > [class*='col-'] {
+    @include flexbox;
+}
+.bg-grey {
+ background-color: #e6eaf0;
+}

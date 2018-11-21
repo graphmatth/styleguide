@@ -1,0 +1,221 @@
+/*Corail*/
+/*Bleu orage*/
+/*Vert => couleur complementaire corail*/
+/*btn */
+/* Liens */
+/* Typo */
+.card-offer {
+  display: inline-block;
+  background-color: #303f4c;
+  border-radius: 5px;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: right top;
+  color: #FFF; }
+  .card-offer:hover {
+    text-decoration: none; }
+    .card-offer:hover * {
+      color: #FFF; }
+  .card-offer__container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    width: 100%;
+    height: 100%; }
+  .card-offer__title {
+    color: #FFF; }
+  .card-offer__cta {
+    margin: 0 auto; }
+  .card-offer--gold {
+    background-image: url("../../../img/gifts-members/small-bandeau-or.png"); }
+    .card-offer--gold:hover .btn-action {
+      background-color: #C5B358 !important;
+      border: 1px solid #C5B358;
+      color: #FFF; }
+  .card-offer--silver {
+    background-image: url("../../../img/gifts-members/small-bandeau-argent.png"); }
+    .card-offer--silver:hover .btn-action {
+      background-color: #AEADA9 !important;
+      border: 1px solid #AEADA9;
+      color: #FFF; }
+  .card-offer--gold-shadow {
+    background-image: url("../../../img/gifts-members/small-bandeau-or.png"); }
+
+.gifts-members h1, .gifts-members h2, .gifts-members p {
+  text-align: center; }
+.gifts-members header + .container {
+  margin-top: 30px; }
+.gifts-members h1 {
+  font-size: 48px;
+  margin-top: 0;
+  margin-bottom: 15px; }
+  .gifts-members h1 + p {
+    font-size: 20px;
+    margin-bottom: 20px; }
+.gifts-members h2 {
+  font-size: 42px;
+  color: #FFF; }
+  .gifts-members h2 + p {
+    font-size: 21px; }
+.gifts-members .paywall.paywall-offre .card-offer {
+  width: -moz-calc(50% - 80px);
+  width: -webkit-calc(50% - 80px);
+  width: calc(50% - 80px);
+  max-width: 400px;
+  height: 240px; }
+  .gifts-members .paywall.paywall-offre .card-offer__title {
+    font-size: 28px; }
+  .gifts-members .paywall.paywall-offre .card-offer__price {
+    font-size: 25px; }
+  .gifts-members .paywall.paywall-offre .card-offer--gold {
+    margin: 20px 40px 0 0; }
+  .gifts-members .paywall.paywall-offre .card-offer--silver {
+    margin: 20px 0px 0 40px; }
+.gifts-members .paywall.paywall-offre .moyen-paiement.inscrit {
+  margin: 45px 0 10px 0; }
+  .gifts-members .paywall.paywall-offre .moyen-paiement.inscrit i + i {
+    font-size: 35px;
+    margin: 0; }
+.gifts-members .paywall.paywall-temoignage {
+  background-image: linear-gradient(to bottom, #FF5555, #FF5555 26%, #FFF 15%, #FFF 85%, #FFF 85%);
+  background-color: #FFF; }
+.gifts-members .paywall.confirmation-gift p {
+  font-size: 22px;
+  padding: 24px 0; }
+.gifts-members .paywall.confirmation-gift h2 {
+  font-size: 26px;
+  color: #222255;
+  padding-top: 20px; }
+.gifts-members .paywall.confirmation-gift p.what-now {
+  font-size: 18px; }
+  .gifts-members .paywall.confirmation-gift p.what-now + p.what-now {
+    padding: 0; }
+  .gifts-members .paywall.confirmation-gift p.what-now a {
+    display: block;
+    margin: 5px auto; }
+.gifts-members .paywall.confirmation-gift .option-cmd {
+  color: #FF5555; }
+.gifts-members .paywall.paywall-footer p {
+  margin: 0 auto;
+  max-width: 800px;
+  margin-top: 5px;
+  margin-bottom: 60px;
+  color: #757585;
+  text-align: left;
+  font-size: 13px; }
+.gifts-members .pack-premium {
+  position: relative;
+  background-color: #FFF;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  margin: 210px auto 0 auto; }
+  .gifts-members .pack-premium .computer {
+    width: 100%;
+    float: left;
+    z-index: 10;
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    -moz-transform: translateY(-45%) translateX(-50%);
+    -ms-transform: translateY(-45%) translateX(-50%);
+    -webkit-transform: translateY(-45%) translateX(-50%);
+    transform: translateY(-45%) translateX(-50%); }
+    .gifts-members .pack-premium .computer img {
+      max-width: 600px;
+      width: 75%; }
+  .gifts-members .pack-premium .pack-premium-content {
+    padding-top: 60px; }
+    .gifts-members .pack-premium .pack-premium-content img {
+      max-width: 480px;
+      width: 100%;
+      margin: 0 auto; }
+  .gifts-members .pack-premium h4 {
+    color: #FF5555;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 40px; }
+  .gifts-members .pack-premium h3 {
+    font-weight: bold;
+    color: #222255; }
+  .gifts-members .pack-premium p {
+    color: #222255;
+    font-size: 25px;
+    padding-bottom: 40px; }
+  .gifts-members .pack-premium .bold-premium {
+    font-weight: bold; }
+  .gifts-members .pack-premium .card-offer--gold-shadow {
+    position: relative;
+    z-index: 20;
+    margin: 50px auto 0 auto;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    height: 210px;
+    width: 325px; }
+    .gifts-members .pack-premium .card-offer--gold-shadow h3 {
+      color: #FFF;
+      font-weight: 400; }
+    .gifts-members .pack-premium .card-offer--gold-shadow i {
+      color: #C5B358; }
+.gifts-members .bloc-offre p {
+  font-size: 18px;
+  color: #757585;
+  margin-top: 10px;
+  padding-bottom: 20px; }
+.gifts-members .bloc-offre .btn {
+  margin: 0 auto;
+  padding: 7px 27px; }
+
+@media (max-width: 992px) {
+  .gifts-members .paywall.paywall-offre {
+    padding: 0; } }
+@media (max-width: 767px) {
+  .gifts-members {
+    display: block; }
+    .gifts-members .pack-premium .computer img {
+      width: 95%; }
+    .gifts-members .paywall.paywall-offre {
+      padding: 0; }
+      .gifts-members .paywall.paywall-offre .card-offer {
+        display: block;
+        margin: 20px auto;
+        width: 80%; }
+      .gifts-members .paywall.paywall-offre.confirmation-gift img {
+        width: 100%;
+        height: auto; } }
+@media (max-width: 480px) {
+  .gifts-members .pack-premium {
+    margin: 150px auto 0 auto; }
+    .gifts-members .pack-premium .computer img {
+      width: 95%; }
+    .gifts-members .pack-premium .card-offer--gold-shadow {
+      height: 140px;
+      width: 200px; }
+
+  .gifts-members .bloc-offre {
+    width: 100%; } }
+
+/*# sourceMappingURL=gift-offers.css.map */

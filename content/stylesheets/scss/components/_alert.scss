@@ -1,0 +1,180 @@
+/* -- Callout => message d'alert, d'information de la documentation de bootstrap non inclu dans bootstrap.css => http://cpratt.co/twitter-bootstrap-callout-css-styles/ --*/
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+.bs-callout h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 22px;
+}
+.bs-callout p:last-child {
+    margin-bottom: 0;
+}
+.bs-callout code {
+    border-radius: 3px;
+}
+.bs-callout+.bs-callout {
+    margin-top: -5px;
+}
+.bs-callout-default {
+    border-left-color: $storm;
+}
+.bs-callout-default h4, .bs-callout-default i {
+    color: $storm;
+}
+.bs-callout-primary {
+    border-left-color: #337ab7;
+}
+.bs-callout-primary h4, .bs-callout-primary i {
+    color: #337ab7;
+}
+.bs-callout-success {
+    border-left-color: #5cb85c;
+}
+.bs-callout-success h4, .bs-callout-success i {
+    color: #5cb85c;
+}
+.bs-callout-danger {
+    border-left-color: #d9534f;
+}
+.bs-callout-danger h4, .bs-callout-danger i {
+    color: #d9534f;
+}  
+
+.bs-callout-warning h4, .bs-callout-warning i {
+    color: #f0ad4e;
+}
+
+#boardAlertBlock {
+    .bs-callout {
+        border-left-color: $lagoon;
+    }
+    .bs-callout-info h4, .bs-callout-info i {
+        color: $lagoon;
+    }
+}
+
+.bs-callout {
+    border-left-color: $lagoon;
+}
+            .bs-callout-warning {
+                border-left-color: #f0ad4e;
+            }
+.bs-callout-info h4, .bs-callout-info i {
+    color: $bleu-clair;
+}
+
+
+.bs-callout span {
+    display: inline-block;
+    width: 85%}
+.bs-callout span+i {
+    font-size: 48px;
+    float: right;
+}
+.bs-callout div {
+    margin: 20px 0 0 0;
+}
+.bs-callout div a.btn {
+    margin: 0 10px 0 0;
+}
+.bs-callout p span {
+    width: auto;
+}
+
+
+.bs-callout-success {
+    border-left-color: #5cb85c;
+}
+.bs-callout-success h4, .bs-callout-success i {
+    color: #5cb85c;
+}
+.bs-callout-danger {
+    border-left-color: #d9534f;
+}
+.bs-callout-danger h4, .bs-callout-danger i {
+    color: #d9534f;
+}  
+
+.bs-callout-warning h4, .bs-callout-warning i {
+    color: #f0ad4e;
+}
+
+
+////////////////////////////////////////
+/* Bulle d'explication informatives  */
+///////////////////////////////////////
+
+.bubble-info {
+    position: relative;
+    padding: 0px;
+    background: $white;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: $grey-02 solid 1px;
+}
+
+.bubble-info:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 13px 13px 13px 0;
+    border-color: transparent $white;
+    display: block;
+    width: 0;
+    z-index: 1;
+    left: -13px;
+    top: 29px;
+}
+
+.bubble-info:before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 13px 13px 13px 0;
+    border-color: transparent $grey-02;
+    display: block;
+    width: 0;
+    z-index: 0;
+    left: -14px;
+    top: 29px;
+}
+
+//////////////////////////////////////////////////////////////////////////////////
+/*  Message informatif dans propositiond de message (popup de demande d'accès)  */
+//////////////////////////////////////////////////////////////////////////////////
+
+.proposition-msg .conseil {
+    display: inline-block;
+    margin: 10px 0 15px 0;
+}
+
+.proposition-msg .conseil i {
+    color: #337ab7;
+    font-size: 64px;
+    margin: 8px 0 0 0;
+    vertical-align: top;
+    cursor: pointer;
+}
+.proposition-msg .conseil .bubble-info {
+    display: inline-block;
+    width: 60%;
+    margin: 0 0 0 18px;
+}
+.proposition-msg .conseil .bubble-info h6 {
+    background: $grey-02;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 10px;
+    padding: 7px 10px;
+}
+.proposition-msg .conseil .bubble-info p {
+    font-size: 13px;
+    margin: 0;
+    padding: 0 10px 10px 10px;
+}

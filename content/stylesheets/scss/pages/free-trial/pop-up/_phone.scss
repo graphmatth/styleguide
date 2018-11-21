@@ -1,0 +1,88 @@
+@import '../../../helpers/variables';
+@import '../../../helpers/mixin/_mixin';
+#popup-1erdoc {
+    #phone-step-freetrial {
+        .freetrial-title {
+            margin-top: 0;
+            margin-bottom: $spacing-large;
+        }
+
+        .form-group {
+            max-width: 300px;
+            .intl-tel-input.allow-dropdown {
+                width: 300px;
+                @media (max-width: 600px) {
+                    width: auto;
+                }
+            }
+        }
+
+        .input-simple {
+            &:hover {
+                .material-icons {
+                    display: inline-block;
+                }
+            }
+        } 
+
+        .phone-container {
+            margin: 45px auto 35px auto;
+        }
+
+        .intl-tel-input {
+            .country-list {
+                max-height: 200px;
+                width: inherit; 
+            }
+    
+            &.allow-dropdown {
+                input[type=tel] { 
+                    height: 30px;
+                    padding-top: 0;
+                }
+
+                .error {
+                    i {
+                        vertical-align: middle;
+                    }
+                    font-size: 11px !important;
+                    text-align: left;
+                    color: $danger;
+                }
+            }
+        }
+        
+
+
+        .explanation {
+            color: $black-02;
+            font-weight: $bold;
+        }
+
+        .checkbox-phone-container {
+            display: table;
+            .checkbox-material, #newsletter{
+                display: table-cell;
+                vertical-align: top;
+            }
+
+            .text-checkbox {
+                display: table-cell;
+                vertical-align: top;
+                font-weight: $bold;
+                color: $grey-01;
+                padding-left: $spacing-small;
+                font-size: 13px;
+                line-height: 22px;
+            }
+        }
+
+        .btn-free-container {
+            margin: 25px auto 25px auto;
+        }
+
+        .legal-notice-container {
+            margin-top: 25px;
+        }
+    }
+}
