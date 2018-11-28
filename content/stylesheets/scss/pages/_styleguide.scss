@@ -1,11 +1,12 @@
 body {
     background-color: #F2F3F4;
+    width: 100%;
 }
 
 $sidebar-width: 275px;
 .wrapper {
     .container {
-        
+
         @media (min-width: 768px) {
             width: calc(720px - #{$sidebar-width});
         }
@@ -19,6 +20,11 @@ $sidebar-width: 275px;
     }
 }
 
+.container {
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
 .row {
     margin-right: -8px;
     margin-left: -8px;
@@ -30,24 +36,24 @@ $sidebar-width: 275px;
 }
 
 
-// @media (min-width: 768px) {
-//     .container {
-//         width: 720px;
-//     }
-// }
+@media (min-width: 768px) {
+    .container {
+        width: 720px;
+    }
+}
 
-// @media (min-width: 992px) {
-//     .container {
-//         width: 960px;
-//     }
-// }
+@media (min-width: 992px) {
+    .container {
+        width: 960px;
+    }
+}
 
 
-// @media (min-width: 1200px) {
-//     .container {
-//         width: 1152px;
-//     }
-// }
+@media (min-width: 1200px) {
+    .container {
+        width: 1152px;
+    }
+}
 
 
 

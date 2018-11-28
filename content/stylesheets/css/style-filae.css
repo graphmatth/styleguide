@@ -26532,7 +26532,8 @@ body.modal-open {
       top: 3px; }
 
 body {
-  background-color: #F2F3F4; }
+  background-color: #F2F3F4;
+  width: 100%; }
 
 @media (min-width: 768px) {
   .wrapper .container {
@@ -26544,6 +26545,10 @@ body {
   .wrapper .container {
     width: calc(1170px - 275px); } }
 
+.container {
+  padding-right: 8px;
+  padding-left: 8px; }
+
 .row {
   margin-right: -8px;
   margin-left: -8px;
@@ -26552,6 +26557,15 @@ body {
     padding-right: 8px;
     padding-left: 8px; }
 
+@media (min-width: 768px) {
+  .container {
+    width: 720px; } }
+@media (min-width: 992px) {
+  .container {
+    width: 960px; } }
+@media (min-width: 1200px) {
+  .container {
+    width: 1152px; } }
 #navbar {
   /* width */
   /* Track */
