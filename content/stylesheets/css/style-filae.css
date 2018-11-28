@@ -26534,6 +26534,24 @@ body.modal-open {
 body {
   background-color: #F2F3F4; }
 
+@media (min-width: 768px) {
+  .wrapper .container {
+    width: calc(720px - 275px); } }
+@media (min-width: 992px) {
+  .wrapper .container {
+    width: calc(970px - 275px); } }
+@media (min-width: 1200px) {
+  .wrapper .container {
+    width: calc(1170px - 275px); } }
+
+.row {
+  margin-right: -8px;
+  margin-left: -8px;
+  position: relative; }
+  .row > [class*='col-'] {
+    padding-right: 8px;
+    padding-left: 8px; }
+
 #navbar {
   /* width */
   /* Track */
@@ -26954,13 +26972,6 @@ p {
 .btn-payment {
   margin-top: 0;
   margin: 0; }
-
-@media (min-width: 992px) {
-  .container-fluid {
-    width: calc(970px - 275px); } }
-@media (min-width: 1200px) {
-  .container-fluid {
-    width: calc(1170px - 275px); } }
 
 .beaucarnot-section-container {
   padding: 10px 0; }
